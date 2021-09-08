@@ -75,6 +75,16 @@ body {
     display: none;
 }
 
+#reCAPTCHASection.BBFormSection{
+    
+    display:block;
+}
+
+.BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] #reCAPTCHADisclosure{
+    
+    margin-left:0;
+}
+
 .BBFormSection.BBFormSectionRecurrenceInfo{
     
     display:block;
