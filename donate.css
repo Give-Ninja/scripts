@@ -85,6 +85,13 @@ body {
     margin-left:0 !important;
 }
 
+body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-payment-step #mongo-form .BBFormSection.BBDFormSectionPaymentInfo{
+    
+    display:block;
+}
+
+/*
+
 .BBFormSection.BBFormSectionRecurrenceInfo{
     
     display:block;
@@ -93,6 +100,7 @@ body {
 .BBFormSection.BBDFormSectionGiftInfo {
     display: block;
 }
+*/
 
 .BBFormSectionRecurrenceInfo,
 .BBDFormSectionBillingInfo {
