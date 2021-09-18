@@ -12,7 +12,7 @@
 
                     flag_url = window.location.href;
 
-                    
+                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo').show();
                     
                     if(flag_url == "https://go.anglicare.org.au/donate" || flag_url.indexOf("https://go.anglicare.org.au/donate?") >= 0 ){
 
@@ -362,7 +362,7 @@
                 $('.BBDFormSectionBillingInfo,.contents .button-wrapper .button--orange').show();
 
                  let donateParams = new URLSearchParams(window.location.search)
-                if(donateParams.has('amount')){
+                if(donateParams.has('amount') || donateParams.has('donate')){
 
                     if($pSku != 'rdGivingLevel4') {
                         $pSku = $pSku;
@@ -433,6 +433,7 @@
                     $('.donate-form__step').removeClass('donate-form__step--current');
                     $('.donate-form__steps').find('.donate-form__step:eq(2)').addClass('donate-form__step--current');
                 
+                    $('body').addClass('show-payment-step');
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer').hide();
                     $('.BBFormButtonRow,.BBDFormSectionPaymentInfo').show();
                     $('.contents .button-wrapper .button--orange').hide();
@@ -461,6 +462,7 @@
             if( current.index() > prev.index() ) {
                 $('.donate-form__step').removeClass('donate-form__step--current');
                 $(this).addClass('donate-form__step--current');
+                $('body').removeClass('show-payment-step');
             
                 if( prev.index() == 0 ) {
                     $('.contents .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer').show();
@@ -474,6 +476,7 @@
                     }
                 }
                 else if( prev.index() == 1 ) {
+
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFormProgressContainer').hide();
                     $('.contents .button-wrapper .button--orange,.BBDFormSectionBillingInfo').show();
                 }
