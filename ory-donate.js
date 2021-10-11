@@ -489,11 +489,13 @@
             if( id.val() == '') {
                 id.addClass('has-error');
                 id.next('.error-text').show();
+                id.next('.error-text').addClass('.error-shown');
                 return false;
             }
             else {
                 id.removeClass('has-error');
                 id.next('.error-text').hide();
+                id.next('.error-text').removeClass('.error-shown');
                 return true;
             }
         }
