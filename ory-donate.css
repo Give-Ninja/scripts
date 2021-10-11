@@ -116,7 +116,7 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 }
 
 .donate-form__step--current {
-    border-bottom: 3px solid rgba(71,108,122,.5);
+    border-bottom: 3px solid #FA522C;
 }
 
 .donate-form__step__index {
@@ -219,8 +219,8 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 }
 
 .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected {
-    border-color: #476c7a !important;
-    background-color: #eef3f7 !important;
+    border-color: #FA522C !important;
+    background-color: #1e3510 !important;
     cursor: default !important;
 }
 
@@ -332,6 +332,11 @@ line-height:27px !important;
     display: none;
 }
 
+#bboxdonation_billing_fldAnonymous input[type="checkbox"]{
+
+	display: block;
+}
+
 /*.BBFormCheckboxLabel:before,
 .BBFormCheckboxLabel:after {
     display: flex;
@@ -399,8 +404,8 @@ input:checked + .BBFormCheckboxLabel:before {
 
 #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox input:checked + .BBFormCheckboxLabel,
 #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .BBFormCheckboxLabel.active,#mongo-form .single-donation-btn.monthly-not-active {
-    box-shadow: inset 0 0 0 2px #476c7a;
-    background-color: #eef3f7;
+    box-shadow: inset 0 0 0 2px #FA522C;
+    background-color: #1e3510;
     color: #000;
 }
 
