@@ -534,10 +534,7 @@ input:checked + .BBFormCheckboxLabel:before {
 #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBThreeFields .BBFormTextbox {
     max-width: calc(40% - 14px);
 }
-#mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBTwoFields .BBFormSelectList,
-#mongo-form #bboxdonation_billing_billingAddress_txtAUPostCode {
-    max-width: calc(50% - 8px);
-}
+
 
 #bboxdonation_payment_lblCCType {
     display: block !important;
