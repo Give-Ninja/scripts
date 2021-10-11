@@ -178,7 +178,7 @@
 
                    
 
-                    $('.donate-form__steps,.form-container.button-wrapper').css({'opacity':1});
+                    $('.donate-form__steps,.form-container .button-wrapper').css({'opacity':1});
                     $('.BBDFormSectionBillingInfo fieldset,.BBDFormSectionPaymentInfo fieldset').before('<p class="donation-highlight-text"><p>');
                   
                     if($monthly_exists){
