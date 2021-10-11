@@ -495,13 +495,13 @@ input:checked + .BBFormCheckboxLabel:before {
     border-color: #4b6b7e;
     opacity: 1;
 }
-.button-wrapper .button:hover .button__inner,
+.button-wrapper .button:hover,
 #mongo-form .BBFormButtonRow .BBFormSubmitbutton:hover .button__inner {
     -webkit-transform: translateX(-6px);
     transform: translateX(-6px);
 }
 
-.button-wrapper .button:hover .button__inner:before,
+.button-wrapper .button:hover:before,
 #mongo-form .BBFormButtonRow .BBFormSubmitbutton:hover .button__inner:before {
     -webkit-transform: translateX(12px) translateY(-50%);
     transform: translateX(12px) translateY(-50%);
@@ -542,7 +542,7 @@ input:checked + .BBFormCheckboxLabel:before {
 }
 
 @media (max-width: 1024px) {
-    #page_block_below_fold .form-container {
+     .form-container {
         width: 100%;
         max-width: 100%;
         margin-left: 0;
@@ -570,13 +570,8 @@ input:checked + .BBFormCheckboxLabel:before {
 }
 
 @media (max-width: 767px) {
-    #page_block_below_fold .form-container {
-    }
-    #element-90 {
-        width: 100%;
-        left: 0;
-        margin-left: 0;
-    }
+
+  
     .donate-form__steps {
         max-width: 100%;
     }
@@ -609,7 +604,7 @@ input:checked + .BBFormCheckboxLabel:before {
 }
 
 @media (max-width: 350px) {
-    #page_block_below_fold .form-container {
+    .form-container {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -630,9 +625,7 @@ input:checked + .BBFormCheckboxLabel:before {
 }
 
 @media (min-width: 1025px) and (max-width: 1250px) {
-    #element-90 {
-        max-width: 50%;
-    }
+  
     #mongo-form #fldIndivInfo .error-text.last-error {
         left: calc(20% + 14px);
         top: 105px;
