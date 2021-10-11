@@ -300,7 +300,7 @@
 
         
         
-        $('.form-container.button-wrapper .button--orange').on('click', function(){
+        $('.form-container .button-wrapper .button--orange').on('click', function(){
             
             var current = $('.donate-form__steps').find('.donate-form__step--current');
 
