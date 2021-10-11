@@ -35,7 +35,7 @@
     text-align: center !important;
     margin: 0 auto 30px;
     max-width: 440px;
-    color: #000;
+    color: #1e3510;
 }
 
 .form-container h6:before {
@@ -112,7 +112,7 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 .donate-form__step {
     text-align: center;
     padding-bottom: 15px;
-    color: #000;
+    color: #1e3510;
 }
 
 .donate-form__step--current {
@@ -164,7 +164,7 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 
 .BBFormRadioList .BBFormRadioItem label .BBFormRadioAmount,
 .BBFormRadioList .BBFormRadioItem label .BBFormRadioDescriptionOther {
-    color: #000;
+    color: #1e3510;
     font-size: 24px;
     margin-bottom: 10px;
     white-space: nowrap;
@@ -220,14 +220,14 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 
 .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected {
     border-color: #FA522C !important;
-    background-color: rgba(0,0,0,.8) !important;
+    background-color: #FA522C !important;
     cursor: default !important;
-    color: #fff;
+    color: #fff !important;
 }
 
 #mongo-form .has-inline-error+*, 
 #mongo-form .has-inline-error>input {
-    border-color: #e91c0d!important;
+    border-color: #FA522C !important;
 }
 
 #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormSortCodeTextbox{
@@ -260,7 +260,7 @@ line-height:27px !important;
     opacity: 1;
     line-height: 1.15;
     font-size: 16px;
-    color: #000;
+    color: #1e3510;
     border-radius: 0 !important;
     max-width: 100%;
 }
@@ -284,7 +284,7 @@ line-height:27px !important;
 
 #mongo-form input.has-error,
 #mongo-form select.has-error {
-    border-bottom-color: #e91c0d!important;
+    border-bottom-color: #FA522C !important;
 }
 
 #mongo-form input[type=email]:focus,
@@ -300,7 +300,7 @@ line-height:27px !important;
 }
 
 #mongo-form .error-text {
-    color: #e91c0d;
+    color: #FA522C;
     text-transform: none;
     font-size: 12px;
     line-height: 15px;
@@ -308,25 +308,20 @@ line-height:27px !important;
     white-space: nowrap;
     margin-top: 4px;
     display: none;
+    padding: 10px 0;
+}
+
+
+#mongo-form .error-text.error-shown {
+
+	display: inline-block !important;
 }
 
 #mongo-form .error-text.inline-error {
-    position: absolute;
-    left: 10px;
-    top: 90px;  
+    position: relative;  
 }
 
-#mongo-form #fldIndivInfo .error-text.inline-error {
-    left: calc(20% + 14px);
-}
 
-#mongo-form #fldIndivInfo .error-text.last-error {
-    left: 60%;
-}
-
-#mongo-form .error-text.postcode-error {
-    left: 50%;
-}
 
 #mongo-form input[type="checkbox"],
 #mongo-form input[type="radio"] {
@@ -335,7 +330,13 @@ line-height:27px !important;
 
 #bboxdonation_billing_fldAnonymous input[type="checkbox"],.BBDFormSectionTributeInfo input[type="checkbox"]{
 
-	display: block;
+	display: inline !important;
+	margin-right: 5px;
+}
+
+
+.BBDFormSectionTributeInfo .BBFormTextbox,.BBDFormSectionComments .BBFormTextArea,.BBDFormSectionComments .BBFormFieldLabel{
+	margin-left: 0 !important;
 }
 
 /*.BBFormCheckboxLabel:before,
@@ -374,7 +375,7 @@ input:checked + .BBFormCheckboxLabel:before {
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 2.2px;
-    color: #000;
+    color: #1e3510;
     width: 100% !important;
     float: none !important;
     text-align: left !important;
@@ -406,7 +407,7 @@ input:checked + .BBFormCheckboxLabel:before {
 #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox input:checked + .BBFormCheckboxLabel,
 #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .BBFormCheckboxLabel.active,#mongo-form .single-donation-btn.monthly-not-active {
     box-shadow: inset 0 0 0 2px #FA522C;
-    background-color: rgba(0,0,0,.8);
+    background-color: #FA522C;
     color: #fff;
 }
 
@@ -560,19 +561,8 @@ input:checked + .BBFormCheckboxLabel:before {
     .donate-form__steps {
         max-width: 90%;
     }
-    #element-90 {
-        width: 50%;
-        margin-left: 20px;
-    }
-    #mongo-form #fldIndivInfo .error-text.last-error {
-        left: calc(20% + 14px);
-        top: 105px;
-    }
-    #mongo-form .error-text.postcode-error {
-        left: 10px;
-        top: 105px;
-    }
-}
+ 
+ 
 
 @media (max-width: 767px) {
 
@@ -599,13 +589,7 @@ input:checked + .BBFormCheckboxLabel:before {
         padding-left: 0;
         text-align: center;
     }
-    #mongo-form #fldIndivInfo .error-text.inline-error {
-        left: calc(20% + 10px);
-    }
-    #mongo-form #fldIndivInfo .error-text.last-error {
-        left: calc(20% + 10px);
-        top: 105px;
-    }
+  
 }
 
 @media (max-width: 350px) {
@@ -616,26 +600,11 @@ input:checked + .BBFormCheckboxLabel:before {
     #mongo-form .BBFormContainer .BBFormFieldContainer {
         padding: 0;
     }
-    #mongo-form .error-text.inline-error,
-    #mongo-form .error-text.postcode-error {
-        left: 0;
-    }
-    #mongo-form #fldIndivInfo .error-text.inline-error,
-    #mongo-form #fldIndivInfo .error-text.last-error {
-        left: calc(20% + 10px);
-    }
-    #mongo-form .error-text.postcode-error {
-        top: 105px;
-    }
+  
+   
 }
 
-@media (min-width: 1025px) and (max-width: 1250px) {
-  
-    #mongo-form #fldIndivInfo .error-text.last-error {
-        left: calc(20% + 14px);
-        top: 105px;
-    }
-}
+
 
 
 #mongo-form * {
