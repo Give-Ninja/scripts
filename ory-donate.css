@@ -130,8 +130,8 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 }
 
 .BBFormRadioList .BBFormRadioItem {
-    width: 100%;
-    display: block !important;
+    width: auto;
+    display: inline-block !important;
 }
 
 .BBFormRadioButtonContainer {
@@ -143,9 +143,9 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 .BBFormRadioList .BBFormRadioItem label {
     display: flex !important;
     flex-direction: row-reverse;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    text-align: left !important;
+    text-align: center !important;
     border: 2px solid #eaeaea !important;
     padding: 20px 25px !important;
     margin-bottom: 10px;
@@ -164,7 +164,6 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 
 .BBFormRadioList .BBFormRadioItem label .BBFormRadioAmount,
 .BBFormRadioList .BBFormRadioItem label .BBFormRadioDescriptionOther {
-    color: #1e3510;
     font-size: 24px;
     margin-bottom: 10px;
     white-space: nowrap;
