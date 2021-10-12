@@ -16,7 +16,7 @@
                     
                     if(flag_url == "" || flag_url.indexOf("") >= 0 ){
 
-                    $flag_designation_show = true;
+                    //$flag_designation_show = true;
 
                     }
                     
@@ -199,6 +199,11 @@
                      $('#bboxdonation_designation_divSection').show();
                     
                     }
+
+                    var tribute =  $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').clone();
+                     $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').remove();
+                     $('.BBFormSection.BBDFormSectionGiftInfo').before(tribute);
+                     
 
                         /* Utm parameter intialize */
 
