@@ -326,7 +326,8 @@ line-height:27px !important;
     display: none;
 }
 
-#bboxdonation_billing_fldAnonymous input[type="checkbox"],.BBDFormSectionTributeInfo input[type="checkbox"]{
+#bboxdonation_billing_fldAnonymous input[type="checkbox"],.BBDFormSectionTributeInfo input[type="checkbox"],
+#bboxdonation_billing_fldOrgGift input[type="checkbox"]{
 
 	display: inline !important;
 	margin-right: 5px;
