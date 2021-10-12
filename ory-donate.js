@@ -309,6 +309,11 @@
 
 
             }
+
+            else{
+                $(".BBDFormSectionComments").hide();
+
+            }
             
             
     
