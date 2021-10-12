@@ -204,8 +204,7 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 @media (min-width: 48em) {
 .BBFormRadioList .BBFormRadioItem label .BBFormRadioAmount,
 .BBFormRadioList .BBFormRadioItem label .BBFormRadioDescriptionOther {
-    margin-bottom: 0;
-    margin-right: 20px;
+      margin: 0 20px;
     flex-basis: 60px;
 }
 }
@@ -398,7 +397,7 @@ input:checked + .BBFormCheckboxLabel:before {
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
     white-space: nowrap;
-    margin: 0 10px 16px;
+    margin: 0 10px 16px 0;
     width: auto !important;
     font-size: 10px;
 }
