@@ -44,12 +44,12 @@ body {
     display: block;
     margin: auto;
 }
-
+/*
 #element-2 {
     top: 0;
     position: relative;
     width: 100%;
-}
+}*/
 
 #page_block_below_fold .form-container h6 {
     font-size: 30px !important;
