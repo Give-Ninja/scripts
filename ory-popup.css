@@ -1,0 +1,1319 @@
+body {
+    font-family: Lato,Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    -webkit-overflow-scrolling: touch;
+    color: #616161;
+}
+
+body.modal-open{
+    
+    overflow:hidden;
+}
+
+body.modal-open #element-114{
+    z-index:100 !important;
+}
+
+
+#formModal .pb-0{
+    padding-bottom:0 !important;
+}
+
+#formModal .btn{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #515151;
+    background: #fff;
+    background-image: -webkit-linear-gradient(top,#fff 0,#f9f9f9 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#f9f9f9 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#f9f9f9 100%);
+    background-repeat: repeat-x;
+    display: block;
+    width: 100%;
+    padding: 0;
+    line-height: 18px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+    border: 0;
+    margin: 0;
+    outline: 0;
+    text-align: center;
+    -webkit-transition: all 50ms ease-in-out;
+    -o-transition: all 50ms ease-in-out;
+    transition: all 50ms ease-in-out;
+    padding: 12px;
+    border-radius: 5px;
+}
+#formModal .btn-primary{
+    background: #4c85db;
+    color: #fff;
+}
+/**popup**/
+
+#formModal.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background: rgba(0,0,0,.7);
+    transition: opacity .2s ease-in-out;
+    transform: translateZ(99px);
+    -webkit-animation: fun-widget-backdrop .2s ease-in-out;
+    animation: fun-widget-backdrop .2s ease-in-out;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; 
+    overflow-x:hidden;
+
+}
+
+#formModal .modal-content {
+    margin: auto;
+    width: 820px;
+}
+
+
+#formModal .close {
+    position:fixed;
+    top:0;
+    right:0;
+    padding: 12px;
+    cursor:pointer;
+}
+#formModal .close svg{
+    transition: all .15s ease-in-out;
+    color: #e8e8e8;
+}
+
+/**card-left**/
+#formModal .cards {
+  display: flex;
+    margin: 65px auto 0;
+}
+
+#formModal .card {
+    margin-right: 15px;
+    background:#ffffff;
+    width: 468px;
+    border-radius: 10px;
+        position: relative;
+}
+#formModal .card:nth-child(2){
+    background-color:#f5f5f7;
+    width: 336px;
+    margin-right: 0;
+    min-height: 580px;
+        padding: 0 37px 25px;
+}
+#formModal .card .banner{
+    width:100%;
+    border-radius: 10px 10px 0 0;
+}
+#formModal .card .logo{
+    height:85px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    display: flex;
+}
+#formModal .card .logo img{
+    max-width:100px;
+}
+#formModal .cards-content{
+    padding:0 30px; 
+}
+
+#formModal .cards-content h2{
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 0;
+    margin-top: 0;
+    text-align: left;
+    color: #262626;
+}
+#formModal .cards-content p{
+    font-size: 15px;
+    line-height: 21px;
+    padding-bottom: 15px;
+    margin:0;
+    color: #262626;
+    text-align: left;
+}
+
+/**card-right**/
+#formModal  .header-title{
+    font-size: 20px;
+    line-height: 26px;
+    font-weight:600;
+    text-align:center;
+    padding: 28px 0;
+    color:#515151;
+}
+#formModal .header-title .secure-donation{
+    position:relative;
+    padding-left: 37px;
+}
+#formModal .header-title .secure-donation:after{
+    content:'';
+    position:absolute;
+    top:-7px;
+    left:0;
+    background-image:url('https://v.fastcdn.co/t/thumbnail/20210906/1630939569-58839497-150x150-secure.png');
+    background-size:cover;
+    width: 28px;
+    background-repeat: no-repeat;
+    height: 36px;
+}
+#formModal .header-title .prev-icon{
+    position: absolute;
+    left: 37px;
+    width: 15px;
+    top: 34px;
+    cursor:pointer;
+}
+#formModal .header-title svg{
+    padding-right: 10px;
+    vertical-align:middle;
+}
+
+#formModal #mongo-form .heart-flying{
+    position: absolute;
+    width: 125px !important;
+    float: right;
+    z-index: 999;
+    text-align: right;
+    opacity: 1;
+    padding: 4px 0;
+    background: transparent;
+    box-shadow: none;
+    right: 0;
+    height: 41px;
+    top:-41px;
+}
+
+#formModal #mongo-form #hearts-wrapper {
+    bottom: -28px;
+    left: 15px;
+    
+}
+
+
+#formModal #mongo-form .hearts {
+    width: 12px;
+    min-width: 16px;
+    height: 150px;
+    min-height: 200px;
+    position: absolute;
+    z-index: 999;
+}
+
+#formModal #mongo-form .heart {  
+    position: absolute;
+    height: 20%;
+    min-height: 20px;
+    width: 20%;
+    min-width: 20px;
+    opacity: 0;
+    background-image: url('https://v.fastcdn.co/u/06e81d16/58899867-0-heart.svg');  
+    background-repeat: no-repeat; 
+   background-position: bottom;   
+    animation: floating-heart 10s 1 cubic-bezier(0.5, 0.5, 0.5, 0.5);
+}
+#formModal #mongo-form .single-donation-btn ~ .heart-flying  #hearts-wrapper{
+    display:block;
+}
+#formModal #mongo-form .monthly-not-active ~ .heart-flying  #hearts-wrapper{
+    display:none;
+}
+
+@keyframes floating-heart {
+  0% {
+    opacity: 1;
+    bottom: 0%;
+    left: 0%;
+    transform: scale(0.5);
+  }
+  10% {
+    opacity: 1;
+   bottom: 0%;
+    left: 0%;
+     transform: scale(1.5);
+  }
+  20% {
+    bottom: 20%;
+   left: 0%;
+    transform:rotate(20deg) scale(1.5);
+  }
+  30% {
+    bottom: 30%;
+   left: 0%;
+    
+  }
+  40% {
+    opacity: 1;
+    bottom: 40%;
+   left: 0%;
+  }
+  48% {
+    opacity: 0;
+    bottom: 50%;
+   left: 0%;
+    transform:rotate(0deg) scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    bottom: 60%;
+  left: 0%;
+    transform:rotate(0deg) scale(1.5);
+  }
+}
+
+#formModal #bbox-root {
+    min-height: 418px;
+    position:static !important;
+}
+#formModal #mongo-form .BBFormSection {
+    display: none;
+}
+#formModal #reCAPTCHASection.BBFormSection{    
+    display:block;
+}
+body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,body.show-payment-step #formModal #mongo-form .BBFormSection.BBDFormSectionPaymentInfo{
+    
+    display:block;
+}
+#formModal #mongo-form .BBFormSection.BBFormAddressBlock{
+    margin:0  !important;
+}
+#formModal #mongo-form .BBFormSection.BBDFormSectionGiftInfo {
+    margin: 0 !important;
+    margin-top:40px !important;
+}
+#formModal #mongo-form .BBFormSectionHeading{
+    display: none !important;
+}
+#formModal #mongo-form .BBFormRadioButtonContainer {
+    width: 100%;
+    clear: both;
+}
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem {
+    width: 82px;
+    display: inline-block !important;
+}
+
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem:nth-child(3){
+    margin-right:0 !important;
+}
+
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem:nth-child(4){  
+    width:98% !important;
+}
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem label .BBFormRadioAmount,
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem label .BBFormRadioDescriptionOther {
+    font-size: 18px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis:60px
+}
+
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem label .BBFormRadioDescriptionOther{
+    
+    margin-bottom:0 !important;
+}
+
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected .BBFormRadioAmount,
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected .BBFormRadioDescriptionOther {
+    color: #ffffff;
+}
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected {
+	background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
+    background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
+    background-image: linear-gradient(to bottom,#5087d9 0,#4579c7 100%);
+    background-repeat: repeat-x;
+    box-shadow: none;    
+	padding:4px;
+	border: 0;
+}
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem label{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    padding: 0 2px;
+    margin: 0;
+    border: 0;
+    border-radius: 5px;
+    color: #515151;
+    width: 100%;
+    background-image: -webkit-linear-gradient(top,#fff 0,#f9f9f9 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#f9f9f9 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#f9f9f9 100%);
+    background-repeat: repeat-x;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+    outline: 0;
+    letter-spacing: -.03em;
+    padding: 8px !important;
+	min-width: 100%;
+    line-height: 11px !important;
+}
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem .BBFormRadioLabelGivingLevelOther{
+    text-align:left;
+    padding:8px 15px !important;
+}
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] #reCAPTCHADisclosure{    
+    margin-left:0 !important;
+}
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"]  input#bboxdonation_gift_txtOtherAmountButtons{    
+    margin-bottom:0px !important;
+    display:block !important;
+}
+
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormRadioLabelGivingLevelSelected input#bboxdonation_gift_txtOtherAmountButtons.BBFormGiftOtherAmount,
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormRadioLabelGivingLevelSelected input::-webkit-input-placeholder, .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .selectMenuUnselected{
+    
+    color: #ffffff;
+}
+
+
+
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"].BBFormWidthNarrow-Less600 .BBFormRadioLabelGivingLevelNotSelected.BBFormRadioLabelGivingNotLevelSelected span{
+    color:#515151;
+}
+
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormRadioLabelGivingLevelNotSelected{
+    background-image: -webkit-linear-gradient(top,#fff 0,#f9f9f9 100%) !important;
+    background-image: -o-linear-gradient(top,#fff 0,#f9f9f9 100%) !important;
+    background-image: linear-gradient(to bottom,#fff 0,#f9f9f9 100%) !important;
+    background-repeat: repeat-x;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 25%) !important;
+}
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] {
+    padding: 0;
+    border-radius: 0;
+}
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBFormFieldContainer {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormSubmitbutton{
+    font-size: 16px !important;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    color: #ffffff;
+    background: #5087d9;
+    background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
+    background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
+    background-image: linear-gradient(to bottom,#5087d9 0,#4579c7 100%);
+    background-repeat: repeat-x;
+    width:100%;
+    padding: 18px 19px !important;
+    line-height: 18px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 25%) !important;
+    border: 0;
+    margin: 0 0 15px;
+    outline: 0;
+    text-align: center;
+    -webkit-transition: all 50ms ease-in-out;
+    -o-transition: all 50ms ease-in-out;
+    transition: all 50ms ease-in-out;
+    border-radius:5px;
+}
+#formModal #mongo-form .BBFormFieldContainer{
+    margin:0 !important;
+}
+#formModal #mongo-form .BBFormFieldContainer .BBFormFieldLabel{
+    visibility:hidden;
+}
+#formModal #mongo-form .BBFormFieldContainerRequired {
+    position: relative;
+}
+#formModal #mongo-form .BBFormFieldContainer label{
+    position:relative;
+    padding-top: 10px;
+	    text-align: left;
+}
+
+#formModal #mongo-form  .BBFormFieldContainerPaymentMethods label{
+    
+    padding-top:0;
+}
+
+#formModal #mongo-form .BBFormAddress .BBFormFieldContainer .BBFormFieldLabel,
+#formModal #mongo-form .BBFormCreditCardDetails .BBFormFieldContainer .BBFormFieldLabel{
+    visibility:inherit;
+}
+#formModal #mongo-form .BBFormAddress .BBFormFieldContainer .error-text{
+    margin-top: 54px !important;
+}
+#formModal #mongo-form .BBFormAddress .BBFormFieldContainer:nth-child(9) .error-text{
+    margin-top: 44px  !important;
+}
+#formModal #mongo-form .BBFormErrorBlock .BBFormErrorItem{
+    padding:0 !important;
+    margin:0 !important;
+    text-align:left;
+    font-size:16px;
+}
+#formModal #mongo-form .BBFormErrorBlock ul{
+    padding:0 !important;
+    margin:10px 0 0 17px!important !important;
+}
+#formModal #mongo-form .BBFieldBillingStateZip .BBFormFieldContainer .error-text {
+    margin-top: -16px !important;
+}
+
+#formModal #mongo-form .contents .button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    opacity: 0;
+}
+.thankyou-shown .card-main-content{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+#formModal #mongo-form #bbox-msg-wrapper img {
+    display: block;
+    margin: auto;
+}
+#formModal #mongo-form #bboxdonation_recurrence_divRecurrenceInfo .BBRecurrenceFieldContainer{    
+    display:none;
+}
+
+#formModal #mongo-form .BBFormRadioLabelGivingLevelOther {
+    flex-direction: unset;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#formModal #mongo-form .BBFormRadioLabelGivingLevelOther .BBFormGiftOtherAmount {
+    display: block;
+    font-size: 16px;
+    line-height: 40px;
+    border: none;
+    border-bottom: 0;
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    white-space: nowrap;
+    max-width: 70%;
+    margin-left: 0px;
+    margin-bottom: 0;
+    float: right;
+    padding: 0;
+    height:21px;
+    min-height:21px;
+}
+#formModal #mongo-form .BBFormRadioLabelGivingLevelOther span {
+    top: 0 !important;
+    visibility: visible;
+    text-overflow: unset;
+    overflow: visible;
+    flex-basis: 60px;
+}
+#formModal #mongo-form .has-inline-error+*, 
+#formModal #mongo-form .has-inline-error>input {
+    border-color: #e91c0d!important;
+}
+
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormSortCodeTextbox{    
+    width:150px !important;
+}
+
+#formModal #mongo-form #bboxdonation_payment_txtCSC{    
+    width:150px !important;
+}
+
+#formModal #mongo-form div#bboxdonation_divThanks{
+    line-height:27px !important;
+}
+
+#formModal #mongo-form textarea {
+    resize: vertical;
+    min-height: 55px;
+    padding: 16px 15px 10px;
+}
+
+#formModal #mongo-form select {
+    padding-right: 40px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAMCAYAAAB4MH11AAAABGdBTUEAALGPC/xhBQAAAetJREFUOBGlUs9LFVEUPucO+h7owhaZkG76HxQLadubkLBcKdVKRORNttAgxwfR9BBJ/PVaSAlB9kMQf230LRUX6s62bitIFLSF4mB3TufMY5xh5hVIF4b73e985zvDOQfN7KBJgO8IwEOlnhWnnDn4j3O3L9fpeXoECBEUditCeEtA1wGogTz95U526BURs5c8kiO5WutPRFAvnuTRNGay9vdSgdCRay9eTV15PDs6cBKyf0eP+l9XHbhHH9j4QVSFgD8UGNgLgGfRgAgP3ONN03pRH+XLYdGINm4unsrAHr8VpmU3e0DLQHAtasJ/8FMZqm110tmJ8gFuteym3wQr3IG6gPNvhH0F2LZWyG8rIQSkK7CRq+5GhZKotbeeseyOKC9YuHOCjYQ5e4iXeIrOLyBgZSz/rTZd0wIIy/IOD6V5gJ/Z0JFBymc+GXopHC9GOtQx4lzxEK+AT2yLb2Dl8gTe80AU3rhQwtQeciXEOzm8VnBsROSND0+iQBDKZHMPAfUMDy8VcOVu3jgXyOgqvnE+lo2XIwMu8zR3k7Reig8/iHNL9tEw7hcnnK0LLgYuZhDj/ackVqrKJkD8mogzJ7F/mUuOkUiMEXs7679u3b43e6rdam7HDS7mosL3tamajvlx+zAmTzz/AP06xEvhrez3AAAAAElFTkSuQmCC);
+    background-size: 12px 6px;
+    background-position: center right 18px;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#formModal #mongo-form input.has-error,
+#formModal #mongo-form textarea.has-error,
+#formModal #mongo-form select.has-error {
+    border-bottom-color: #e91c0d!important;
+}
+
+#formModal #mongo-form input[type=email]:focus,
+#formModal #mongo-form input[type=tel]:focus,
+#formModal #mongo-form input[type=text]:focus,
+#formModal #mongo-form select:focus,
+#formModal #mongo-form textarea:focus {
+    box-shadow: none !important;
+}
+#formModal #mongo-form input[type="checkbox"],
+#formModal #mongo-form input[type="radio"] {
+    display: none;
+}
+#formModal #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 257px;
+    height:41px;
+}
+
+#formModal #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .BBFormCheckboxLabel:before,
+#formModal #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .BBFormCheckboxLabel:after {
+    display: none;
+}
+#formModal #mongo-form .BBFormFieldContainer .BBFormFieldRecurrenceInfo{
+    padding: 0;
+    text-align: center;
+    font-size: 13px ;
+}
+#formModal #mongo-form .BBFormFieldRecurrenceInfo select {
+    display: inline-block;
+    background: none;
+    height: auto;
+    width: auto;
+    appearance: auto;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+#formModal  .button--orange .button__inner,
+#formModal .BBFormButtonRow .BBFormSubmitbutton .button__inner {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#formModal .button--orange .button__inner:before,
+#formModal .BBFormButtonRow .BBFormSubmitbutton .button__inner:before {
+    content: '';
+    vertical-align: top;
+    position: absolute;
+    display: block;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -5px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    opacity: 0;
+    background-image: url('https://v.fastcdn.co/u/06e81d16/52368825-0-icons8-forward-30.png');
+    background-size: 16px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin-top: -2px;
+}
+
+#formModal  .button-wrapper .button:hover,
+#formModal .BBFormButtonRow .BBFormSubmitbutton:hover {
+    background-color: #4b6b7e;
+    border-color: #4b6b7e;
+    opacity: 1;
+}
+#formModal  .button-wrapper .button:hover .button__inner,
+#formModal  .BBFormButtonRow .BBFormSubmitbutton:hover .button__inner {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+}
+
+#formModal  .button-wrapper .button:hover .button__inner:before,
+#formModal  .BBFormButtonRow .BBFormSubmitbutton:hover .button__inner:before {
+    -webkit-transform: translateX(12px) translateY(-50%);
+    transform: translateX(12px) translateY(-50%);
+    opacity: 1;
+}
+
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBThreeFields .BBFormSelectList {
+    max-width: 20%;
+}
+#formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBThreeFields .BBFormTextbox {
+    max-width: calc(40% - 14px);
+}
+
+#formModal #mongo-form #bboxdonation_payment_lblCCType {
+    display: block !important;
+}
+#formModal #mongo-form .BBFormContainer{
+    padding: 0;
+}
+#formModal #mongo-form .BBFormContainer .BBFormFieldContainer .BBFormFieldContainer {
+    padding: 0;
+    width: 100%;
+}
+#formModal #mongo-form .error-text {
+    color: #e91c0d;
+    text-transform: none;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    margin-top: -16px;
+    display: none;
+    position: absolute;
+    background: #ff000033;
+    width: 100%;
+    padding: 5px 10px;
+    left: 0; 
+}
+#formModal #mongo-form #divName.BBFormFieldContainer .BBFormFieldLabel,
+#formModal #mongo-form #bboxdonation_billing_divPhone.BBFormFieldContainer .BBFormFieldLabel,
+#formModal #mongo-form #bboxdonation_billing_divEmail.BBFormFieldContainer .BBFormFieldLabel{
+    visibility:inherit;
+	text-align: left;
+}
+
+#formModal #mongo-form input[type=email], 
+#formModal #mongo-form input[type=tel], 
+#formModal #mongo-form input[type=text], 
+#formModal #mongo-form select,
+#formModal #mongo-form textarea {
+    height: 45px;
+    background-color: transparent;
+    width: 100%;
+    padding: 0 15px;
+    border: none;
+    border-bottom: 2px solid rgba(0,0,0,.05);
+    outline: none;
+    opacity: 1;
+    line-height: 1.15;
+    font-size: 16px;
+    color: #000;
+    border-radius: 0 !important;
+    max-width: 100%;
+    text-transform: capitalize;
+    margin-bottom: 15px
+}
+#formModal #mongo-form .BBFormBillingEmail{
+    margin-top:15px;
+}
+#formModal #mongo-form .BBFormFieldContainer{
+    margin:0;
+}
+#formModal #mongo-form .BBFormBillingEmail .error-text {
+    position: absolute;
+    left: 10px;
+    margin-top: 44px;
+    background: #ff000033;
+    width: 100%;
+    padding: 5px 10px;
+    left: 0;  
+    top: 40px;
+}
+#formModal #mongo-form #bboxdonation_divThanks > div:first-child {
+    display:none;
+}
+
+  
+
+#formModal #mongo-form #bboxdonation_divForm .BBFormSectionRecurrenceInfo{
+    height: 41px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+#formModal #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .BBFormCheckbox{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 126px;
+    padding: 0;
+    height: 41px;
+    
+}
+#formModal #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .single-donation-btn.monthly-not-active ~ .BBFormCheckbox:hover:after{
+    background: #f7f7f7;
+    color: #515151;
+}
+#formModal #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .single-donation-btn.monthly-not-active ~ .BBFormCheckbox:after{
+    color: #515151;
+    background: #fff;
+    background-image: -webkit-linear-gradient(top,#fff 0,#f9f9f9 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#f9f9f9 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#f9f9f9 100%);
+    background-repeat: repeat-x;
+}
+#formModal #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .BBFormCheckbox:after{
+    content: 'Monthly';
+    visibility: visible;
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #5087d9;
+    background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
+    background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
+    background-image: linear-gradient(to bottom,#5087d9 0,#4579c7 100%);
+    color: #ffffff;
+    display: block;
+    line-height: 21px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+    border: 0;
+    margin: 0;
+    outline: 0;
+    cursor:pointer;
+    text-align: center;
+    -webkit-transition: all 50ms ease-in-out;
+    -o-transition: all 50ms ease-in-out;
+    transition: all 50ms ease-in-out;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center !important;
+    width: 67px;
+	height: 18px;
+    padding:11px 20px 11px 39px;
+}
+
+
+#formModal #mongo-form .single-donation-btn:before{
+    content: '';
+    position: absolute;
+    top:10px;
+    left: 146px;
+    background-image: url(https://v.fastcdn.co/u/06e81d16/58918162-0-white-heart.svg);
+   
+    width: 24px;
+    height: 24px;
+    z-index: 99;
+    background-repeat: no-repeat;
+}
+#formModal #mongo-form .single-donation-btn.monthly-not-active:before{
+  background-image: url(https://v.fastcdn.co/u/06e81d16/58899867-0-heart.svg);
+}
+#formModal #mongo-form .single-donation-btn{
+
+    position: absolute;
+    left: 0;
+    top: 1px;
+    height: 41px;
+    width: 130px;
+}
+#formModal #mongo-form .single-donation-btn:after{  
+    content:'Give Once'; 
+    visibility: visible;
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+   color: #515151;
+    background: #fff;
+    background-image: -webkit-linear-gradient(top,#fff 0,#f9f9f9 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#f9f9f9 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#f9f9f9 100%);
+    background-repeat: repeat-x;    
+    display: block;
+    padding: 11px 10px;
+    line-height:21px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+    border: 0;
+    margin: 0;
+    outline: 0;
+    text-align: center;
+    -webkit-transition: all 50ms ease-in-out;
+    -o-transition: all 50ms ease-in-out;
+    transition: all 50ms ease-in-out;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width:110px;
+	height: 18px;
+    cursor:pointer;
+}
+#formModal #mongo-form .single-donation-btn.monthly-not-active:after{
+    background: #5087d9;
+    background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
+    background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
+    background-image: linear-gradient(to bottom,#5087d9 0,#4579c7 100%);
+    color: #ffffff;
+}
+
+#formModal #mongo-form .step-monthly-section{
+    min-height: 446px;
+    position: relative;
+}
+#formModal #mongo-form .step-monthly-section h4{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0 0 15px;
+    text-align: left;
+    color: #262626;
+}
+#formModal #mongo-form .step-monthly-section p{
+    margin: 0 0 14px;
+    font-size: 15px;
+    line-height: 21px !important;
+    color: #262626;
+    text-align: left;
+}
+#formModal #mongo-form .monthly-up-container{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+#formModal #mongo-form .button-monthly-click.button-monthly-info{
+    background: #efefef;
+    color: #515151;
+    margin: 0;
+}
+
+#formModal #mongo-form .button-monthly-click.button-monthly-first{
+    background: #ed4044;
+}
+#formModal #mongo-form .monthly-up-container:before{
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: -11px;
+    background: url('https://v.fastcdn.co/t/thumbnail/20210910/1631291970-58910682-150x150-gift.png');
+    background-repeat: no-repeat;
+    width: 79px;
+    height: 75px;
+    z-index: 111;
+    background-size: contain;
+}
+#formModal #mongo-form .button-monthly-click{
+    font-weight: 600;
+    border-radius: 5px;
+    background: #4c85db;
+    color: #fff;
+    display: block;
+    margin: 0 0 15px;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0;
+    white-space: nowrap;
+    padding: 17px;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 25%);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-tap-highlight-color: rgba(0,0,0,.1);
+    transition: background-color .15s ease-in-out;
+    font-size: 16px;
+    line-height: 21px;
+}
+#formModal #mongo-form .button-monthly-second:hover{
+    background-color: #2e71d5;
+}
+#formModal #mongo-form .button-monthly-info:hover{
+    background-color: #e2e2e2;
+    color: #515151;
+}
+
+#formModal #mongo-form .donation-highlight-text{
+    margin-bottom:15px;
+    color:#262626 ;
+    text-align: left;
+    text-align: left;
+}
+
+
+#formModal #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox{
+    position:relative;
+}
+/**thankyou page**/
+
+#formModal .social-links{
+    text-align: left;
+    display: flex;
+    justify-content: center
+
+}
+
+#formModal .social-links ul{
+    padding:0;
+    margin:0;
+}
+#formModal .social-links ul li{
+    list-style-type:none;
+    margin:25px 0;
+}
+#formModal .social-links ul li a{
+text-decoration:none;
+cursor:pointer;
+color: #616161;
+}
+
+
+#formModal .social-links ul li .icon{
+    width:30px !important;
+    margin-right:15px;
+    vertical-align: middle;
+}
+#formModal .heading{
+    text-align:center;
+    margin:15px 0;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 600;
+}
+#formModal .donation{
+    background:#009415;
+    padding:10px 0;
+    color:#ffffff;
+    text-align:center;
+    width:100%;
+}
+#formModal .donate-text{
+    margin-top:120px;
+}
+
+#formModal .circle-outer{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+}
+#formModal .circle-container{
+     width: 336px;
+    height: 222px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#formModal .circle{
+  border-radius: 50%;
+  background-color: #0fb8fb;
+  width: 10px;
+  height:10px;
+  position: absolute;
+  opacity: 0;
+  animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
+}
+#formModal .circle.one{
+    animation-delay: -5s;
+}
+#formModal .circle.two{
+    animation-delay: -4s;
+}
+#formModal .circle.three{
+    animation-delay: -3s;
+}
+#formModal .circle.four{
+    animation-delay: -2s;
+}
+#formModal .circle.five{
+    animation-delay: -1s;
+}
+#formModal .circle.six{
+    animation-delay: 0s;
+}
+#formModal .heart-flying-result{
+    position:relative;
+}
+
+#formModal .hearts-shape-wrapper {
+   bottom: -107px;
+    left: 170px;
+}
+
+#formModal .hearts1 {
+    width: 12px;
+    min-width: 16px;
+    height: 150px;
+    min-height: 200px;
+    position: absolute;
+    z-index: 10;
+}
+#formModal .hearts-shape-wrapper.hearts.one{
+    left: 132px;
+    bottom: -73px;
+}
+#formModal .hearts-shape-wrapper.hearts.two{
+    left:110px;
+}
+#formModal .hearts-shape-wrapper.hearts.three{
+    bottom: -84px;
+    left:217px;
+}
+#formModal .hearts-shape-wrapper.hearts.one .heart-shape{
+    animation-delay:-6s;
+}
+#formModal .hearts-shape-wrapper.hearts.two .heart-shape{
+    animation-delay:-3s;
+}
+#formModal .hearts-shape-wrapper.hearts.three .heart-shape{
+    animation-delay:0s;
+}
+#formModal .heart-shape {
+    background-color:#ef5350;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    opacity: 0;
+    -webkit-mask-image: url('https://v.fastcdn.co/u/06e81d16/58899867-0-heart.svg');
+    mask-image: url('https://v.fastcdn.co/u/06e81d16/58899867-0-heart.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: bottom;
+    mask-position: bottom;
+    animation: floating-heart 15s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+    animation-delay:-9s;
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(1, 1);
+    opacity: .2;
+
+  }
+  to {
+    transform: scale(25, 25);
+    opacity: 0;
+    
+  }
+}
+#formModal .button-wrapper .button {  
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius:5px;
+    background: #4c85db;
+    color: #fff;
+    display: block;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 0;
+    background-image: none;
+    white-space: nowrap;
+    padding: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 25%);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-tap-highlight-color: rgba(0,0,0,.1);
+    transition: background-color .15s ease-in-out;
+    font-size: 16px;
+    line-height: 21px;
+}
+#formModal .button-wrapper .button:hover{
+    background: #2e71d5;
+    color: #fff;
+}
+
+/**tooltip**/
+#formModal .tool-tip-list.is-collapsed .tool-tip-content{
+  display: none;
+}
+#formModal .tool-tip-wrapper{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#formModal .tool-tip-wrapper ul{
+    padding:0;
+    margin:0;
+}
+#formModal .tool-tip-wrapper ul li{
+    list-style-type:none;
+    display:inline-block;
+    margin:0 10px;
+    font-size:12px;
+    color:#ffffff;
+    cursor:pointer;
+    position:relative;
+}
+#formModal .tool-tip-wrapper ul li svg{
+    width:12px;
+    margin-left:5px;
+    height: 20px;
+    vertical-align: middle;
+}
+#formModal .tool-tip-wrapper ul li .text:hover{
+    text-decoration:underline;
+}
+#formModal .tool-tip-wrapper ul li:first-child .tool-tip-pointer{
+    left: 2px;
+}
+#formModal .tool-tip-wrapper ul li:last-child .tool-tip-text{
+    left:34px;
+}
+#formModal .tool-tip {
+    position: relative;
+    display: inline-block;
+}
+#formModal .tool-tip:hover,
+#formModal .tool-tip:focus{
+    text-decoration:underline;
+}
+#formModal .tool-tip-text {
+    left: 0;
+    width: 200px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    color: #515151;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 20px;
+    position: absolute;
+    z-index: 1;
+    bottom: 19px;
+    box-shadow: 0 2px 26px rgb(0 0 0 / 25%);
+    transition: all .2s ease-in-out;
+    font-size: 12px;
+    text-align:left;
+}
+#formModal .tool-tip-text .heading{
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top:0;
+    display: inline-block;
+    text-align: left;
+    line-height: 16px;
+}
+#formModal .tool-tip-text .content{
+    margin: 0 0 10px;
+    display:inline-block;
+        text-align: left;
+    line-height: 16px;
+}
+#formModal .tool-tip-text .content:last-child{
+    margin-bottom:0;
+}
+#formModal .tool-tip-pointer-floating {
+    position: absolute;
+    height: 6px;
+    overflow: hidden;
+    width: 25px;
+    left: 90%;
+    bottom: 18px;
+    z-index: 5;
+    transition: all .2s ease-in-out;    
+}
+
+#formModal .tool-tip-pointer {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 9px;
+    bottom: -5px;
+    -webkit-transform: rotate( -35deg) skew( 20deg);
+    -ms-transform: rotate(-35deg) skew(20deg);
+    -o-transform: rotate(-35deg) skew(20deg);
+    transform: rotate( -35deg) skew( 20deg);
+    background: #fff;
+    bottom: 0;
+    margin-bottom: 1px;
+}
+#formModal .tool-tip-heading:hover + #formModal .tool-tip-content{
+    display:block;
+}
+
+/**Media Queries**/
+@media(max-width:849px){
+    
+    #formModal #mongo-form #bboxdonation_divThanks > div:first-child {
+        display:block;
+    }
+    #formModal .modal-content{
+        width:100%;
+    }
+    #formModal .card:nth-child(1){
+        display:none;
+    }
+    #formModal .card:nth-child(2){
+        margin:0 auto;
+    }
+    #formModal .tool-tip-wrapper ul li{
+        display:block;
+    }
+    #formModal .tool-tip-wrapper {        
+        width: 336px;
+        margin: 20px auto 0;
+    }
+    #formModal .tool-tip-pointer-floating {
+        left: 78%;
+    }
+    #formModal .tool-tip-text {
+        left: 66px;
+    }
+    #formModal .tool-tip-wrapper ul li:last-child .tool-tip-text{
+        left: 86px;
+    }
+    #formModal .tool-tip-wrapper ul li:nth-child(1) .tool-tip-content .tool-tip-pointer-floating {
+        left: 68%;
+    }
+    #formModal .tool-tip-wrapper ul li:nth-child(2) .tool-tip-content .tool-tip-pointer-floating {
+        left: 73%;
+    }
+}
+
+@media (max-width: 767px) {
+    #formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBFormFieldContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+    #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox {
+        justify-content: center;
+        align-items: center;
+    }
+    #formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBFormFieldRecurrenceInfo {
+        padding-left: 0;
+        text-align: center;
+    }
+}
