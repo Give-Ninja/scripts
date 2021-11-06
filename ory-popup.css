@@ -1,18 +1,6 @@
-body {
-    font-family: Lato,Arial,Helvetica,sans-serif;
-    font-size: 16px;
-    line-height: 1.5em;
-    -webkit-overflow-scrolling: touch;
-    color: #616161;
-}
-
 body.modal-open{
     
     overflow:hidden;
-}
-
-body.modal-open #element-114{
-    z-index:100 !important;
 }
 
 
