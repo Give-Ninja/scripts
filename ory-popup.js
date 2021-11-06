@@ -11,10 +11,10 @@ $(document).ready(function() {
     
     $(".donate-now").on('click', function() {
 
-    if($(this).attr("href") == "#formModal"){
+    
      modal.style.display = "flex";
      $('body').addClass('modal-open');
-    }
+    
 });
 
 
