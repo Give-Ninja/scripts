@@ -9,7 +9,7 @@ $(document).ready(function() {
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0]; 
     
-    $("a").on('click', function() {
+    $(".donate-now").on('click', function() {
 
     if($(this).attr("href") == "#formModal"){
      modal.style.display = "flex";
