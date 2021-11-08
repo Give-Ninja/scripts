@@ -4,6 +4,11 @@ body.modal-open{
 }
 
 
+#formModal :before,#formModal :after{
+    
+    box-sizing:unset !important;
+}
+
 #formModal .pb-0{
     padding-bottom:0 !important;
 }
@@ -332,13 +337,13 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     color: #ffffff;
 }
 #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected {
-	background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
+    background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
     background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
     background-image: linear-gradient(to bottom,#5087d9 0,#4579c7 100%);
     background-repeat: repeat-x;
     box-shadow: none;    
-	padding:4px;
-	border: 0;
+    padding:4px;
+    border: 0;
 }
 #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label{
     overflow: hidden;
@@ -364,7 +369,7 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     outline: 0;
     letter-spacing: -.03em;
     padding: 8px !important;
-	min-width: 100%;
+    min-width: 100%;
     line-height: 11px !important;
 }
 #formModal #mongo-form .BBFormRadioList .BBFormRadioItem .BBFormRadioLabelGivingLevelOther{
@@ -442,7 +447,7 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
 #formModal #mongo-form .BBFormFieldContainer label{
     position:relative;
     padding-top: 10px;
-	    text-align: left;
+        text-align: left;
 }
 
 #formModal #mongo-form  .BBFormFieldContainerPaymentMethods label{
@@ -689,7 +694,7 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
 #formModal #mongo-form #bboxdonation_billing_divPhone.BBFormFieldContainer .BBFormFieldLabel,
 #formModal #mongo-form #bboxdonation_billing_divEmail.BBFormFieldContainer .BBFormFieldLabel{
     visibility:inherit;
-	text-align: left;
+    text-align: left;
 }
 
 #formModal #mongo-form input[type=email], 
@@ -791,7 +796,7 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     border-bottom-right-radius: 5px;
     text-align: center !important;
     width: 67px;
-	height: 18px;
+    height: 18px;
     padding:11px 20px 11px 39px;
 }
 
@@ -849,7 +854,7 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     width:110px;
-	height: 18px;
+    height: 18px;
     cursor:pointer;
 }
 #formModal #mongo-form .single-donation-btn.monthly-not-active:after{
