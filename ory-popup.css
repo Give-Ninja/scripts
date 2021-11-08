@@ -376,43 +376,43 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     text-align:left;
     padding:8px 15px !important;
 }
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] #reCAPTCHADisclosure{    
+#formModal #mongo-form .BBFormContainer #reCAPTCHADisclosure{    
     margin-left:0 !important;
 }
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"]  input#bboxdonation_gift_txtOtherAmountButtons{    
+#formModal #mongo-form .BBFormContainer  input#bboxdonation_gift_txtOtherAmountButtons{    
     margin-bottom:0px !important;
     display:block !important;
 }
 
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormRadioLabelGivingLevelSelected input#bboxdonation_gift_txtOtherAmountButtons.BBFormGiftOtherAmount,
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormRadioLabelGivingLevelSelected input::-webkit-input-placeholder, .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .selectMenuUnselected{
+#formModal #mongo-form .BBFormContainer.BBFormRadioLabelGivingLevelSelected input#bboxdonation_gift_txtOtherAmountButtons.BBFormGiftOtherAmount,
+#formModal #mongo-form .BBFormContainer .BBFormRadioLabelGivingLevelSelected input::-webkit-input-placeholder, .BBFormContainer .selectMenuUnselected{
     
     color: #ffffff;
 }
 
 
 
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"].BBFormWidthNarrow-Less600 .BBFormRadioLabelGivingLevelNotSelected.BBFormRadioLabelGivingNotLevelSelected span{
+#formModal #mongo-form .BBFormContainer.BBFormWidthNarrow-Less600 .BBFormRadioLabelGivingLevelNotSelected.BBFormRadioLabelGivingNotLevelSelected span{
     color:#515151;
 }
 
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormRadioLabelGivingLevelNotSelected{
+#formModal #mongo-form .BBFormContainer .BBFormRadioLabelGivingLevelNotSelected{
     background-image: -webkit-linear-gradient(top,#fff 0,#f9f9f9 100%) !important;
     background-image: -o-linear-gradient(top,#fff 0,#f9f9f9 100%) !important;
     background-image: linear-gradient(to bottom,#fff 0,#f9f9f9 100%) !important;
     background-repeat: repeat-x;
     box-shadow: 0 1px 3px rgb(0 0 0 / 25%) !important;
 }
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] {
+#formModal #mongo-form .BBFormContainer {
     padding: 0;
     border-radius: 0;
 }
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBFormFieldContainer {
+#formModal #mongo-form .BBFormContainer .BBFormFieldContainer {
     margin-left: 0;
     margin-right: 0;
 }
 
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormSubmitbutton{
+#formModal #mongo-form .BBFormContainer .BBFormSubmitbutton{
     font-size: 16px !important;
     text-transform: uppercase;
     font-weight: 600 !important;
@@ -537,7 +537,7 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     border-color: #e91c0d!important;
 }
 
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormSortCodeTextbox{    
+#formModal #mongo-form .BBFormContainer .BBFormSortCodeTextbox{    
     width:150px !important;
 }
 
@@ -658,10 +658,10 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     opacity: 1;
 }
 
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBThreeFields .BBFormSelectList {
+#formModal #mongo-form .BBFormContainer .BBThreeFields .BBFormSelectList {
     max-width: 20%;
 }
-#formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBThreeFields .BBFormTextbox {
+#formModal #mongo-form .BBFormContainer .BBThreeFields .BBFormTextbox {
     max-width: calc(40% - 14px);
 }
 
@@ -1293,7 +1293,7 @@ color: #616161;
 }
 
 @media (max-width: 767px) {
-    #formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBFormFieldContainer {
+    #formModal #mongo-form .BBFormContainer .BBFormFieldContainer {
         margin-left: 0;
         margin-right: 0;
     }
@@ -1305,7 +1305,7 @@ color: #616161;
         justify-content: center;
         align-items: center;
     }
-    #formModal #mongo-form .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBFormFieldRecurrenceInfo {
+    #formModal #mongo-form .BBFormContainer .BBFormFieldRecurrenceInfo {
         padding-left: 0;
         text-align: center;
     }
