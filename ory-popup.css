@@ -62,7 +62,7 @@ body.modal-open{
 
 }
 
-#formModal .modal-content {
+#formModal .popup-modal-content {
     margin: auto;
     width: 820px;
 }
@@ -1254,7 +1254,7 @@ color: #616161;
     #formModal #mongo-form #bboxdonation_divThanks > div:first-child {
         display:block;
     }
-    #formModal .modal-content{
+    #formModal .popup-modal-content{
         width:100%;
     }
     #formModal .card:nth-child(1){
