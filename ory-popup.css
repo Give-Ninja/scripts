@@ -609,7 +609,7 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     padding-right: 10px;
 }
 
-#formModal  .button--orange .button__inner,
+#formModal  .button--orange.button__inner,
 #formModal .BBFormButtonRow .BBFormSubmitbutton .button__inner {
     position: relative;
     display: inline-block;
@@ -617,8 +617,8 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     transition: all .3s ease;
 }
 
-#formModal .button--orange .button__inner:before,
-#formModal .BBFormButtonRow .BBFormSubmitbutton .button__inner:before {
+#formModal .button--orange.button__inner .button--inline:before,
+#formModal .BBFormButtonRow .BBFormSubmitbutton .button__inner .button--inline:before {
     content: '';
     vertical-align: top;
     position: absolute;
