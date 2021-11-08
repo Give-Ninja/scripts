@@ -91,25 +91,25 @@ body.modal-open{
     margin: 65px auto 0;
 }
 
-#formModal .card {
+#formModal .form-card {
     margin-right: 15px;
     background:#ffffff;
     width: 468px;
     border-radius: 10px;
         position: relative;
 }
-#formModal .card:nth-child(2){
+#formModal .form-card:nth-child(2){
     background-color:#f5f5f7;
     width: 336px;
     margin-right: 0;
     min-height: 580px;
         padding: 0 37px 25px;
 }
-#formModal .card .banner{
+#formModal .form-card .banner{
     width:100%;
     border-radius: 10px 10px 0 0;
 }
-#formModal .card .logo{
+#formModal .form-card .logo{
     height:85px;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -123,7 +123,7 @@ body.modal-open{
     justify-content: space-between;
     display: flex;
 }
-#formModal .card .logo img{
+#formModal .form-card .logo img{
     max-width:100px;
 }
 #formModal .cards-content{
@@ -1262,10 +1262,10 @@ color: #616161;
     #formModal .popup-modal-content{
         width:100%;
     }
-    #formModal .card:nth-child(1){
+    #formModal .form-card:nth-child(1){
         display:none;
     }
-    #formModal .card:nth-child(2){
+    #formModal .form-card:nth-child(2){
         margin:0 auto;
     }
     #formModal .tool-tip-wrapper ul li{
