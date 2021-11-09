@@ -348,9 +348,7 @@
         color: #ffffff;
     }
     #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected {
-        background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
-        background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
-        background-image: linear-gradient(to bottom,#5087d9 0,#4579c7 100%);
+        background:#FA522C;
         background-repeat: repeat-x;
         box-shadow: none;    
         padding:4px;
@@ -428,10 +426,7 @@
         text-transform: uppercase;
         font-weight: 600 !important;
         color: #ffffff;
-        background: #5087d9;
-        background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
-        background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
-        background-image: linear-gradient(to bottom,#5087d9 0,#4579c7 100%);
+        background: #FA522C;
         background-repeat: repeat-x;
         width:100%;
         padding: 18px 19px !important;
@@ -789,10 +784,7 @@
         font-size: 14px;
         text-transform: uppercase;
         font-weight: 600;
-        background: #5087d9;
-        background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
-        background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
-        background-image: linear-gradient(to bottom,#5087d9 0,#4579c7 100%);
+        background: #FA522C;
         color: #ffffff;
         display: block;
         line-height: 21px;
@@ -871,10 +863,7 @@
         cursor:pointer;
     }
     #formModal #mongo-form .single-donation-btn.monthly-not-active:after{
-        background: #5087d9;
-        background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
-        background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
-        background-image: linear-gradient(to bottom,#5087d9 0,#4579c7 100%);
+        background: #FA522C;
         color: #ffffff;
     }
 
