@@ -39,7 +39,7 @@
         border-radius: 5px;
     }
     #formModal .btn-primary{
-        background: #4c85db;
+        background: #FA522C;
         color: #fff;
     }
     /**popup**/
@@ -1114,7 +1114,7 @@
         text-transform: uppercase;
         font-weight: 600;
         border-radius:5px;
-        background: #4c85db;
+        background: #FA522C;
         color: #fff;
         display: block;
         margin: 0;
