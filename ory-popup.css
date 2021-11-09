@@ -89,6 +89,12 @@
     margin: 0 auto;
     }
 
+    #formModal #bboxdonation_billing_fldOrgGift{
+
+    display:none
+
+    }
+
     /**card-left**/
     #formModal .cards {
       display: flex;
@@ -389,7 +395,7 @@
         display:block !important;
     }
 
-    #formModal #mongo-form .BBFormContainer.BBFormRadioLabelGivingLevelSelected input#bboxdonation_gift_txtOtherAmountButtons.BBFormGiftOtherAmount,
+    #formModal #mongo-form .BBFormContainer .BBFormRadioLabelGivingLevelSelected input#bboxdonation_gift_txtOtherAmountButtons.BBFormGiftOtherAmount,
     #formModal #mongo-form .BBFormContainer .BBFormRadioLabelGivingLevelSelected input::-webkit-input-placeholder, .BBFormContainer .selectMenuUnselected{
         
         color: #ffffff;
