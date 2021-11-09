@@ -3,6 +3,10 @@
         overflow:hidden;
     }
 
+    #formModal ::focus{
+
+    outline:0;
+    }
 
     #formModal :before,#formModal :after{
         
@@ -339,7 +343,7 @@
     }
 
     #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label .BBFormRadioDescriptionOther{
-        
+        padding-top:3px;
         margin-bottom:0 !important;
     }
 
