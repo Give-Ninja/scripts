@@ -3,7 +3,7 @@
         overflow:hidden;
     }
 
-    #formModal ::focus{
+    #formModal :focus{
 
     outline:0;
     }
