@@ -189,7 +189,7 @@ function elementLoadedMain(el, cb) {
                 $('.single-donation-btn').removeClass('monthly-not-active');
                 
 
-                $('#bboxdonation_gift_rdGivingLevel4').prop("checked", true);
+                $('#bboxdonation_gift_rdGivingLevel5').prop("checked", true);
                 $('#bboxdonation_gift_txtOtherAmountButtons').val(monthly_value);
 
                
@@ -241,7 +241,7 @@ function elementLoadedMain(el, cb) {
                         $revenue = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
                  
 
-                        if($pSku == 'rdGivingLevel4') {
+                        if($pSku == 'rdGivingLevel5') {
                             $pSku = $('#bboxdonation_gift_txtOtherAmountButtons').val();
                            
                         }
@@ -697,12 +697,12 @@ function elementLoadedMain(el, cb) {
 
             function setOtherValueAmount(){
 
-             if($pSku != 'rdGivingLevel4') {
+             if($pSku != 'rdGivingLevel5') {
 
               if(donateParams.has('amount') || donateParams.has('donate') || $pCategory == "Single Donation" ){
                         $pSku = $pSku;
 
-                        $('#bboxdonation_gift_rdGivingLevel4').prop("checked", true);
+                        $('#bboxdonation_gift_rdGivingLevel5').prop("checked", true);
                     $('#bboxdonation_gift_txtOtherAmountButtons').val($pSku);
                     $('.BBFormRadioLabelGivingLevel').removeClass('BBFormRadioLabelGivingLevelSelected');
                  $('.BBFormRadioLabelGivingLevel').addClass('BBFormRadioLabelGivingNotLevelSelected');
