@@ -213,7 +213,7 @@ function elementLoadedMain(el, cb) {
                 }
 
 
-                $(".contents .button-wrapper .button--orange").trigger("click");  
+                $(".button-wrapper .button--orange").trigger("click");  
 
         
             });
@@ -223,7 +223,7 @@ function elementLoadedMain(el, cb) {
 
             
             
-            $('.contents .button-wrapper .button--orange').on('click', function(){
+            $('.button-wrapper .button--orange').on('click', function(){
                 
 
 
@@ -265,11 +265,11 @@ function elementLoadedMain(el, cb) {
                 
                 //console.log(current.index());
                 
-                if( $('.contents .button-wrapper .button--orange').hasClass('step-one') ) {
+                if( $('.button-wrapper .button--orange').hasClass('step-one') ) {
                     
 
                         $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo').hide();
-                         $('.contents .button-wrapper .button--orange').removeClass('step-one');
+                         $('.button-wrapper .button--orange').removeClass('step-one');
                           $('#bboxdonation_divForm  .button-monthly-second').show();
                          $('.prev-icon').show();
 
@@ -279,11 +279,11 @@ function elementLoadedMain(el, cb) {
                         if($pCategory == "Single Donation" && pSku_withoutdollar < 201){
                       
                        $('.step-monthly-section .single-payment-info').html($pSku);
-                        $('.contents .button-wrapper .button--orange').addClass('step-monthly');
+                        $('.button-wrapper .button--orange').addClass('step-monthly');
                         $('#bboxdonation_divForm .step-monthly-section').show();
                          $('.prev-icon').addClass("step-monthly-prev");
                          $('.prev-icon').addClass("single-donation-prev");
-                         $('.contents .button-wrapper .button--orange').hide();
+                         $('.button-wrapper .button--orange').hide();
 
                          if(pSku_withoutdollar >= 1 && pSku_withoutdollar <= 25){
                         
@@ -331,7 +331,7 @@ function elementLoadedMain(el, cb) {
 
                         }
                         else{
-                         $('.contents .button-wrapper .button--orange').addClass('step-address-one');
+                         $('.button-wrapper .button--orange').addClass('step-address-one');
                         $('.BBDFormSectionBillingInfo').show();
                          $('.BBDFormSectionBillingInfo .BBFormAddress').hide();
 
@@ -341,20 +341,20 @@ function elementLoadedMain(el, cb) {
                         }
 
                 }
-                else if($('.contents .button-wrapper .button--orange').hasClass('step-monthly')) {
+                else if($('.button-wrapper .button--orange').hasClass('step-monthly')) {
 
                 $('#bboxdonation_divForm .step-monthly-section').hide();
                 $('.BBDFormSectionBillingInfo').show();
                  $('.BBDFormSectionBillingInfo .BBFormAddress').hide();
 
-                 $('.contents .button-wrapper .button--orange').removeClass('step-monthly');
+                 $('.button-wrapper .button--orange').removeClass('step-monthly');
                  $('.prev-icon').removeClass('step-monthly-prev');
-                $('.contents .button-wrapper .button--orange').addClass('step-address-one');
+                $('.button-wrapper .button--orange').addClass('step-address-one');
                 $('.prev-icon').addClass('step-address-one-prev');
-                $('.contents .button-wrapper .button--orange').show();
+                $('.button-wrapper .button--orange').show();
                 }
 
-                else if( $('.contents .button-wrapper .button--orange').hasClass('step-address-one') ) {
+                else if( $('.button-wrapper .button--orange').hasClass('step-address-one') ) {
 
                 
                     var n = [],
@@ -387,8 +387,8 @@ function elementLoadedMain(el, cb) {
                          $('.BBDFormSectionBillingInfo .BBFormAddress').show();
 
 
-                        $('.contents .button-wrapper .button--orange').removeClass('step-address-one');
-                        $('.contents .button-wrapper .button--orange').addClass('step-address-two');
+                        $('.button-wrapper .button--orange').removeClass('step-address-one');
+                        $('.button-wrapper .button--orange').addClass('step-address-two');
                          $('.prev-icon').removeClass('step-address-one-prev');
                         $('.prev-icon').addClass('step-address-two-prev');
                        
@@ -404,7 +404,7 @@ function elementLoadedMain(el, cb) {
                     }
                 }
 
-                 else if( $('.contents .button-wrapper .button--orange').hasClass('step-address-two') ) {
+                 else if( $('.button-wrapper .button--orange').hasClass('step-address-two') ) {
 
                     $address = $('#bboxdonation_billing_billingAddress_txtAddress'),
                         $city = $('#bboxdonation_billing_billingAddress_txtAUCity'),
@@ -435,13 +435,13 @@ function elementLoadedMain(el, cb) {
 
                         setOtherValueAmount();
                         $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo').hide();
-                        $('.contents .button-wrapper .button--orange').removeClass('step-address-two');
-                        $('.contents .button-wrapper .button--orange').addClass('step-payment');
+                        $('.button-wrapper .button--orange').removeClass('step-address-two');
+                        $('.button-wrapper .button--orange').addClass('step-payment');
                          $('.prev-icon').removeClass('step-address-two-prev');
                         $('.prev-icon').addClass('step-payment-prev');
                         $('.BBFormButtonRow,.BBDFormSectionPaymentInfo').show();
                         $('body').addClass('show-payment-step');
-                        $('.contents .button-wrapper .button--orange').hide();
+                        $('.button-wrapper .button--orange').hide();
                         
                         if( $('.BBFormErrorBlock').find('.BBFormErrorItem').length > 0 ) {
                             $('.BBFormErrorBlock').show();
@@ -481,13 +481,13 @@ function elementLoadedMain(el, cb) {
 
 
                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo').show();
-                         $('.contents .button-wrapper .button--orange').addClass('step-one');
-                         $('.contents .button-wrapper .button--orange').removeClass('step-monthly');
+                         $('.button-wrapper .button--orange').addClass('step-one');
+                         $('.button-wrapper .button--orange').removeClass('step-monthly');
                          $('.button-monthly-info').removeClass('single-to-monthly');
                   $('#bboxdonation_divForm .step-monthly-section').hide();
                          $('.prev-icon').removeClass("step-monthly-prev"); 
                           $('.prev-icon').hide();
-                            $('.contents .button-wrapper .button--orange').show();
+                            $('.button-wrapper .button--orange').show();
 
                 }
 
@@ -497,22 +497,22 @@ function elementLoadedMain(el, cb) {
 
                       $('.prev-icon').removeClass('step-address-one-prev');
                         $('.BBDFormSectionBillingInfo').hide();
-                         $('.contents .button-wrapper .button--orange').removeClass('step-address-one');
+                         $('.button-wrapper .button--orange').removeClass('step-address-one');
 
                       if($(this).hasClass('single-donation-prev')){
 
                        $('#bboxdonation_divForm .step-monthly-section').show();
-                        $('.contents .button-wrapper .button--orange').addClass('step-monthly');
+                        $('.button-wrapper .button--orange').addClass('step-monthly');
                        $('.prev-icon').addClass('step-monthly-prev');
 
-                      $('.contents .button-wrapper .button--orange').hide();
+                      $('.button-wrapper .button--orange').hide();
 
                       }
 
                       else {
 
                        $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo').show();
-                         $('.contents .button-wrapper .button--orange').addClass('step-one');
+                         $('.button-wrapper .button--orange').addClass('step-one');
                           $('.prev-icon').hide();
                       
 
@@ -532,8 +532,8 @@ function elementLoadedMain(el, cb) {
                         $('.prev-icon').addClass('step-address-one-prev');
                           $('.BBDFormSectionBillingInfo #fldIndivInfo,.BBDFormSectionBillingInfo #bboxdonation_billing_divEmail,.BBDFormSectionBillingInfo #bboxdonation_billing_divPhone').show();
                            $('.BBDFormSectionBillingInfo .BBFormAddress').hide();
-                         $('.contents .button-wrapper .button--orange').removeClass('step-address-two');
-                          $('.contents .button-wrapper .button--orange').addClass('step-address-one');
+                         $('.button-wrapper .button--orange').removeClass('step-address-two');
+                          $('.button-wrapper .button--orange').addClass('step-address-one');
 
                           if(!($('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo').hasClass('payment-step-reloaded'))){
 
@@ -552,12 +552,12 @@ function elementLoadedMain(el, cb) {
                          $('.BBDFormSectionBillingInfo').show();
                          $('.BBDFormSectionBillingInfo .BBFormAddress').show();
                            $('.BBDFormSectionBillingInfo #fldIndivInfo,.BBDFormSectionBillingInfo #bboxdonation_billing_divEmail,.BBDFormSectionBillingInfo #bboxdonation_billing_divPhone').hide();
-                        $('.contents .button-wrapper .button--orange').addClass('step-address-two');
-                        $('.contents .button-wrapper .button--orange').removeClass('step-payment');
+                        $('.button-wrapper .button--orange').addClass('step-address-two');
+                        $('.button-wrapper .button--orange').removeClass('step-payment');
                         $(this).addClass('step-address-two-prev');
                         $(this).removeClass('step-payment-prev');
                         $('.BBFormButtonRow,.BBDFormSectionPaymentInfo').hide();
-                        $('.contents .button-wrapper .button--orange').show();
+                        $('.button-wrapper .button--orange').show();
                         $('body').removeClass('show-payment-step');
                        
                         
@@ -725,7 +725,7 @@ function elementLoadedMain(el, cb) {
 
                   $('.BBDFormSectionBillingInfo fieldset,.BBDFormSectionPaymentInfo fieldset').before('<p class="donation-highlight-text"><p>');
 
-                  $('.donate-form__steps,.contents .button-wrapper').css({'opacity':1});
+                  $('.donate-form__steps,.button-wrapper').css({'opacity':1});
                       
                         $('.BBFormRadioButtonContainer .BBFormRadioDescription').remove();
 
