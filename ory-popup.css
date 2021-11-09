@@ -306,16 +306,16 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     clear: both;
 }
 #formModal #mongo-form .BBFormRadioList .BBFormRadioItem {
-    width: 82px;
+    width: 125px;
     display: inline-block !important;
 }
 
-#formModal #mongo-form .BBFormRadioList .BBFormRadioItem:nth-child(3){
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem:last-child{
     margin-right:0 !important;
 }
 
-#formModal #mongo-form .BBFormRadioList .BBFormRadioItem:nth-child(4){  
-    width:98% !important;
+#formModal #mongo-form .BBFormRadioList .BBFormRadioItem:last-child{  
+    width:100% !important;
 }
 #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label .BBFormRadioAmount,
 #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label .BBFormRadioDescriptionOther {
@@ -645,14 +645,14 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     border-color: #4b6b7e;
     opacity: 1;
 }
-#formModal  .button-wrapper .button:hover .button__inner,
-#formModal  .BBFormButtonRow .BBFormSubmitbutton:hover .button__inner {
+#formModal  .button-wrapper.button__inner .button:hover ,
+#formModal  .BBFormButtonRow.button__inner .BBFormSubmitbutton:hover{
     -webkit-transform: translateX(-6px);
     transform: translateX(-6px);
 }
 
-#formModal  .button-wrapper .button:hover .button__inner:before,
-#formModal  .BBFormButtonRow .BBFormSubmitbutton:hover .button__inner:before {
+#formModal  .button-wrapper.button__inner .button:hover:before,
+#formModal  .BBFormButtonRow.button__inner .BBFormSubmitbutton:hover:before {
     -webkit-transform: translateX(12px) translateY(-50%);
     transform: translateX(12px) translateY(-50%);
     opacity: 1;
