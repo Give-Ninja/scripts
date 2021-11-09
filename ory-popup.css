@@ -484,7 +484,7 @@
         margin-top: -16px !important;
     }
 
-    #formModal #mongo-form .contents .button-wrapper {
+    #formModal #mongo-form .button-wrapper {
         display: flex;
         justify-content: flex-end;
         margin-top: 25px;
@@ -631,7 +631,7 @@
         top: 50%;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
-        right: -5px;
+        right: 80px;
         -webkit-transition: all .3s ease;
         transition: all .3s ease;
         opacity: 0;
@@ -663,12 +663,14 @@
         opacity: 1;
     }
 
+    /*
     #formModal #mongo-form .BBFormContainer .BBThreeFields .BBFormSelectList {
         max-width: 20%;
     }
+
     #formModal #mongo-form .BBFormContainer .BBThreeFields .BBFormTextbox {
         max-width: calc(40% - 14px);
-    }
+    }*/
 
     #formModal #mongo-form #bboxdonation_payment_lblCCType {
         display: block !important;
@@ -1140,7 +1142,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-tap-highlight-color: rgba(0,0,0,.1);
-        transition: background-color .15s ease-in-out;
+        transition: all .35s ease-in-out;
         font-size: 16px;
         line-height: 21px;
     }
