@@ -16,10 +16,10 @@ $(document).ready(function() {
 });
 
 
-    $("#formModal .close").onclick = function() {
+     $(document).on("click", '#formModal .close', function(e) {
       modal.style.display = "none";
       $('body').removeClass('modal-open');
-    }
+    });
     window.onclick = function(event) {
       if (event.target == modal) {
         modal.style.display = "none";
