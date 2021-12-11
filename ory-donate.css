@@ -465,7 +465,7 @@
     }
 
     .form-container .go-back {
-        
+        cursor:pointer;
         display:none;
     }
 
