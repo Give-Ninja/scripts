@@ -386,10 +386,6 @@ input:checked + .BBFormCheckboxLabel:before {
     text-align: left !important;
 }
 
-#mongo-form label#bboxdonation_recurrence_lblRecurringGift:after{
-    
-    content:"Monthly Gift"
-}
 
 #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox {
     display: flex;
@@ -466,6 +462,11 @@ input:checked + .BBFormCheckboxLabel:before {
     cursor: pointer;
     outline: none;
     box-shadow: none;
+}
+
+#mongo-form .go-back img.prev-icon{
+    
+    display:inline-block;
 }
 
 .button--orange .button__inner,
