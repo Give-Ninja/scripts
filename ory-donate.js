@@ -14,7 +14,9 @@
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
 
-                    $("#bboxdonation_recurrence_lblRecurringGift").val("Monthly Gift");
+                    console.log("hi");
+
+                    $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Gift");
                     
                     if(flag_url == "" || flag_url.indexOf("") >= 0 ){
 
