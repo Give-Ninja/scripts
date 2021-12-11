@@ -484,7 +484,7 @@
         
         $('.donate-form__step,.form-container .go-back .go-back-text').on('click', function(){
             
-            var current = $('.donate-form__steps').find('.donate-form__step--current'),
+            var current = $('.donate-form__steps').find('.donate-form__step--current'),prev;
                
             if($(this).hasClass("go-back-text")){
 
