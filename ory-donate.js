@@ -82,7 +82,7 @@
                    
                     }
 
-                   
+
 
                       if(donateParams.has('title')){
 
@@ -208,8 +208,7 @@
                      $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').remove();
                      $('.BBFormSection.BBDFormSectionGiftInfo').before(tribute);
                      
-
-                        /* Utm parameter intialize */
+                       /* Utm parameter intialize */
 
                          if(donateParams.has('type')){
 
@@ -221,6 +220,7 @@
                    }
                    
                     }
+                      
 
                          }
 
@@ -383,6 +383,7 @@
             if( current.index() == 0 ) {
                 $('.donate-form__step').removeClass('donate-form__step--current');
                 $('.donate-form__steps').find('.donate-form__step:eq(1)').addClass('donate-form__step--current');
+                $('.form-container .go-back').show();
                 
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
                 $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
@@ -481,7 +482,7 @@
         
         
         
-        $('.donate-form__step').on('click', function(){
+        $('.donate-form__step,.form-container .go-back').on('click', function(){
             
             var current = $('.donate-form__steps').find('.donate-form__step--current'),
                 prev = $(this);
@@ -492,6 +493,8 @@
                 $('body').removeClass('show-payment-step');
             
                 if( prev.index() == 0 ) {
+
+                $('.form-container .go-back').hide();
                     $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo').show();
                     $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
                        
