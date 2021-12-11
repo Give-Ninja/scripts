@@ -464,6 +464,11 @@ input:checked + .BBFormCheckboxLabel:before {
     box-shadow: none;
 }
 
+#mongo-form .go-back {
+    
+    display:none;
+}
+
 #mongo-form .go-back img.prev-icon{
     
     display:inline-block;
