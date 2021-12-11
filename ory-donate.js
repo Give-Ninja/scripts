@@ -14,7 +14,7 @@
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
 
-                    console.log("hii");
+                    console.log("h");
 
                     $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Gift");
                     
@@ -482,7 +482,7 @@
         
         
         
-        $('.donate-form__step,.form-container .go-back').on('click', function(){
+        $('.donate-form__step,.form-container .go-back .go-back-text').on('click', function(){
             
             var current = $('.donate-form__steps').find('.donate-form__step--current'),
                 prev = $(this);
