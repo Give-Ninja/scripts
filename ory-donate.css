@@ -57,6 +57,12 @@
     display:block;
 }
 
+
+#mongo-form .BBFormContainer[data-bbox-part-id="8a42bbd9-743a-4f5f-973d-581d4e3817ca"] #reCAPTCHADisclosure{
+    margin-left:0;
+}
+
+
 .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] #reCAPTCHADisclosure{
     
     margin-left:0 !important;
@@ -378,6 +384,11 @@ input:checked + .BBFormCheckboxLabel:before {
     width: 100% !important;
     float: none !important;
     text-align: left !important;
+}
+
+#mongo-form label#bboxdonation_recurrence_lblRecurringGift:after{
+    
+    content:"Monthly Gift"
 }
 
 #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox {
