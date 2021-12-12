@@ -244,6 +244,7 @@
   height: 40px;
   border-radius: 50%;
   margin-bottom: 6px;
+  background:rgba(199,204,196,.25);
 }
 
 #formModal .form-container .stepper-item.active {
