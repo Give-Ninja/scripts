@@ -212,6 +212,7 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
+}
 
 #formModal .form-container .stepper-item::before {
   position: absolute;
@@ -270,7 +271,7 @@
 #formModal .form-container .stepper-item:last-child::after {
   content: none;
 }
-    
+
 
     #formModal #mongo-form .heart-flying{
         position: absolute;
