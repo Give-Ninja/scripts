@@ -339,8 +339,8 @@ function elementLoadedMain(el, cb) {
                          $('#formModal .prev-icon').addClass("step-address-one-prev");
                          $('#formModal .prev-icon').removeClass("single-donation-prev");
 
-                           $(".stepper-item step-item-first").addClass('completed');
-                        $(".stepper-item step-item-second").addClass('active');
+                           $("#formModal .stepper-item.step-item-first").addClass('completed');
+                        $("#formModal .stepper-item.step-item-second").addClass('active');
 
                         }
 
@@ -357,8 +357,8 @@ function elementLoadedMain(el, cb) {
                 $('#formModal .prev-icon').addClass('step-address-one-prev');
                 $('#formModal .button-wrapper .button--orange').show();
 
-                  $(".stepper-item step-item-first").addClass('completed');
-                        $(".stepper-item step-item-second").addClass('active');
+                  $("#formModal .stepper-item.step-item-first").addClass('completed');
+                        $("#formModal .stepper-item.step-item-second").addClass('active');
 
                 }
 
@@ -451,8 +451,8 @@ function elementLoadedMain(el, cb) {
                         $('body').addClass('show-payment-step');
                         $('#formModal .button-wrapper .button--orange').hide();
 
-                          $(".stepper-item step-item-two").addClass('completed');
-                        $(".stepper-item step-item-third").addClass('active');
+                          $("#formModal .stepper-item.step-item-two").addClass('completed');
+                        $("#formModal .stepper-item.step-item-third").addClass('active');
                         
                         if( $('#formModal .BBFormErrorBlock').find('.BBFormErrorItem').length > 0 ) {
                             $('#formModal .BBFormErrorBlock').show();
