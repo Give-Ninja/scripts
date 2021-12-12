@@ -224,7 +224,7 @@ function elementLoadedMain(el, cb) {
             $('#formModal .button-wrapper .button--orange').on('click', function(){
                 
 
-                        $(".stepper-item").removeClass('active completed');
+                       
 
                          $pCategory = "Single Donation";
 
@@ -339,6 +339,7 @@ function elementLoadedMain(el, cb) {
                          $('#formModal .prev-icon').addClass("step-address-one-prev");
                          $('#formModal .prev-icon').removeClass("single-donation-prev");
 
+                        $("#formModal .stepper-item").removeClass('active completed');
                            $("#formModal .stepper-item.step-item-first").addClass('completed');
                         $("#formModal .stepper-item.step-item-second").addClass('active');
 
@@ -357,6 +358,8 @@ function elementLoadedMain(el, cb) {
                 $('#formModal .prev-icon').addClass('step-address-one-prev');
                 $('#formModal .button-wrapper .button--orange').show();
 
+
+                 $("#formModal .stepper-item").removeClass('active completed');
                   $("#formModal .stepper-item.step-item-first").addClass('completed');
                         $("#formModal .stepper-item.step-item-second").addClass('active');
 
@@ -451,6 +454,7 @@ function elementLoadedMain(el, cb) {
                         $('body').addClass('show-payment-step');
                         $('#formModal .button-wrapper .button--orange').hide();
 
+                        $("#formModal .stepper-item").removeClass('active completed');
                           $("#formModal .stepper-item.step-item-two").addClass('completed');
                         $("#formModal .stepper-item.step-item-third").addClass('active');
                         
@@ -500,6 +504,10 @@ function elementLoadedMain(el, cb) {
                           $('#formModal .prev-icon').hide();
                             $('#formModal .button-wrapper .button--orange').show();
 
+                               $("#formModal .stepper-item").removeClass('active completed');
+                           $("#formModal .stepper-item.step-item-first").addClass('active');
+                        
+
                 }
 
                 else if( $(this).hasClass('step-address-one-prev') ) {
@@ -509,6 +517,10 @@ function elementLoadedMain(el, cb) {
                       $('#formModal .prev-icon').removeClass('step-address-one-prev');
                         $('#formModal .BBDFormSectionBillingInfo').hide();
                          $('#formModal .button-wrapper .button--orange').removeClass('step-address-one');
+
+                            $("#formModal .stepper-item").removeClass('active completed');
+                           $("#formModal .stepper-item.step-item-first").addClass('active');
+                       
 
                       if($(this).hasClass('single-donation-prev')){
 
@@ -546,9 +558,14 @@ function elementLoadedMain(el, cb) {
                          $('#formModal .button-wrapper .button--orange').removeClass('step-address-two');
                           $('#formModal .button-wrapper .button--orange').addClass('step-address-one');
 
+                             $("#formModal .stepper-item").removeClass('active completed');
+                           $("#formModal .stepper-item.step-item-first").addClass('completed');
+                        $("#formModal .stepper-item.step-item-second").addClass('active');
+
                           if(!($('#formModal .BBDFormSectionGiftInfo,#formModal .BBFormSectionRecurrenceInfo').hasClass('payment-step-reloaded'))){
 
                             $('#formModal .prev-icon').hide();
+
                           }
 
                           
@@ -570,6 +587,10 @@ function elementLoadedMain(el, cb) {
                         $('#formModal .BBFormButtonRow,.BBDFormSectionPaymentInfo').hide();
                         $('#formModal .button-wrapper .button--orange').show();
                         $('body').removeClass('show-payment-step');
+
+                           $("#formModal .stepper-item").removeClass('active completed');
+                           $("#formModal .stepper-item.step-item-first").addClass('completed');
+                     
                        
                         
                    
