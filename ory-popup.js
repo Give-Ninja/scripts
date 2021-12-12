@@ -455,6 +455,7 @@ function elementLoadedMain(el, cb) {
                         $('#formModal .button-wrapper .button--orange').hide();
 
                         $("#formModal .stepper-item").removeClass('active completed');
+                         $("#formModal .stepper-item.step-item-first").addClass('completed');
                           $("#formModal .stepper-item.step-item-two").addClass('completed');
                         $("#formModal .stepper-item.step-item-third").addClass('active');
                         
