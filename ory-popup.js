@@ -62,6 +62,7 @@ function elementLoaded(el, cb) {
   elementLoaded('#bboxdonation_divThanks', function(el) {
    
    $('#formModal .prev-icon').hide();
+   $('#formModal .stepper-wrapper').hide();
     $('#formModal .secure-donation').hide();
     $('body').addClass('thankyou-shown');
 
