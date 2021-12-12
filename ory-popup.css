@@ -217,7 +217,7 @@
 #formModal .form-container .stepper-item::before {
   position: absolute;
   content: "";
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #1e3510;
   width: 100%;
   top: 20px;
   left: -50%;
@@ -227,7 +227,7 @@
 #formModal .form-container .stepper-item::after {
   position: absolute;
   content: "";
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #1e3510;
   width: 100%;
   top: 20px;
   left: 50%;
@@ -243,7 +243,6 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #ccc;
   margin-bottom: 6px;
 }
 
