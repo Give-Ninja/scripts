@@ -224,6 +224,7 @@ function elementLoadedMain(el, cb) {
             $('#formModal .button-wrapper .button--orange').on('click', function(){
                 
 
+                        $(".stepper-item").removeClass('active completed');
 
                          $pCategory = "Single Donation";
 
@@ -265,6 +266,8 @@ function elementLoadedMain(el, cb) {
                 
                 if( $('#formModal .button-wrapper .button--orange').hasClass('step-one') ) {
                     
+
+
 
                         $('#formModal .BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo').hide();
                          $('#formModal .button-wrapper .button--orange').removeClass('step-one');
@@ -336,6 +339,9 @@ function elementLoadedMain(el, cb) {
                          $('#formModal .prev-icon').addClass("step-address-one-prev");
                          $('#formModal .prev-icon').removeClass("single-donation-prev");
 
+                           $(".stepper-item step-item-first").addClass('completed');
+                        $(".stepper-item step-item-second").addClass('active');
+
                         }
 
                 }
@@ -350,6 +356,10 @@ function elementLoadedMain(el, cb) {
                 $('#formModal .button-wrapper .button--orange').addClass('step-address-one');
                 $('#formModal .prev-icon').addClass('step-address-one-prev');
                 $('#formModal .button-wrapper .button--orange').show();
+
+                  $(".stepper-item step-item-first").addClass('completed');
+                        $(".stepper-item step-item-second").addClass('active');
+
                 }
 
                 else if( $('#formModal .button-wrapper .button--orange').hasClass('step-address-one') ) {
@@ -440,6 +450,9 @@ function elementLoadedMain(el, cb) {
                         $('#formModal .BBFormButtonRow,#formModal .BBDFormSectionPaymentInfo').show();
                         $('body').addClass('show-payment-step');
                         $('#formModal .button-wrapper .button--orange').hide();
+
+                          $(".stepper-item step-item-two").addClass('completed');
+                        $(".stepper-item step-item-third").addClass('active');
                         
                         if( $('#formModal .BBFormErrorBlock').find('.BBFormErrorItem').length > 0 ) {
                             $('#formModal .BBFormErrorBlock').show();
