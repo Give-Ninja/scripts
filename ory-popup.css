@@ -253,6 +253,7 @@
 
 #formModal .form-container .stepper-item.completed .step-counter {
   background-color: #60993d;
+  color:#fff;
 }
 
 #formModal .form-container .stepper-item.completed::after {
