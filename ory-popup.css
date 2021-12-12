@@ -217,7 +217,7 @@
 #formModal .form-container .stepper-item::before {
   position: absolute;
   content: "";
-  border-bottom: 2px solid rgba(199,204,196,.25);
+  border-bottom: 2px solid rgb(199,204,196);
   width: 100%;
   top: 20px;
   left: -50%;
@@ -227,7 +227,7 @@
 #formModal .form-container .stepper-item::after {
   position: absolute;
   content: "";
-  border-bottom: 2px solid rgba(199,204,196,.25);
+  border-bottom: 2px solid rgb(199,204,196);
   width: 100%;
   top: 20px;
   left: 50%;
@@ -244,7 +244,7 @@
   height: 40px;
   border-radius: 50%;
   margin-bottom: 6px;
-  background:rgba(199,204,196,.25);
+  background:rgb(199,204,196);
 }
 
 #formModal .form-container .stepper-item.active {
