@@ -100,12 +100,15 @@
                     
 
                         var appealValue = donateparamVal;
+                        var appealValueVar =  $('#bboxdonation_designation_ddDesignations').find('option[value="'+ appealValue +'"]').text();
                        
 
                         console.log("hi");
                         console.log(appealValue);
+
                         $('#bboxdonation_designation_ddDesignations').find('option[value="'+ appealValue +'"]').prop('selected', 'selected');
-                        $('.form-container .donate-form__steps').html("<p class='designation-text'>You are donating to the "+appealValue+" appeal</p>");
+
+                        $('.form-container .donate-form__steps').html("<p class='designation-text'>You are donating to the "+appealValueVar+" appeal</p>");
 
                     
                     }
