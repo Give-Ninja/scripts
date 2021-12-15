@@ -103,7 +103,7 @@
                        
 
 
-                        $('.#bboxdonation_designation_ddDesignations').find('option[value="'+ appealValue +'"]').prop('selected', 'selected');
+                        $('#bboxdonation_designation_ddDesignations').find('option[value="'+ appealValue +'"]').prop('selected', 'selected');
                         $('.form-container .donate-form__steps').html("<p>You are donating to the '+ appealValue +' appeal</p>")
 
                     
