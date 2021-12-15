@@ -94,6 +94,21 @@
                     
                     }
 
+                       if(donateParams.has('appeal')){
+
+                        let donateparamVal = donateParams.get('appeal');
+                    
+
+                        var appealValue = donateparamVal;
+                       
+
+
+                        $('.#bboxdonation_designation_ddDesignations').find('option[value="'+ appealValue +'"]').prop('selected', 'selected');
+                        $().html("<p>You are donating to the '+ appealValue +' appeal</p>")
+
+                    
+                    }
+
                     if(donateParams.has('fname')){
 
                         let donateparamVal = donateParams.get('fname')
