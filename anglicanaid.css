@@ -153,11 +153,11 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 
 .BBFormRadioList .BBFormRadioItem {
     width: 47%;
-    display: block !important;
+    display: inline-block !important;
 }
 
 .BBFormRadioList .BBFormRadioItem:last-child {
-    width: 90%;
+    width: 96%;
     display: block !important;
 }
 
