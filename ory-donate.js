@@ -16,7 +16,12 @@
 
                    
 
-                    $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Gift");
+                    $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Donation");
+                    var monthly_text = $("#bboxdonation_recurrence_lblRecurringGift").html();
+                    monthly_text = monthly_text.replace("gift","monthly donation");
+
+                    $("#bboxdonation_recurrence_lblRecurringGift").html(monthly_text);
+                    
                     
                     if(flag_url == "" || flag_url.indexOf("") >= 0 ){
 
