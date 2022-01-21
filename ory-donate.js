@@ -289,7 +289,7 @@
                              $('#lblRecurrenceNextGiftDate').html(function(index,html){
                             return html.replace("gift","monthly donation");
                             });
-                    console.log("hi");
+                  
                             $('#lblRecurrenceNextGiftDate').show();
                     }, 500);
             
