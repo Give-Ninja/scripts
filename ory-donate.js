@@ -21,6 +21,7 @@
                     monthly_text = monthly_text.replace("gift","monthly donation");
 
                     $("#lblRecurrenceNextGiftDate").html("hi");
+                    console.log(monthly_text);
                     console.log("hi");
                     
                     
