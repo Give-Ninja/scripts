@@ -17,11 +17,11 @@
                    
 
                     $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Donation");
-                    var monthly_text = $("#lblRecurrenceNextGiftDate").html();
+                 
                     $('#lblRecurrenceNextGiftDate').html(function(index,html){
                             return html.replace("gift","monthly donation");
                             });
-                    console.log("h");
+                    console.log("hi");
                     
                     
                     if(flag_url == "" || flag_url.indexOf("") >= 0 ){
@@ -284,7 +284,9 @@
            if(($('.single-donation-btn').hasClass('monthly-not-active'))){
             $('.single-donation-btn').removeClass('monthly-not-active');
              $('#bboxdonation_designation_divSection').hide();
-            
+            $('#lblRecurrenceNextGiftDate').html(function(index,html){
+                            return html.replace("gift","monthly donation");
+                            });
             }
 
             else{
