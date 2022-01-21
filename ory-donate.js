@@ -284,7 +284,12 @@
            if(($('.single-donation-btn').hasClass('monthly-not-active'))){
             $('.single-donation-btn').removeClass('monthly-not-active');
              $('#bboxdonation_designation_divSection').hide();
-            console.log($('#lblRecurrenceNextGiftDate').html());
+               setTimeout(
+                    function() 
+                        {
+                            console.log($('#lblRecurrenceNextGiftDate').html());
+                    }, 2000);
+            
             }
 
             else{
