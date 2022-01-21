@@ -3,8 +3,8 @@
         overflow:hidden;
     }
 
-    .cluetip-BBForm{
-        z-index:9999999999;
+    body .cluetip-BBForm{
+        z-index:9999999999 !important;
     }
 
 
