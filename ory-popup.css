@@ -3,6 +3,12 @@
         overflow:hidden;
     }
 
+    .cluetip-BBForm{
+        z-index:9999999999;
+    }
+
+
+
     #formModal :focus{
 
     outline:0;
