@@ -20,7 +20,8 @@
                     var monthly_text = $("#lblRecurrenceNextGiftDate").html();
                     monthly_text = monthly_text.replace("gift","monthly donation");
 
-                    $("#lblRecurrenceNextGiftDate").html(monthly_text);
+                    $("#lblRecurrenceNextGiftDate").html("hi");
+                    console.log("hi");
                     
                     
                     if(flag_url == "" || flag_url.indexOf("") >= 0 ){
