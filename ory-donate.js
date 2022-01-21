@@ -18,11 +18,10 @@
 
                     $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Donation");
                     var monthly_text = $("#lblRecurrenceNextGiftDate").html();
-                    monthly_text = monthly_text.replace("gift","monthly donation");
-
-                    $("#lblRecurrenceNextGiftDate").html("hi");
-                    console.log(monthly_text);
-                    console.log("hi");
+                    $('#lblRecurrenceNextGiftDate').html(function(index,html){
+                            return html.replace("gift","monthly donation");
+                            });
+                    console.log("h");
                     
                     
                     if(flag_url == "" || flag_url.indexOf("") >= 0 ){
