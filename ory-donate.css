@@ -103,6 +103,8 @@
     #mongo-form .donation-highlight-text{
      margin-bottom:25px; 
      text-align: center	;
+     color:#fa532c;
+     font-weight:bold;
     }
 
     .donate-form__steps {
