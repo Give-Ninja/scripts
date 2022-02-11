@@ -617,6 +617,7 @@
         padding: 0;
         height:21px;
         min-height:21px;
+        color:#fff;
     }
     #formModal #mongo-form .BBFormRadioLabelGivingLevelOther span {
         top: 0 !important;
