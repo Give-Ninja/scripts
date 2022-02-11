@@ -275,7 +275,9 @@ function elementLoadedMain(el, cb) {
                           $('#formModal #bboxdonation_divForm  .button-monthly-second').show();
                          $('#formModal .prev-icon').show();
 
-                         var pSku_withoutdollar = parseInt($pSku.replace('$',''));
+                         console.log($pSku);
+
+                         //var pSku_withoutdollar = parseInt($pSku.replace('$',''));
                     
 
                         if($pCategory == "Single Donation" && pSku_withoutdollar < 201){
