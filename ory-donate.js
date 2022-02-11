@@ -365,7 +365,7 @@
                     //console.log($pSku);
 
                     if($pSku == 'rdGivingLevel4') {
-                        $pSku = $('#bboxdonation_gift_txtOtherAmountButtons').val();
+                        $pSku = $('#formModal .BBFormGiftOtherAmount').val();
                        
                     }
                     else{
@@ -468,7 +468,7 @@
                     }
                     else if($pSku == 'rdGivingLevel5') {
                         $pSku = 'OTHER';
-                        $revenue = $('#bboxdonation_gift_txtOtherAmountButtons').val();
+                        $revenue = $('#formModal .BBFormGiftOtherAmount').val();
                     }
                     
                     
