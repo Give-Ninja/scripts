@@ -253,6 +253,11 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
     cursor: default !important;
 }
 
+.BBFormRadioLabelGivingLevelSelected .BBFormRadioDescriptionOther{
+    
+    width:unset;
+}
+
 #mongo-form .has-inline-error+*, 
 #mongo-form .has-inline-error>input {
     border-color: #e91c0d!important;
