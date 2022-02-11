@@ -255,7 +255,7 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
 
 .BBFormRadioLabelGivingLevelSelected .BBFormRadioDescriptionOther{
     
-    width:unset;
+    width:unset !important;
 }
 
 #mongo-form .has-inline-error+*, 
