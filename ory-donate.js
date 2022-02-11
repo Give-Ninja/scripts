@@ -364,7 +364,7 @@
                     //console.log($revenue);
                     //console.log($pSku);
 
-                    if($pSku == 'rdGivingLevel4') {
+                    if($pSku == 'rdGivingLevel5') {
                         $pSku = $('#formModal .BBFormGiftOtherAmount').val();
                        
                     }
@@ -406,10 +406,10 @@
                  let donateParams = new URLSearchParams(window.location.search)
                 if(donateParams.has('amount') || donateParams.has('donate')){
 
-                    if($pSku != 'rdGivingLevel4') {
+                    if($pSku != 'rdGivingLevel5') {
                         $pSku = $pSku;
 
-                        $('#bboxdonation_gift_rdGivingLevel4').prop("checked", true);
+                        $('#bboxdonation_gift_rdGivingLevel5').prop("checked", true);
                     $('#bboxdonation_gift_txtOtherAmountButtons').val($pSku);
                     $('.BBFormRadioLabelGivingLevel').removeClass('BBFormRadioLabelGivingLevelSelected');
                  $('.BBFormRadioLabelGivingLevel').addClass('BBFormRadioLabelGivingNotLevelSelected');
