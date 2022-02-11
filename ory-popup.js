@@ -172,7 +172,7 @@ function elementLoadedMain(el, cb) {
 
                 $('#formModal .button-monthly-info').removeClass('single-to-monthly');
                 $('#formModal #bboxdonation_recurrence_lblRecurringGift').trigger("click");
-                $('#formModal #bboxdonation_gift_txtOtherAmountButtons').val(single_value);
+                $('#formModal .BBFormGiftOtherAmount').val(single_value);
 
 
                 }
@@ -188,8 +188,8 @@ function elementLoadedMain(el, cb) {
                 $('#formModal .single-donation-btn').removeClass('monthly-not-active');
                 
 
-                $('#formModal #bboxdonation_gift_rdGivingLevel5').prop("checked", true);
-                $('#formModal #bboxdonation_gift_txtOtherAmountButtons').val(monthly_value);
+                $('#formModal .BBFormRadioGivingLevelOther').prop("checked", true);
+                $('#formModal .BBFormGiftOtherAmount').val(monthly_value);
 
                
                
@@ -241,7 +241,8 @@ function elementLoadedMain(el, cb) {
                         $revenue = $('#formModal #bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
                  
 
-                        if($pSku == 'rdGivingLevel5') {
+                        if($pSku.includes('rdGivingLevel')) {
+                        //console.log("hi");
                             $pSku = $('#formModal .BBFormGiftOtherAmount').val();
                            
                         }
@@ -481,7 +482,7 @@ function elementLoadedMain(el, cb) {
                         else if($pSku == '$100') {
                             $pSku = 'DONATE100';
                         }
-                        else if($pSku == 'rdGivingLevel5') {
+                        else if($pSku.includes('rdGivingLevel')) {
                             $pSku = 'OTHER';
                             $revenue = $('#formModal .BBFormGiftOtherAmount').val();
                         }
@@ -733,13 +734,13 @@ function elementLoadedMain(el, cb) {
 
             function setOtherValueAmount(){
 
-             if($pSku != 'rdGivingLevel5') {
+             if(!($pSku.includes('rdGivingLevel'))) {
 
               if(donateParams.has('amount') || donateParams.has('donate') || $pCategory == "Single Donation" ){
                         $pSku = $pSku;
 
-                        $('#formModal #bboxdonation_gift_rdGivingLevel5').prop("checked", true);
-                    $('#formModal #bboxdonation_gift_txtOtherAmountButtons').val($pSku);
+                        $('#formModal .BBFormRadioGivingLevelOther').prop("checked", true);
+                    $('#formModal .BBFormGiftOtherAmount').val($pSku);
                     $('#formModal .BBFormRadioLabelGivingLevel').removeClass('BBFormRadioLabelGivingLevelSelected');
                  $('#formModal .BBFormRadioLabelGivingLevel').addClass('BBFormRadioLabelGivingNotLevelSelected');
 
