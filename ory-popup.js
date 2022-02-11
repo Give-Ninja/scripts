@@ -242,7 +242,7 @@ function elementLoadedMain(el, cb) {
                  
 
                         if($pSku == 'rdGivingLevel5') {
-                            $pSku = $('#formModal #bboxdonation_gift_txtOtherAmountButtons').val();
+                            $pSku = $('#formModal .BBFormGiftOtherAmount').val();
                            
                         }
                         else{
