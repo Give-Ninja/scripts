@@ -432,8 +432,32 @@
 
     #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected .BBFormRadioAmount,
     #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected .BBFormRadioDescriptionOther {
-        color: #ffffff;
+        color: #ffffff ;
     }
+
+      .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected span,
+    .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected input{
+    color:#fff !important;
+    }
+
+ 
+      .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected :-ms-input-placeholder{
+   color:#fff !important;
+    }
+
+    
+       .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected ::placeholder{
+   color:#fff !important;
+    }
+
+    
+     .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected ::-webkit-input-placeholder{
+    color:#fff !important;
+    }
+
+
+
+    
     #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected {
         background:#FA522C;
         background-repeat: repeat-x;
@@ -617,7 +641,7 @@
         padding: 0;
         height:21px;
         min-height:21px;
-        color:#fff;
+     
     }
     #formModal #mongo-form .BBFormRadioLabelGivingLevelOther span {
         top: 0 !important;
