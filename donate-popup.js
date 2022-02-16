@@ -244,6 +244,10 @@ function elementLoadedMain(el, cb) {
 
                         if($pSku.includes('rdGivingLevel')) {
                             $pSku = $('.BBFormGiftOtherAmount').val();
+                               if(!($pSku.includes('$'))) {
+                        
+                            $pSku = "$" + $pSku;
+                        }
                            
                         }
                         else{
@@ -278,8 +282,21 @@ function elementLoadedMain(el, cb) {
                     
 
                         if($pCategory == "Single Donation" && pSku_withoutdollar < 201){
+
+                        var info_val;
+
+                            if(!($pSku.includes('$'))) {
+                        
+                            info_val = "$" + $pSku;
+                        }
+
+                        else{
+
+                        info_val = $pSku;
+
+                        }
                       
-                       $('.step-monthly-section .single-payment-info').html($pSku);
+                       $('.step-monthly-section .single-payment-info').html($info_val);
                         $('.contents .button-wrapper .button--orange').addClass('step-monthly');
                         $('#bboxdonation_divForm .step-monthly-section').show();
                          $('.prev-icon').addClass("step-monthly-prev");
