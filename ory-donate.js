@@ -366,12 +366,11 @@
 
                     if($pSku.includes('rdGivingLevel')) {
 
-                        if($pSku.includes('$')) {
-                        $pSku = $('.BBFormGiftOtherAmount').val();
-                        }
+                     $pSku = $('.BBFormGiftOtherAmount').val();
 
-                        else{
-                        $pSku = "$" + $('.BBFormGiftOtherAmount').val();
+                        if(!($pSku.includes('$'))) {
+                        
+                            $pSku = "$" + $pSku;
                         }
                        
                     }
