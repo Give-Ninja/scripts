@@ -232,6 +232,10 @@
         color: #fff !important;
     }
 
+    .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected span,.BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected input{
+    color:#fff;
+    }
+
     #mongo-form .has-inline-error+*, 
     #mongo-form .has-inline-error>input {
         border-color: #FA522C !important;
