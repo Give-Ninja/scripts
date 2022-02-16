@@ -343,6 +343,9 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
 #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected .BBFormRadioDescriptionOther {
     color: #ffffff;
 }
+
+
+
 #formModal #mongo-form .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected {
     background-image: -webkit-linear-gradient(top,#5087d9 0,#4579c7 100%);
     background-image: -o-linear-gradient(top,#5087d9 0,#4579c7 100%);
@@ -397,6 +400,25 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     color: #ffffff;
 }
 
+ .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected span,
+    .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected input{
+    color:#fff !important;
+    }
+
+ 
+      .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected :-ms-input-placeholder{
+   color:#fff !important;
+    }
+
+    
+       .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected ::placeholder{
+   color:#fff !important;
+    }
+
+    
+     .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected ::-webkit-input-placeholder{
+    color:#fff !important;
+    }
 
 
 #formModal #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"].BBFormWidthNarrow-Less600 .BBFormRadioLabelGivingLevelNotSelected.BBFormRadioLabelGivingNotLevelSelected span{
@@ -531,7 +553,7 @@ body.show-payment-step #formModal #mongo-form  .BBFormSection.BBFormButtonRow,bo
     padding: 0;
     height:21px;
     min-height:21px;
-    color:#fff;
+
 }
 #formModal #mongo-form .BBFormRadioLabelGivingLevelOther span {
     top: 0 !important;
