@@ -365,7 +365,14 @@
                     //console.log($pSku);
 
                     if($pSku.includes('rdGivingLevel')) {
+
+                        if($pSku.includes('$')) {
                         $pSku = $('.BBFormGiftOtherAmount').val();
+                        }
+
+                        else{
+                        $pSku = "$" + $('.BBFormGiftOtherAmount').val();
+                        }
                        
                     }
                     else{
