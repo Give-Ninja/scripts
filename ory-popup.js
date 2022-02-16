@@ -59,17 +59,17 @@ function elementLoaded(el, cb) {
     }
   };
 
-  elementLoaded('#bboxdonation_divThanks', function(el) {
+  elementLoaded('#formModal #bboxdonation_divThanks', function(el) {
    
    $('#formModal .prev-icon').hide();
    $('#formModal .stepper-wrapper').hide();
     $('#formModal .secure-donation').hide();
     $('body').addClass('thankyou-shown');
 
-                    var content_cloned_final = $('#bboxdonation_divThanks').children().clone();
+                    var content_cloned_final = $('#formModal #bboxdonation_divThanks').children().clone();
 
               $('#formModal .card-main-content').html(content_cloned_final);
-    $('#bboxdonation_divThanks').append('<div class="thank-you-new"><div class="circle-outer"> <div class="circle-container"> <div class="circle one"></div> <div class="circle two"></div> <div class="circle three"></div> <div class="circle four"></div> <div class="circle five"></div> <div class="circle six"></div> </div> </div> <span class="heart-flying-result"> <span class="hearts-shape-wrapper hearts"> <span class="heart-shape"></span> </span> <span class="hearts-shape-wrapper hearts one"> <span class="heart-shape"></span> </span> <span class="hearts-shape-wrapper hearts two"> <span class="heart-shape"></span> </span> <span class="hearts-shape-wrapper hearts three"> <span class="heart-shape"></span> </span> </span> <div class="cards-content"> <div class="donate-text text-center"> <h2>Help spread the word!</h2> <p>1 out of 4 people you share this with will also donate</p> </div> <div class="social-links"> <ul> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531382-0-facebook.svg" alt="facebook"/><a href="https://www.facebook.com/sharer/sharer.php?u='+windowurl+'">Share on Facebook</a></li> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531392-0-twitter.svg" alt="twitter"/><a href="https://twitter.com/intent/tweet?url='+windowurl+'&text=Become+a+Life+Changer&hashtags=donation">Share on Twitter</a></li> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531387-0-linkedin.svg" alt="linkedin"/><a href="https://www.linkedin.com/cws/share?url='+windowurl+'">Share on Linkedin</a></li> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531397-0-email.svg" alt="email"/><a href="mailto:?subject=Donate Now&amp;amp;body='+windowurl+'" target="_blank">Share via Email</a></li> </ul> </div>');
+    $('#formModal  #bboxdonation_divThanks').append('<div class="thank-you-new"><div class="circle-outer"> <div class="circle-container"> <div class="circle one"></div> <div class="circle two"></div> <div class="circle three"></div> <div class="circle four"></div> <div class="circle five"></div> <div class="circle six"></div> </div> </div> <span class="heart-flying-result"> <span class="hearts-shape-wrapper hearts"> <span class="heart-shape"></span> </span> <span class="hearts-shape-wrapper hearts one"> <span class="heart-shape"></span> </span> <span class="hearts-shape-wrapper hearts two"> <span class="heart-shape"></span> </span> <span class="hearts-shape-wrapper hearts three"> <span class="heart-shape"></span> </span> </span> <div class="cards-content"> <div class="donate-text text-center"> <h2>Help spread the word!</h2> <p>1 out of 4 people you share this with will also donate</p> </div> <div class="social-links"> <ul> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531382-0-facebook.svg" alt="facebook"/><a href="https://www.facebook.com/sharer/sharer.php?u='+windowurl+'">Share on Facebook</a></li> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531392-0-twitter.svg" alt="twitter"/><a href="https://twitter.com/intent/tweet?url='+windowurl+'&text=Become+a+Life+Changer&hashtags=donation">Share on Twitter</a></li> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531387-0-linkedin.svg" alt="linkedin"/><a href="https://www.linkedin.com/cws/share?url='+windowurl+'">Share on Linkedin</a></li> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531397-0-email.svg" alt="email"/><a href="mailto:?subject=Donate Now&amp;amp;body='+windowurl+'" target="_blank">Share via Email</a></li> </ul> </div>');
 
   });
 
@@ -89,7 +89,7 @@ function elementLoadedMain(el, cb) {
     }
   };
 
-  elementLoadedMain('#mongo-form', function(el) {
+  elementLoadedMain('#formModal #mongo-form', function(el) {
 
 
    
