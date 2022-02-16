@@ -296,7 +296,7 @@ function elementLoadedMain(el, cb) {
 
                         }
                       
-                       $('.step-monthly-section .single-payment-info').html($info_val);
+                       $('.step-monthly-section .single-payment-info').html(info_val);
                         $('.contents .button-wrapper .button--orange').addClass('step-monthly');
                         $('#bboxdonation_divForm .step-monthly-section').show();
                          $('.prev-icon').addClass("step-monthly-prev");
