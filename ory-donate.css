@@ -233,7 +233,22 @@
 
     .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected span,
     .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected input{
-    color:#fff;
+    color:#fff !important;
+    }
+
+ 
+      .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected :-ms-input-placeholder{
+   color:#fff !important;
+    }
+
+    
+       .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected ::placeholder{
+   color:#fff !important;
+    }
+
+    
+     .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected ::-webkit-input-placeholder{
+    color:#fff !important;
     }
 
 
