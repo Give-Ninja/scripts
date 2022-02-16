@@ -288,7 +288,11 @@ function elementLoadedMain(el, cb) {
 
                         if($pCategory == "Single Donation" && pSku_withoutdollar < 201){
                       
-                       $('#formModal .step-monthly-section .single-payment-info').html(if(!($pSku.includes('$'))) { "$" + $pSku; } else { $pSku });
+                        var info_val;
+
+                         if(!($pSku.includes('$'))) { info_val = "$" + $pSku; } else { info_val = $pSku })
+
+                       $('#formModal .step-monthly-section .single-payment-info').html(info_val);
                         $('#formModal .button-wrapper .button--orange').addClass('step-monthly');
                         $('#formModal #bboxdonation_divForm .step-monthly-section').show();
                          $('#formModal .prev-icon').addClass("step-monthly-prev");
