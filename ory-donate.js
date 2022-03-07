@@ -565,11 +565,11 @@
             }
         }
         
-        /*console.log($pCategory,$pName,$pSku,$revenue);
+        /*console.log($pCategory,$pName,$pSku,$revenue);*/
         gtag('event', 'purchase', {
           "transaction_id": "24.031608523954162",
-          "affiliation": $pName,
-          "value": $revenue,
+          "affiliation": "test",
+          "value": "12",
           "currency": "USD",
           "tax": 1.24,
           "shipping": 0
@@ -578,7 +578,7 @@
         window.dataLayer.push({
             'event': 'registrationComplete',
             'ProductCategory': 'Premium'
-        });*/
+        });
     });
     
     
