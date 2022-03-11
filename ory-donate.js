@@ -4,10 +4,41 @@
             
             
 
-            console.log("hi");
-            console.log($pCategory);
-            console.log(window.location.href);
-            console.log($pSku);
+
+
+function elementLoaded(el, cb) {
+    
+    if ($(el).length) {
+      // Element is now loaded.
+      cb($(el));
+    } else {
+      // Repeat every 500ms.
+      setTimeout(function() {
+        elementLoaded(el, cb)
+      }, 1000);
+    }
+  };
+
+  elementLoaded('#formModal #bboxdonation_divThanks', function(el) {
+   
+   window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({            
+          "event": "purchase",
+          "ecommerce": {
+             "transaction_id": "24.031608523954162",
+             "affiliation": "test",
+             "value": "12",
+             "Product Category": $pCategory,
+             "Product Name": window.location.href,
+             "Revenue": $pSku
+          }
+        });
+
+
+  });
+
+   
+           
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
@@ -445,10 +476,7 @@
             }
             else if( current.index() == 1 ) {
 
-             console.log("hi2");
-            console.log($pCategory);
-            console.log(window.location.href);
-            console.log($pSku);
+
 
                 var n = [],
                 step = true;
@@ -577,7 +605,7 @@
             }
         }
         
-        /*console.log($pCategory,$pName,$pSku,$revenue);*/
+        /*console.log($pCategory,$pName,$pSku,$revenue);
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({            
           "event": "purchase",
@@ -589,7 +617,7 @@
              "tax": 1.24,
              "shipping": 0
           }
-        });
+        });*/
     });
     
     
