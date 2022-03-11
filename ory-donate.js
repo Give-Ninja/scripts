@@ -3,6 +3,13 @@
             $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false;
             
             
+
+            console.log("hi");
+            console.log($pCategory);
+            console.log(window.location.href);
+            console.log($pSku);
+
+
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
             $('#mongo-form').on("DOMNodeInserted", function (ev) {
                 if(flag == true){
@@ -437,6 +444,11 @@
                 
             }
             else if( current.index() == 1 ) {
+
+             console.log("hi2");
+            console.log($pCategory);
+            console.log(window.location.href);
+            console.log($pSku);
 
                 var n = [],
                 step = true;
