@@ -19,7 +19,7 @@ function elementLoaded(el, cb) {
     }
   };
 
-  elementLoaded('#formModal #bboxdonation_divThanks', function(el) {
+  elementLoaded('#bboxdonation_divThanks', function(el) {
    
    window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({            
@@ -33,6 +33,8 @@ function elementLoaded(el, cb) {
              "Revenue": $pSku
           }
         });
+
+        console.log("hi");
 
 
   });
