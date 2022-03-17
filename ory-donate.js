@@ -1,6 +1,6 @@
     $(document).ready(function() {
         var flag =true,
-            $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false;
+            $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata;
             
             
 
@@ -25,16 +25,13 @@ function elementLoaded(el, cb) {
         window.dataLayer.push({            
           "event": "purchase",
           "ecommerce": {
-             "transaction_id": "24.031608523954162",
-             "affiliation": "test",
-             "value": "12",
              "Product Category": $pCategory,
-             "Product Name": window.location.href,
-             "Revenue": $pSku
+             "Product Name": window.location.pathname,
+             "Product SKU": $pSkudata,
+             "Revenue": $pSkuAmt
+
           }
         });
-
-        console.log("hi");
 
 
   });
@@ -518,6 +515,26 @@ function elementLoaded(el, cb) {
                         $pSku = 'OTHER';
                         $revenue = $('.BBFormGiftOtherAmount').val();
                     }
+
+                    if($pCategory == "Single Donation"){
+
+                        $pCategorydata = "one-off donation";
+
+                    }
+
+                    else if($pCategory == "Monthly Donation"){
+
+                         $pCategorydata = "monthly donation";
+
+                    }
+
+                    else{
+                        
+                        $pCategorydata = $pCategory;
+
+                    }
+
+            
                     
                     
                     $('.donate-form__step').removeClass('donate-form__step--current');
@@ -534,8 +551,10 @@ function elementLoaded(el, cb) {
                     else {
                         $('.BBFormErrorBlock').hide();
                     }
+
+                    console.log("hi");
                     
-                    //console.log($pCategory,$pName,$pSku,$revenue);
+                    console.log($pCategorydata,window.location.pathname,$pSku,$revenue);
                 }
             }
             
