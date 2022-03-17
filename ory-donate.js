@@ -618,19 +618,7 @@ function elementLoaded(el, cb) {
             }
         }
         
-        /*console.log($pCategory,$pName,$pSku,$revenue);
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({            
-          "event": "purchase",
-          "ecommerce": {
-             "transaction_id": "24.031608523954162",
-             "affiliation": "test",
-             "value": "12",
-             "currency": "USD",
-             "tax": 1.24,
-             "shipping": 0
-          }
-        });*/
+      
     });
     
     
