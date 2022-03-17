@@ -499,21 +499,13 @@ function elementLoaded(el, cb) {
                     $revenue = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
 
                     
-                    if($pSku == '25') {
-                        $pSku = 'DONATE25';
-                    }
-                    else if($pSku == '50') {
-                        $pSku = 'DONATE50';
-                    }
-                    else if($pSku == '75') {
-                        $pSku = 'DONATE75';
-                    }
-                    else if($pSku == '100') {
-                        $pSku = 'DONATE100';
-                    }
-                    else if($pSku.includes('rdGivingLevel')) {
+                   if($pSku.includes('rdGivingLevel')) {
                         $pSku = 'OTHER';
                         $revenue = $('.BBFormGiftOtherAmount').val();
+                    }
+                    else{
+
+                        $pSku = "dollar_"+$pSku;
                     }
 
                     if($pCategory == "Single Donation"){
@@ -552,7 +544,7 @@ function elementLoaded(el, cb) {
                         $('.BBFormErrorBlock').hide();
                     }
 
-                    console.log("hi");
+                    console.log("hii");
                     
                     console.log($pCategorydata,window.location.pathname,$pSku,$revenue);
                 }
