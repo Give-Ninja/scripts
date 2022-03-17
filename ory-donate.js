@@ -2,8 +2,8 @@
         var flag =true,
             $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata;
             
-            
-console.log("new");
+            console.log("hello");
+
 
 
 function elementLoaded(el, cb) {
@@ -25,10 +25,10 @@ function elementLoaded(el, cb) {
         window.dataLayer.push({            
           "event": "purchase",
           "ecommerce": {
-             "Product Category": $pCategory,
-             "Product Name": window.location.pathname,
-             "Product SKU": $pSkudata,
-             "Revenue": $pSkuAmt
+             "Product Category": $pCategorydata,
+             "Product Name": window.location.pathname.toLowerCase(),
+             "Product SKU": $pSkudata.toLowerCase(),
+             "Revenue": $revenue
 
           }
         });
@@ -544,9 +544,9 @@ function elementLoaded(el, cb) {
                         $('.BBFormErrorBlock').hide();
                     }
 
-                    console.log("hii");
+                  
                     
-                    console.log($pCategorydata,window.location.pathname,$pSku,$revenue);
+                    console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue);
                 }
             }
             
