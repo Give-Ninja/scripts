@@ -2,7 +2,7 @@
         var flag =true,
             $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata;
             
-            console.log("hello");
+            
 
 
 
@@ -27,7 +27,7 @@ function elementLoaded(el, cb) {
           "ecommerce": {
              "Product Category": $pCategorydata,
              "Product Name": window.location.pathname.toLowerCase(),
-             "Product SKU": $pSkudata.toLowerCase(),
+             "Product SKU": $pSku.toLowerCase(),
              "Revenue": $revenue
 
           }
