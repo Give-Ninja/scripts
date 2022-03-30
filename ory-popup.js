@@ -4,7 +4,7 @@ $(document).ready(function() {
                 $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$pCategorydata;
                  let donateParams = new URLSearchParams(window.location.search);
                 let windowurl = window.location.href;
-
+console.log("hi");
     var modal = document.getElementById("formModal");
     
     $(".donate-now").on('click', function() {
