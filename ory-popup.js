@@ -503,7 +503,7 @@ function elementLoadedMain(el, cb) {
                     }
                     else{
 
-                        $pSku = "dollar_"+$pSku;
+                        $pSkudata = "dollar_"+$pSku;
                     }
 
                     if($pCategory == "Single Donation"){
