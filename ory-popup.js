@@ -5,7 +5,7 @@ $(document).ready(function() {
                  let donateParams = new URLSearchParams(window.location.search);
                 let windowurl = window.location.href;
 
-                console.log("h");
+               
 
     var modal = document.getElementById("formModal");
     
@@ -80,7 +80,7 @@ function elementLoaded(el, cb) {
           "ecommerce": {
              "Product Category": $pCategorydata,
              "Product Name": window.location.pathname.toLowerCase(),
-             "Product SKU": $pSku.toLowerCase(),
+             "Product SKU": $pSkudata.toLowerCase(),
              "Revenue": $revenue
 
           }
@@ -524,7 +524,7 @@ function elementLoadedMain(el, cb) {
 
                     }
                         
-                        console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue);
+                        console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSkudata.toLowerCase(),$revenue);
                     }
                 }
                 
@@ -847,20 +847,7 @@ function elementLoadedMain(el, cb) {
                 }
             }
             
-            /*console.log($pCategory,$pName,$pSku,$revenue);
-            gtag('event', 'purchase', {
-              "transaction_id": "24.031608523954162",
-              "affiliation": $pName,
-              "value": $revenue,
-              "currency": "USD",
-              "tax": 1.24,
-              "shipping": 0
-            });*/
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'registrationComplete',
-                'ProductCategory': 'Premium'
-            });
+           
         
         });
         
