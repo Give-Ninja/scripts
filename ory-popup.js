@@ -1,7 +1,7 @@
 $(document).ready(function() {
             var flag =true;
             var current = 0,
-                $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue;
+                $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$pCategorydata;
                  let donateParams = new URLSearchParams(window.location.search);
                 let windowurl = window.location.href;
 
@@ -70,6 +70,21 @@ function elementLoaded(el, cb) {
 
               $('#formModal .card-main-content').html(content_cloned_final);
     $('#formModal  #bboxdonation_divThanks').append('<div class="thank-you-new"><div class="circle-outer"> <div class="circle-container"> <div class="circle one"></div> <div class="circle two"></div> <div class="circle three"></div> <div class="circle four"></div> <div class="circle five"></div> <div class="circle six"></div> </div> </div> <span class="heart-flying-result"> <span class="hearts-shape-wrapper hearts"> <span class="heart-shape"></span> </span> <span class="hearts-shape-wrapper hearts one"> <span class="heart-shape"></span> </span> <span class="hearts-shape-wrapper hearts two"> <span class="heart-shape"></span> </span> <span class="hearts-shape-wrapper hearts three"> <span class="heart-shape"></span> </span> </span> <div class="cards-content"> <div class="donate-text text-center"> <h2>Help spread the word!</h2> <p>1 out of 4 people you share this with will also donate</p> </div> <div class="social-links"> <ul> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531382-0-facebook.svg" alt="facebook"/><a href="https://www.facebook.com/sharer/sharer.php?u='+windowurl+'">Share on Facebook</a></li> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531392-0-twitter.svg" alt="twitter"/><a href="https://twitter.com/intent/tweet?url='+windowurl+'&text=Become+a+Life+Changer&hashtags=donation">Share on Twitter</a></li> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531387-0-linkedin.svg" alt="linkedin"/><a href="https://www.linkedin.com/cws/share?url='+windowurl+'">Share on Linkedin</a></li> <li><img class="icon" src="https://v.fastcdn.co/u/06e81d16/58531397-0-email.svg" alt="email"/><a href="mailto:?subject=Donate Now&amp;amp;body='+windowurl+'" target="_blank">Share via Email</a></li> </ul> </div>');
+
+
+       window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({            
+          "event": "purchase",
+          "ecommerce": {
+             "Product Category": $pCategorydata,
+             "Product Name": window.location.pathname.toLowerCase(),
+             "Product SKU": $pSku.toLowerCase(),
+             "Revenue": $revenue
+
+          }
+        });
+
+
 
   });
 
@@ -479,24 +494,35 @@ function elementLoadedMain(el, cb) {
                             $('#formModal .BBFormErrorBlock').hide();
                         }
 
-                        if($pSku == '$25') {
-                            $pSku = 'DONATE25';
-                        }
-                        else if($pSku == '$50') {
-                            $pSku = 'DONATE50';
-                        }
-                        else if($pSku == '$75') {
-                            $pSku = 'DONATE75';
-                        }
-                        else if($pSku == '$100') {
-                            $pSku = 'DONATE100';
-                        }
-                        else if($pSku.includes('rdGivingLevel')) {
-                            $pSku = 'OTHER';
-                            $revenue = $('#formModal .BBFormGiftOtherAmount').val();
-                        }
+                       
+                         if($pSku.includes('rdGivingLevel')) {
+                        $pSku = 'OTHER';
+                        $revenue = $('#formModal .BBFormGiftOtherAmount').val();
+                    }
+                    else{
+
+                        $pSku = "dollar_"+$pSku;
+                    }
+
+                    if($pCategory == "Single Donation"){
+
+                        $pCategorydata = "one-off donation";
+
+                    }
+
+                    else if($pCategory == "Monthly Donation"){
+
+                         $pCategorydata = "monthly donation";
+
+                    }
+
+                    else{
                         
-                        //console.log($pCategory,$pName,$pSku,$revenue);
+                        $pCategorydata = $pCategory;
+
+                    }
+                        
+                        console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue);
                     }
                 }
                 
