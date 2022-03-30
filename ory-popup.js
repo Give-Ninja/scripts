@@ -1,10 +1,12 @@
 $(document).ready(function() {
             var flag =true;
             var current = 0,
-                $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$pCategorydata;
+                $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$pCategorydata,$pSkudata;
                  let donateParams = new URLSearchParams(window.location.search);
                 let windowurl = window.location.href;
-console.log("hi");
+
+                console.log("h");
+
     var modal = document.getElementById("formModal");
     
     $(".donate-now").on('click', function() {
@@ -495,8 +497,8 @@ function elementLoadedMain(el, cb) {
                         }
 
                        
-                         if($pSku.includes('rdGivingLevel')) {
-                        $pSku = 'OTHER';
+                         if($revenue.includes('rdGivingLevel')) {
+                        $pSkudata = 'OTHER';
                         $revenue = $('#formModal .BBFormGiftOtherAmount').val();
                     }
                     else{
