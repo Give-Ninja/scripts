@@ -124,7 +124,7 @@
     }
 
     .donate-form__step--current {
-        border-bottom: 3px solid #FA522C;
+        color: #00697f;
     }
 
     .donate-form__step__index {
@@ -225,8 +225,8 @@
     }
 
     .BBFormRadioList .BBFormRadioItem label.BBFormRadioLabelGivingLevelSelected {
-        border-color: #FA522C !important;
-        background-color: #FA522C !important;
+        border-color: #00697f !important;
+        background-color: #00697f !important;
         cursor: default !important;
         color: #fff !important;
     }
@@ -255,7 +255,7 @@
 
     #mongo-form .has-inline-error+*, 
     #mongo-form .has-inline-error>input {
-        border-color: #FA522C !important;
+        border-color: #00697f !important;
     }
 
     #mongo-form .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] .BBFormSortCodeTextbox{
@@ -312,7 +312,7 @@
 
     #mongo-form input.has-error,
     #mongo-form select.has-error {
-        border-bottom-color: #FA522C !important;
+        border-bottom-color: #00697f !important;
     }
 
     #mongo-form input[type=email]:focus,
@@ -328,7 +328,7 @@
     }
 
     #mongo-form .error-text {
-        color: #FA522C;
+        color: #00697f;
         text-transform: none;
         font-size: 12px;
         line-height: 15px;
@@ -436,8 +436,8 @@
 
     #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox input:checked + .BBFormCheckboxLabel,
     #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .BBFormCheckboxLabel.active,#mongo-form .single-donation-btn.monthly-not-active {
-        box-shadow: inset 0 0 0 2px #FA522C;
-        background-color: #FA522C;
+        box-shadow: inset 0 0 0 2px #00697f;
+        background-color: #00697f;
         color: #fff;
     }
 
@@ -479,8 +479,8 @@
         letter-spacing: 2.2px;
         -webkit-transition: all .35s ease;
         transition: all .35s ease;
-        background-color: #FA522C;
-        border: 2px solid #FA522C;
+        background-color: #47a363;
+        border: 2px solid #47a363;
         display: block;
         width: auto;
         cursor: pointer;
