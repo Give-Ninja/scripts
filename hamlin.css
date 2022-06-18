@@ -93,6 +93,7 @@
     #mongo-form #bboxdonation_recurrence_divRecurrenceInfo .BBRecurrenceFieldContainer{
         
         display:none;
+        padding-bottom:10px;
     }
 
     #mongo-form .BBFormContainer .BBFormFieldContainer {
@@ -101,7 +102,7 @@
     }
 
 
- #mongo-form .BBFormSectionRecurrenceInfo .BBFormContainer .BBFormFieldContainer:after {
+ #mongo-form  .BBFormContainer .BBFormSectionRecurrenceInfo .BBFormFieldContainer:after {
         content: "Most Impact" url(https://hamlin.org.au/wp-content/uploads/2022/06/up-link.png);
         margin-left:200px;
         color: #00697f;
