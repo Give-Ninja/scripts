@@ -100,10 +100,16 @@
         padding: 0 10px;
     }
 
+
+ #mongo-form .BBFormContainer .BBFormFieldContainer:after {
+        content: "Most Impact" url(https://hamlin.org.au/wp-content/uploads/2022/06/up-link.png);
+    }
+
+
     #mongo-form .donation-highlight-text{
      margin-bottom:25px; 
      text-align: center	;
-     color:#fa532c;
+     color:#00697f;
      font-weight:bold;
     }
 
