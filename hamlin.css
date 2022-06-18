@@ -101,8 +101,11 @@
     }
 
 
- #mongo-form .BBFormContainer .BBFormFieldContainer:after {
+ #mongo-form .BBFormSectionRecurrenceInfo .BBFormContainer .BBFormFieldContainer:after {
         content: "Most Impact" url(https://hamlin.org.au/wp-content/uploads/2022/06/up-link.png);
+        margin-left:200px;
+        color: #00697f;
+        font-weight: bold
     }
 
 
