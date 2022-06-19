@@ -1,5 +1,4 @@
-
-    .form-container {
+.form-container {
         position: relative;
         background-color: #fff;
         padding: 60px 30px;
@@ -74,12 +73,10 @@
     }
 
     /*
-
     .BBFormSection.BBFormSectionRecurrenceInfo{
         
         display:block;
     }
-
     .BBFormSection.BBDFormSectionGiftInfo {
         display: block;
     }
@@ -314,7 +311,6 @@
         resize: vertical;
         min-height: 55px;
         padding: 16px 15px 10px;
-        margin-top:7px;
     }
 
     #mongo-form select {
@@ -401,22 +397,18 @@
         height: 26px;
         border-radius: 2px;
     }
-
     .BBFormCheckboxLabel:after {
         color: white;
         font-size: 8px;
         box-shadow: inset 0px 0px 0px 2px #cfcfcf;
     }
-
     .BBFormCheckboxLabel:before {
         content: "";
         background-color: white;
     }
-
     input:checked + .BBFormCheckboxLabel:after {
         box-shadow: inset 0px 0px 0px 2px #476c7a;
     }
-
     input:checked + .BBFormCheckboxLabel:before {
         background-color: #476c7a;
     }*/
