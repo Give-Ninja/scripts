@@ -462,6 +462,10 @@
         display: none;
     }
 
+     #mongo-form .BBFormFieldRecurrenceInfo {
+          padding-left:0;
+     }
+
     #mongo-form .BBFormFieldRecurrenceInfo select {
         display: inline-block;
         background: none;
