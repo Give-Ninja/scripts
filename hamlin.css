@@ -378,6 +378,9 @@
 
     	display: inline !important;
     	margin-right: 5px;
+        -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
     }
 
 
