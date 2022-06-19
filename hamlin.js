@@ -594,7 +594,7 @@ function elementLoaded(el, cb) {
                 else if( prev.index() == 1 ) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
-                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo').show();
+                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo,.BBDFormSectionBillingInfo .BBFormBillingPhone').show();
                 }
             }
             
