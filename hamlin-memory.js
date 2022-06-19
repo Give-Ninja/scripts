@@ -443,7 +443,7 @@ function elementLoaded(el, cb) {
                 $('.form-container .go-back').show();
                 
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
-                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
+                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes').hide();
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
                  let donateParams = new URLSearchParams(window.location.search)
