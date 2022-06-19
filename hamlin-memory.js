@@ -47,7 +47,7 @@ function elementLoaded(el, cb) {
 
                     flag_url = window.location.href;
 
-                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
+                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo,.BBFormSubSectionGiftAttribute, .BBDFormSectionComments').show();
 
                    
 
@@ -377,6 +377,8 @@ function elementLoaded(el, cb) {
         
         
         $('.form-container .button-wrapper .button--orange').on('click', function(){
+
+        console.log("hi1");
             
             var current = $('.donate-form__steps').find('.donate-form__step--current');
 
@@ -436,6 +438,7 @@ function elementLoaded(el, cb) {
             //console.log(current.index());
             
             if( current.index() == 0 ) {
+            console.log("hi");
                 $('.donate-form__step').removeClass('donate-form__step--current');
                 $('.donate-form__steps').find('.donate-form__step:eq(1)').addClass('donate-form__step--current');
                 $('.form-container .go-back').show();
