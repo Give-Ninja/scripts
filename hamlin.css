@@ -652,7 +652,7 @@
         }
 
         .BBFormFieldContainerGivingLevels .BBFormRadioAmount{
-        width:auto;
+        width:auto !important;
         }
       
     }
