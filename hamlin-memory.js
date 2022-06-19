@@ -378,7 +378,6 @@ function elementLoaded(el, cb) {
         
         $('.form-container .button-wrapper .button--orange').on('click', function(){
 
-        console.log("hi1");
             
             var current = $('.donate-form__steps').find('.donate-form__step--current');
 
@@ -438,7 +437,7 @@ function elementLoaded(el, cb) {
             //console.log(current.index());
             
             if( current.index() == 0 ) {
-            console.log("hi");
+            
                 $('.donate-form__step').removeClass('donate-form__step--current');
                 $('.donate-form__steps').find('.donate-form__step:eq(1)').addClass('donate-form__step--current');
                 $('.form-container .go-back').show();
@@ -448,7 +447,7 @@ function elementLoaded(el, cb) {
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
                  let donateParams = new URLSearchParams(window.location.search)
-                if(donateParams.has('amount') || donateParams.has('donate')){
+                /*if(donateParams.has('amount') || donateParams.has('donate')){
 
                     if(!($pSku.includes('rdGivingLevel'))) {
                         $pSku = $pSku;
@@ -470,7 +469,7 @@ function elementLoaded(el, cb) {
                        
                     }
                    
-                }
+                }*/
                     
                 
             }
@@ -500,14 +499,14 @@ function elementLoaded(el, cb) {
                     $revenue = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
 
                     
-                   if($pSku.includes('rdGivingLevel')) {
+                   /*if($pSku.includes('rdGivingLevel')) {
                         $pSku = 'OTHER';
                         $revenue = $('.BBFormGiftOtherAmount').val();
                     }
                     else{
 
                         $pSku = "dollar_"+$pSku;
-                    }
+                    }*/
 
                     if($pCategory == "Single Donation"){
 
