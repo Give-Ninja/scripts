@@ -47,7 +47,7 @@ function elementLoaded(el, cb) {
 
                     flag_url = window.location.href;
 
-                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo,.BBFormSubSectionGiftAttribute, .BBDFormSectionComments').show();
+                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo,.BBFormSubSectionGiftAttribute, .BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
 
                    
 
@@ -577,7 +577,7 @@ function elementLoaded(el, cb) {
                 if( prev.index() == 0 ) {
 
                 $('.form-container .go-back').hide();
-                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo').show();
+                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
                     $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
                        
                        if($('#bboxdonation_tribute_chkTributeGift')[0].checked){
