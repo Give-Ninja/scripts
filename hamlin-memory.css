@@ -314,6 +314,7 @@
         resize: vertical;
         min-height: 55px;
         padding: 16px 15px 10px;
+        margin-top:7px;
     }
 
     #mongo-form select {
