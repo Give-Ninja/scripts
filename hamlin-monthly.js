@@ -393,7 +393,7 @@ function elementLoaded(el, cb) {
 
                     
                     $pName = window.location.href;
-                    $pSku = $('#bboxdonation_gift_txtAmountGift').val();
+                    $pSku = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
                     $revenue = $('#bboxdonation_gift_txtAmountGift').val();
                     //console.log($pCategory);
                     //console.log($pName);
