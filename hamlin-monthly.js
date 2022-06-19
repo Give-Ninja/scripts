@@ -47,7 +47,7 @@ function elementLoaded(el, cb) {
 
                     flag_url = window.location.href;
 
-                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo,.BBFormSubSectionGiftAttribute, .BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
+                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo,.BBFormSectionGiftAttributes').show();
 
                    
 
@@ -216,7 +216,7 @@ function elementLoaded(el, cb) {
 
                     /* general code with for validation */
 
-                     //$monthly_exists = $('.BBFormSectionRecurrenceInfo #bboxdonation_recurrence_divRecurrenceCheckbox').length;
+                     $monthly_exists = $('.BBFormSectionRecurrenceInfo #bboxdonation_recurrence_divRecurrenceCheckbox').length;
 
                    
 
