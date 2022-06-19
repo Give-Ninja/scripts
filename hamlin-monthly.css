@@ -369,6 +369,11 @@
         display: none;
     }
 
+    #mongo-form .BBFormSectionGiftAttributes input[type="checkbox"]{
+    display: inline-block;
+    }
+
+
     #bboxdonation_billing_fldAnonymous input[type="checkbox"],.BBDFormSectionTributeInfo input[type="checkbox"],
     #bboxdonation_billing_fldOrgGift input[type="checkbox"]{
 
