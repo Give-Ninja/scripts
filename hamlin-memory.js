@@ -394,14 +394,14 @@ function elementLoaded(el, cb) {
 
                     
                     $pName = window.location.href;
-                    $pSku = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
-                    $revenue = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
+                    $pSku = $('#bboxdonation_gift_txtAmountGift').val();
+                    $revenue = $('#bboxdonation_gift_txtAmountGift').val();
                     //console.log($pCategory);
                     //console.log($pName);
                     //console.log($revenue);
                     //console.log($pSku);
 
-                    if($pSku.includes('rdGivingLevel')) {
+                    /*if($pSku.includes('rdGivingLevel')) {
 
                      $pSku = $('.BBFormGiftOtherAmount').val();
 
@@ -414,7 +414,7 @@ function elementLoaded(el, cb) {
                     else{
 
                         $pSku = "$" + $pSku;
-                    }
+                    }*/
 
                     if($pCategory == "Single Donation" && $monthly_exists){
 
