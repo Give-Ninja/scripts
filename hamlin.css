@@ -642,9 +642,17 @@
             justify-content: center;
             align-items: center;
         }
-        .BBFormContainer[data-bbox-part-id="32e42585-f953-46c5-950f-9c75b87bd3b9"] .BBFormFieldRecurrenceInfo {
+        #mongo-form .BBFormContainer .BBFormSectionRecurrenceInfo .BBFormFieldContainer:after {
             padding-left: 0;
             text-align: center;
+        }
+
+        #mongo-form .BBFormContainer .BBFormSectionRecurrenceInfo .BBFormFieldContainer:after{
+        margin-left:50px;
+        }
+
+        .BBFormFieldContainerGivingLevels .BBFormRadioAmount{
+        width:auto;
         }
       
     }
