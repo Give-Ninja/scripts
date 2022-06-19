@@ -242,9 +242,9 @@ function elementLoaded(el, cb) {
                     
                     }
 
-                    var tribute =  $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').clone();
-                     $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').remove();
-                     $('.BBFormSection.BBDFormSectionGiftInfo').before(tribute);
+                    //var tribute =  $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').clone();
+                     //$('.BBDFormSectionTributeInfo,.BBDFormSectionComments').remove();
+                     //$('.BBFormSection.BBDFormSectionGiftInfo').before(tribute);
                      
                        /* Utm parameter intialize */
 
@@ -400,7 +400,7 @@ function elementLoaded(el, cb) {
                     //console.log($revenue);
                     //console.log($pSku);
 
-                    /*if($pSku.includes('rdGivingLevel')) {
+                    if($pSku.includes('rdGivingLevel')) {
 
                      $pSku = $('.BBFormGiftOtherAmount').val();
 
@@ -413,7 +413,7 @@ function elementLoaded(el, cb) {
                     else{
 
                         $pSku = "$" + $pSku;
-                    }*/
+                    }
 
                     if($pCategory == "Single Donation" && $monthly_exists){
 
@@ -447,7 +447,7 @@ function elementLoaded(el, cb) {
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
                  let donateParams = new URLSearchParams(window.location.search)
-                /*if(donateParams.has('amount') || donateParams.has('donate')){
+                if(donateParams.has('amount') || donateParams.has('donate')){
 
                     if(!($pSku.includes('rdGivingLevel'))) {
                         $pSku = $pSku;
@@ -469,7 +469,7 @@ function elementLoaded(el, cb) {
                        
                     }
                    
-                }*/
+                }
                     
                 
             }
@@ -499,14 +499,14 @@ function elementLoaded(el, cb) {
                     $revenue = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
 
                     
-                   /*if($pSku.includes('rdGivingLevel')) {
+                   if($pSku.includes('rdGivingLevel')) {
                         $pSku = 'OTHER';
                         $revenue = $('.BBFormGiftOtherAmount').val();
                     }
                     else{
 
                         $pSku = "dollar_"+$pSku;
-                    }*/
+                    }
 
                     if($pCategory == "Single Donation"){
 
