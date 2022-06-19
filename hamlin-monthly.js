@@ -415,7 +415,7 @@ function elementLoaded(el, cb) {
                         $pSku = "$" + $pSku;
                     }
 
-                    if($pCategory == "Single Donation" && $monthly_exists){
+                    /*if($pCategory == "Single Donation" && $monthly_exists){
 
                     $('.donation-highlight-text').html('You are making a one-off donation of ' + $pSku);
 
@@ -427,11 +427,13 @@ function elementLoaded(el, cb) {
 
                     }
 
-                    if(!($monthly_exists)) {
+                    if(!($monthly_exists)) {  }*/
 
-                    $('.donation-highlight-text').html('You are making a one-off donation of ' + $pSku);
 
-                    }
+
+                    $('.donation-highlight-text').html('You are making a monthly donation of ' + $pSku);
+
+                    
 
             
             //console.log(current.index());
