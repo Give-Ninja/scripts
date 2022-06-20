@@ -73,7 +73,7 @@
     display:none;
     }
 
-    #mongo-form .BBFormSection.BBFormButtonRow{
+    #mongo-form .BBFormSection.BBFormButtonRow,#mongo-form .BBFormSection.BBFormButtonRow .BBFormFieldContainer{
         text-align:center;
     }
 
