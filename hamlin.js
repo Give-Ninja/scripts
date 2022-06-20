@@ -39,7 +39,7 @@ function elementLoaded(el, cb) {
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
-            $('#mongo-form').on("DOMNodeInserted", function (ev) {
+            $('#bboxdonation_divForm').on("DOMNodeInserted", function (ev) {
                 if(flag == true){
                     flag = false;
 
