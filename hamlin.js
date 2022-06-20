@@ -50,7 +50,7 @@ function elementLoaded(el, cb) {
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
 
                         
-                
+                     $('.BBFormSection.BBFormButtonRow').prepend('<p class="payment-cta-info">Click here to enter your payment details:</p>');
                         
                         
 
