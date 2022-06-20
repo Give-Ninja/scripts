@@ -379,9 +379,9 @@
 
     	display: inline !important;
     	margin-right: 5px;
-        -webkit-appearance: auto;
-    -moz-appearance: auto;
-    appearance: auto;
+        -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
     }
 
 
