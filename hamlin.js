@@ -443,7 +443,7 @@ function elementLoaded(el, cb) {
                 $('.donate-form__steps').find('.donate-form__step:eq(1)').addClass('donate-form__step--current');
                 $('.form-container .go-back').show();
                 
-                $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
+                $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange,.BBFieldBillingStateZip .BBFormFieldContainer').show();
                 $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
@@ -599,7 +599,7 @@ function elementLoaded(el, cb) {
                 else if( prev.index() == 1 ) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
-                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo .BBFormBillingPhone,.BBFieldBillingStateZip .BBFormFieldContainer').show();
+                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo ,.BBDFormSectionBillingInfo .BBFormBillingPhone,.BBFieldBillingStateZip .BBFormFieldContainer').show();
                 }
             }
             
