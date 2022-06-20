@@ -202,6 +202,16 @@
     }
 
 
+     .BBFormSectionGiftAttributes .BBFormSectionHeading {
+        display: block !important;
+        border-bottom:0 !important;
+
+    }
+
+
+
+
+
     #mongo-form .BBFormRadioLabelGivingLevelOther .BBFormGiftOtherAmount {
         display: block;
         font-size: 24px;
