@@ -47,7 +47,7 @@ function elementLoaded(el, cb) {
 
                     flag_url = window.location.href;
 
-                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo,.BBFormSubSectionGiftAttribute, .BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
+                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo,.BBFormSectionHeading, .BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
 
                    
 
@@ -443,7 +443,7 @@ function elementLoaded(el, cb) {
                 $('.form-container .go-back').show();
                 
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
-                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes').hide();
+                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes,.BBFormSectionHeading').hide();
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
                  let donateParams = new URLSearchParams(window.location.search)
@@ -577,7 +577,7 @@ function elementLoaded(el, cb) {
                 if( prev.index() == 0 ) {
 
                 $('.form-container .go-back').hide();
-                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
+                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes,.BBFormSectionHeading').show();
                     $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
                        if($('#bboxdonation_tribute_chkTributeGift').length){
                        if($('#bboxdonation_tribute_chkTributeGift')[0].checked){
