@@ -2,7 +2,7 @@
     .form-container {
         position: relative;
         background-color: #fff;
-        padding: 0 30px 60px 30px;
+        padding: 60px 30px;
         margin-bottom: 30px;
         box-shadow: 0 20px 60px rgba(0,0,0,.08);
         z-index: 1;
@@ -58,8 +58,9 @@
     }
 
 
-    #mongo-form .BBFormContainer[data-bbox-part-id="8a42bbd9-743a-4f5f-973d-581d4e3817ca"] #reCAPTCHADisclosure{
-        margin-left:0;
+    #mongo-form  #reCAPTCHADisclosure{
+        margin-left:0 !important;
+        text-align:center !important;
     }
 
 
@@ -71,6 +72,14 @@
     body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-payment-step #mongo-form .BBFormSection.BBDFormSectionPaymentInfo{
         
         display:block;
+    }
+
+    #mongo-form .payment-cta-info{
+    display:none;
+    }
+
+    body.show-payment-step #mongo-form .payment-cta-info{
+    display:block;
     }
 
     /*
@@ -517,6 +526,8 @@
         cursor: pointer;
         outline: none;
         box-shadow: none;
+        max-width: 100%;
+    margin: 0 auto;
     }
 
     .form-container .go-back {
