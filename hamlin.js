@@ -49,9 +49,15 @@ function elementLoaded(el, cb) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
 
-                   console.log("hi");
                         
-                        $('#mongo-form').addClass("test");
+                          console.log('mongo');
+                   console.log($('#mongo-form').length);
+                              console.log('next-step');
+                   console.log($('#bboxdonation_divForm').length);
+                   console.log('gift');
+                   console.log($('.BBDFormSectionGiftInfo').length);
+                        
+                        
 
                     $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Donation");
                  
