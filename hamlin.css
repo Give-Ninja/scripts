@@ -58,19 +58,30 @@
     }
 
 
-    #mongo-form .BBFormContainer[data-bbox-part-id="8a42bbd9-743a-4f5f-973d-581d4e3817ca"] #reCAPTCHADisclosure{
-        margin-left:0;
-    }
-
-
-    .BBFormContainer[data-bbox-part-id="130d676f-6384-483a-8ad6-34d7f5b901a2"] #reCAPTCHADisclosure{
-        
+   
+    #mongo-form  #reCAPTCHADisclosure{
         margin-left:0 !important;
+        text-align:center !important;
     }
+
+
+
 
     body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-payment-step #mongo-form .BBFormSection.BBDFormSectionPaymentInfo{
         
         display:block;
+    }
+
+    #mongo-form .payment-cta-info{
+    display:none;
+    }
+
+    body.show-payment-step #mongo-form .payment-cta-info{
+    display:block;
+    }
+
+     #mongo-form .BBFormSection.BBFormButtonRow,#mongo-form .BBFormSection.BBFormButtonRow .BBFormFieldContainer{
+        text-align:center;
     }
 
     /*
@@ -506,6 +517,12 @@
         cursor: pointer;
         outline: none;
         box-shadow: none;
+    }
+
+
+    #mongo-form .BBFormButtonRow .BBFormSubmitbutton {
+       max-width: 100%;
+        margin: 0 auto;
     }
 
     .form-container .go-back {
