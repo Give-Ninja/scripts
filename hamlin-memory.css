@@ -2,7 +2,7 @@
     .form-container {
         position: relative;
         background-color: #fff;
-        padding: 60px 30px;
+        padding: 0 30px 60px 30px;
         margin-bottom: 30px;
         box-shadow: 0 20px 60px rgba(0,0,0,.08);
         z-index: 1;
