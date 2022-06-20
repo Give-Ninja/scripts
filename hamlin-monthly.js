@@ -2,7 +2,7 @@
         var flag =true,
             $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata;
             
-    
+    console.log("hi");
 
 function elementLoaded(el, cb) {
     
@@ -548,7 +548,8 @@ function elementLoaded(el, cb) {
 
                   
                     
-                    console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue);
+                    //console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue);
+                    console.log($pCategorydata,window.location.pathname,$pSku,$revenue);
                 }
             }
             
