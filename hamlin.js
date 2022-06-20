@@ -50,12 +50,7 @@ function elementLoaded(el, cb) {
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
 
                         
-                          console.log('mongo');
-                   console.log($('#mongo-form').length);
-                              console.log('next-step');
-                   console.log($('#bboxdonation_divForm').length);
-                   console.log('gift');
-                   console.log($('.BBDFormSectionGiftInfo').length);
+                
                         
                         
 
@@ -586,11 +581,13 @@ function elementLoaded(el, cb) {
                     $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo').show();
                     $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
                        
+                         if($('#bboxdonation_tribute_chkTributeGift').length'){
                        if($('#bboxdonation_tribute_chkTributeGift')[0].checked){
                             $(".BBDFormSectionComments").show();
 
 
-                        }
+                        }}
+                    
                     if ($flag_designation_show == true && ($('.single-donation-btn').hasClass('monthly-not-active'))){
 
                       
