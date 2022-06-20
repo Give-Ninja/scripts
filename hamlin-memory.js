@@ -49,7 +49,7 @@ function elementLoaded(el, cb) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo,.BBFormSectionHeading, .BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
 
-                   $('.BBFormSection .BBFormButtonRow').prepend("<p class="payment-cta-info">Click here to enter your payment details:</p>");
+                   $('.BBFormSection .BBFormButtonRow').prepend('<p class="payment-cta-info">Click here to enter your payment details:</p>');
 
                     $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Donation");
                  
