@@ -443,7 +443,7 @@ function elementLoaded(el, cb) {
                 $('.donate-form__steps').find('.donate-form__step:eq(1)').addClass('donate-form__step--current');
                 $('.form-container .go-back').show();
                 
-                $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange,.BBFieldBillingStateZip .BBFormFieldContainer').show();
+                $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
                 $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
@@ -579,7 +579,7 @@ function elementLoaded(el, cb) {
 
                 $('.form-container .go-back').hide();
                     $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo').show();
-                    $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFieldBillingStateZip .BBFormFieldContainer').hide();
+                    $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
                        
                          if($('#bboxdonation_tribute_chkTributeGift').length){
                        if($('#bboxdonation_tribute_chkTributeGift')[0].checked){
