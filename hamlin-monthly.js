@@ -39,7 +39,7 @@ function elementLoaded(el, cb) {
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
-            $('#mongo-form').on("DOMNodeInserted", function (ev) {
+            $('#bboxdonation_divForm').on("DOMNodeInserted", function (ev) {
                 if(flag == true){
                     flag = false;
 
@@ -582,9 +582,10 @@ function elementLoaded(el, cb) {
                     $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo').show();
                     $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBDFormSectionComments,.BBFormSectionGiftAttributes').hide();
                        
+                        if($('#bboxdonation_tribute_chkTributeGift').length){
                        if($('#bboxdonation_tribute_chkTributeGift')[0].checked){
                             $(".BBDFormSectionComments").show();
-
+                       }
 
                         }
                     if ($flag_designation_show == true && ($('.single-donation-btn').hasClass('monthly-not-active'))){
