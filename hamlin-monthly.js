@@ -1,8 +1,7 @@
 (function($){
         var flag =true,
             $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata;
-            
-    console.log("hi");
+        
 
 function elementLoaded(el, cb) {
     
@@ -223,7 +222,7 @@ function elementLoaded(el, cb) {
                     $('.form-container > h6,.donate-form__steps,.form-container .button-wrapper').css({'opacity':1});
                     $('.BBDFormSectionBillingInfo fieldset,.BBDFormSectionPaymentInfo fieldset').before('<p class="donation-highlight-text"><p>');
                   
-                    //if($monthly_exists){
+                    if($monthly_exists){
                    // $('#bboxdonation_recurrence_chkMonthlyGift').before('<span class="monthly-not-active single-donation-btn">Single Donation</span>')
                    
                   
@@ -260,7 +259,7 @@ function elementLoaded(el, cb) {
                     }
                       
 
-                         //}
+                         }
 
                
                   
