@@ -48,6 +48,8 @@ function elementLoaded(el, cb) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
 
+                    $(body).addClass('form-first-step');
+
                    $('.BBFormSection.BBFormButtonRow').prepend('<p class="payment-cta-info">Click here to enter your payment details:</p>');
 
                     $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Donation");
@@ -444,6 +446,7 @@ function elementLoaded(el, cb) {
                 $('.donate-form__step').removeClass('donate-form__step--current');
                 $('.donate-form__steps').find('.donate-form__step:eq(1)').addClass('donate-form__step--current');
                 $('.form-container .go-back').show();
+                $(body).removeClass('form-first-step');
                 
                 $('.BBDFormSectionBillingInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes,.form-container .button-wrapper .button--orange').show();
                 $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo').hide();
@@ -581,6 +584,7 @@ function elementLoaded(el, cb) {
                 if( prev.index() == 0 ) {
 
                 $('.form-container .go-back').hide();
+                $(body).addClass('form-first-step');
                     $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo').show();
                     $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBDFormSectionComments,.BBFormSectionGiftAttributes').hide();
                        
