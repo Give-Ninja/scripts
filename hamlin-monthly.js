@@ -232,7 +232,7 @@ function elementLoaded(el, cb) {
                         $('.BBFormSection.BBDFormSectionGiftInfo').before(c);
                         $('.BBFormSection.BBFormSectionRecurrenceInfo').show();
 
-                    }
+                    });
 
 
                             if ($flag_designation_show){
