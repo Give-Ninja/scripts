@@ -41,7 +41,7 @@ function elementLoaded(el, cb) {
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
-            $('#mongo-form').on("DOMNodeInserted", function (ev) {
+            $('#bboxdonation_divForm').on("DOMNodeInserted", function (ev) {
                 if(flag == true){
                     flag = false;
 
@@ -51,7 +51,7 @@ function elementLoaded(el, cb) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
 
-                   
+                   $('.BBFormSection.BBFormButtonRow').prepend('<p class="payment-cta-info">Click here to enter your payment details:</p>');
 
                     $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Donation");
                  
