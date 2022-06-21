@@ -225,7 +225,7 @@ function elementLoaded(el, cb) {
                     $('.form-container > h6,.donate-form__steps,.form-container .button-wrapper').css({'opacity':1});
                     $('.BBDFormSectionBillingInfo fieldset,.BBDFormSectionPaymentInfo fieldset').before('<p class="donation-highlight-text"><p>');
                   
-                   // if($monthly_exists){
+                    if($monthly_exists){
                     //$('#bboxdonation_recurrence_chkMonthlyGift').before('<span class="monthly-not-active single-donation-btn">Single Donation</span>')
                    
                   
@@ -244,8 +244,8 @@ function elementLoaded(el, cb) {
                     
                     }
 
-                    //var tribute =  $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').clone();
-                     //$('.BBDFormSectionTributeInfo,.BBDFormSectionComments').remove();
+                   // var tribute =  $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').clone();
+                    // $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').remove();
                      //$('.BBFormSection.BBDFormSectionGiftInfo').before(tribute);
                      
                        /* Utm parameter intialize */
@@ -262,7 +262,7 @@ function elementLoaded(el, cb) {
                     }
                       
 
-                        // }
+                         }
 
                
                   
