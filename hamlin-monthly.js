@@ -225,12 +225,14 @@ function elementLoaded(el, cb) {
                     if($monthly_exists){
                    // $('#bboxdonation_recurrence_chkMonthlyGift').before('<span class="monthly-not-active single-donation-btn">Single Donation</span>')
                    
-                  
+                   $('.BBFormSection.BBFormSectionRecurrenceInfo').on("DOMNodeInserted", function (ev) {
 
                     var c = $('.BBFormSection.BBFormSectionRecurrenceInfo').clone();
-                        //$('.BBFormSection.BBFormSectionRecurrenceInfo').remove();
+                        $('.BBFormSection.BBFormSectionRecurrenceInfo').remove();
                         $('.BBFormSection.BBDFormSectionGiftInfo').before(c);
                         $('.BBFormSection.BBFormSectionRecurrenceInfo').show();
+
+                    }
 
 
                             if ($flag_designation_show){
