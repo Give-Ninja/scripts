@@ -215,7 +215,7 @@ function elementLoaded(el, cb) {
 
                     /* general code with for validation */
 
-                     $monthly_exists = $('.BBFormSectionRecurrenceInfo #bboxdonation_recurrence_divRecurrenceCheckbox').length;
+                     $monthly_exists = $('#bboxdonation_recurrence_divRecurrenceInfo').length;
 
                    
 
