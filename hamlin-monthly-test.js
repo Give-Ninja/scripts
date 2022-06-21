@@ -428,11 +428,11 @@ function elementLoaded(el, cb) {
 
                     }
 
-                    if(!($monthly_exists)) {
+                    if(!($monthly_exists)) { } */
 
-                    $('.donation-highlight-text').html('You are making a one-off donation of ' + $pSku);
+                    $('.donation-highlight-text').html('You are making a monthly donation of ' + $pSku);
 
-                    }
+                    
 
             
             //console.log(current.index());
@@ -442,8 +442,8 @@ function elementLoaded(el, cb) {
                 $('.donate-form__steps').find('.donate-form__step:eq(1)').addClass('donate-form__step--current');
                 $('.form-container .go-back').show();
                 
-                $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
-                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
+                 $('.BBDFormSectionBillingInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes,.form-container .button-wrapper .button--orange').show();
+                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo').hide();
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
                  let donateParams = new URLSearchParams(window.location.search)
@@ -533,7 +533,7 @@ function elementLoaded(el, cb) {
                     $('.donate-form__steps').find('.donate-form__step:eq(2)').addClass('donate-form__step--current');
                 
                     $('body').addClass('show-payment-step');
-                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
+                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes').hide();
                     $('.BBFormButtonRow,.BBDFormSectionPaymentInfo').show();
                     $('.form-container .button-wrapper .button--orange').hide();
                     
@@ -578,13 +578,13 @@ function elementLoaded(el, cb) {
 
                 $('.form-container .go-back').hide();
                     $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo').show();
-                    $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
+                    $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBDFormSectionComments,.BBFormSectionGiftAttributes').hide();
                        
+                         if($('#bboxdonation_tribute_chkTributeGift').length){
                        if($('#bboxdonation_tribute_chkTributeGift')[0].checked){
                             $(".BBDFormSectionComments").show();
-
-
-                        }
+                       }
+                       }
                     if ($flag_designation_show == true && ($('.single-donation-btn').hasClass('monthly-not-active'))){
 
                       
@@ -596,7 +596,7 @@ function elementLoaded(el, cb) {
                 else if( prev.index() == 1 ) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
-                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo').show();
+                      $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo,.BBDFormSectionBillingInfo .BBFormBillingPhone,.BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
                 }
             }
             
