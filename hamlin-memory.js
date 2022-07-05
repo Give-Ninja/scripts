@@ -35,8 +35,9 @@ function elementLoaded(el, cb) {
   });
 
    
-           
+    console.log("hq");
 
+        
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
             $('#bboxdonation_divForm').on("DOMNodeInserted", function (ev) {
@@ -49,7 +50,7 @@ function elementLoaded(el, cb) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo,.BBFormSectionHeading, .BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
 
-                   $('.BBFormSection.BBFormButtonRow').prepend('<p class="payment-cta-info">Click here to enter your payment details:</p>');
+                   $('#bboxdonation_btnSecurePayment').val('Click here to complete your secure donation');
 
                     $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Donation");
                  
@@ -531,6 +532,10 @@ function elementLoaded(el, cb) {
                     
                     $('.donate-form__step').removeClass('donate-form__step--current');
                     $('.donate-form__steps').find('.donate-form__step:eq(2)').addClass('donate-form__step--current');
+
+
+                    var element = document.getElementById("bbox-container");
+                    element.scrollIntoView();
                 
                     $('body').addClass('show-payment-step');
 
