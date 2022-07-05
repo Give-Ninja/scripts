@@ -35,7 +35,7 @@ function elementLoaded(el, cb) {
   });
 
    
-           console.log("h");
+           console.log("hii");
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
@@ -536,7 +536,7 @@ function elementLoaded(el, cb) {
                    
                     var form_top_pos = $(".form-container").offset().top;
 
-                    $('html, body').animate({ scrollTop: form_top_pos }, 2000);
+                    
 
                     $('body').addClass('show-payment-step');
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
@@ -550,7 +550,9 @@ function elementLoaded(el, cb) {
                         $('.BBFormErrorBlock').hide();
                     }
 
-                  
+                    console.log(form_top_pos);
+
+                  $('html, body').animate({ scrollTop: form_top_pos }, 2000);
                     
                     console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue);
                 }
