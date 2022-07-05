@@ -35,7 +35,6 @@ function elementLoaded(el, cb) {
   });
 
    
-           console.log("hq");
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
