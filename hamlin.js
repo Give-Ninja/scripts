@@ -535,7 +535,7 @@ function elementLoaded(el, cb) {
                 
                    
                     var scroll_elmnt = document.getElementById("#bbox-root");
-                    elmnt.scrollIntoView();
+                    scroll_elmnt.scrollIntoView();
 
                     $('body').addClass('show-payment-step');
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
