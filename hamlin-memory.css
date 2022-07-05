@@ -525,8 +525,10 @@
         cursor: pointer;
         outline: none;
         box-shadow: none;
-      
+         white-space: pre-wrap;
+     
     }
+
     #mongo-form .BBFormButtonRow .BBFormSubmitbutton{
         max-width: 100%;
         margin: 0 auto;
