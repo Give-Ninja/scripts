@@ -35,7 +35,7 @@ function elementLoaded(el, cb) {
   });
 
    
-           console.log("hi");
+           console.log("h");
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
@@ -534,7 +534,7 @@ function elementLoaded(el, cb) {
                     $('.donate-form__steps').find('.donate-form__step:eq(2)').addClass('donate-form__step--current');
                 
                    
-                    var scroll_elmnt = document.getElementById("#bbox-root");
+                    var scroll_elmnt = document.getElementById("bbox-root");
                     scroll_elmnt.scrollIntoView();
 
                     $('body').addClass('show-payment-step');
