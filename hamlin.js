@@ -35,7 +35,7 @@ function elementLoaded(el, cb) {
   });
 
    
-           console.log("h");
+           console.log("hi");
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
@@ -534,8 +534,8 @@ function elementLoaded(el, cb) {
                     $('.donate-form__steps').find('.donate-form__step:eq(2)').addClass('donate-form__step--current');
                 
                    
-                    var scroll_elmnt = document.getElementById("bbox-root");
-                    scroll_elmnt.scrollIntoView();
+
+                    $.scrollTo($('.form-container'), 1000);
 
                     $('body').addClass('show-payment-step');
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
