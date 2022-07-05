@@ -536,6 +536,7 @@
         cursor: pointer;
         outline: none;
         box-shadow: none;
+        white-space: pre-wrap;
     }
 
     #mongo-form .BBFormButtonRow .BBFormSubmitbutton{
