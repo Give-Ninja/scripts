@@ -34,8 +34,7 @@ function elementLoaded(el, cb) {
 
   });
 
-   
-    console.log("hq");
+
 
         
 
@@ -276,7 +275,7 @@ function elementLoaded(el, cb) {
                     
                     $fname.after('<span class="error-text inline-error">Please enter your first name</span>');
                     $lname.after('<span class="error-text last-error inline-error">Please enter your last name</span>');
-                    $email.after('<span class="error-text">Please enter your email</span>');
+                    $email.after('<span class="error-text">Please enter a valid email</span>');
                     $address.after('<span class="error-text">Please enter your address</span>');
                     $city.after('<span class="error-text">Please select your suburb</span>');
                     $state.after('<span class="error-text inline-error">Please select your state</span>');
@@ -602,7 +601,7 @@ function elementLoaded(el, cb) {
                 else if( prev.index() == 1 ) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
-                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo,.BBDFormSectionBillingInfo .BBFormBillingPhone').show();
+                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo').show();
                 }
             }
             
@@ -617,11 +616,32 @@ function elementLoaded(el, cb) {
                 return false;
             }
             else {
+
+                if(id.attr('type') == "email"){
+
+                    
+
+                    if(!validateEmail(id.val())){
+
+                    
+                        id.addClass('has-error');
+                        id.next('.error-text').show();
+                        id.next('.error-text').addClass('error-shown');
+                        return false;
+                    } 
+                }
+
                 id.removeClass('has-error');
                 id.next('.error-text').hide();
                 id.next('.error-text').removeClass('error-shown');
                 return true;
             }
+        }
+
+        function validateEmail(email) 
+        {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
         }
         
       
