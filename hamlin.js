@@ -277,7 +277,7 @@ function elementLoaded(el, cb) {
                     
                     $fname.after('<span class="error-text inline-error">Please enter your first name</span>');
                     $lname.after('<span class="error-text last-error inline-error">Please enter your last name</span>');
-                    $email.after('<span class="error-text">Please enter your email</span>');
+                    $email.after('<span class="error-text">Please enter a valid email</span>');
                     $address.after('<span class="error-text">Please enter your address</span>');
                     $city.after('<span class="error-text">Please select your suburb</span>');
                     $state.after('<span class="error-text inline-error">Please select your state</span>');
@@ -622,7 +622,11 @@ function elementLoaded(el, cb) {
 
                 if(id.attr('type') == "email"){
 
-                    if(!validateEmail(id)){
+                    console.log(validateEmail(id.val()));
+
+                    if(!validateEmail(id.val())){
+
+                    console.log("invalid");
 
                         id.addClass('has-error');
                         id.next('.error-text').show();
