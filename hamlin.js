@@ -622,12 +622,11 @@ function elementLoaded(el, cb) {
 
                 if(id.attr('type') == "email"){
 
-                    console.log(validateEmail(id.val()));
+                    
 
                     if(!validateEmail(id.val())){
 
-                    console.log("invalid");
-
+                  
                         id.addClass('has-error');
                         id.next('.error-text').show();
                         id.next('.error-text').addClass('error-shown');
