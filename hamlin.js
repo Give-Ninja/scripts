@@ -619,11 +619,29 @@ function elementLoaded(el, cb) {
                 return false;
             }
             else {
+
+                if(id.attr('type') == "email"){
+
+                    if(!validateEmail(id)){
+
+                        id.addClass('has-error');
+                        id.next('.error-text').show();
+                        id.next('.error-text').addClass('error-shown');
+                        return false;
+                    } 
+                }
+
                 id.removeClass('has-error');
                 id.next('.error-text').hide();
                 id.next('.error-text').removeClass('error-shown');
                 return true;
             }
+        }
+
+        function validateEmail(email) 
+        {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
         }
         
       
