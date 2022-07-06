@@ -97,6 +97,10 @@
         text-align:center;
     }
 
+      div.BBFormErrorBlock.BBFormInlineError {
+    display: block !important;
+    }
+
 
     /*
 
