@@ -229,10 +229,10 @@ function elementLoaded(el, cb) {
                    
                   
 
-                    var c = $('.BBFormSection.BBFormSectionRecurrenceInfo').clone();
-                        $('.BBFormSection.BBFormSectionRecurrenceInfo').remove();
-                        $('.BBFormSection.BBDFormSectionGiftInfo').before(c);
-                        $('.BBFormSection.BBFormSectionRecurrenceInfo').show();
+                   // var c = $('.BBFormSection.BBFormSectionRecurrenceInfo').clone();
+                     //   $('.BBFormSection.BBFormSectionRecurrenceInfo').remove();
+                       // $('.BBFormSection.BBDFormSectionGiftInfo').before(c);
+                        //$('.BBFormSection.BBFormSectionRecurrenceInfo').show();
 
 
                             if ($flag_designation_show){
