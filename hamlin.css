@@ -40,7 +40,7 @@
     order:2;
     }
 
-    .form-first-step .BBFormSection.BBDFormSectionGiftInfo .BBFormFieldRecurrenceInfo{
+    .form-first-step .BBFormSectionRecurrenceInfo .BBFormFieldRecurrenceInfo{
     display:none !important;
     height:0 !important
     }
