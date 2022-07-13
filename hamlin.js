@@ -651,7 +651,7 @@ function elementLoaded(el, cb) {
 
             function singleUpdateInfo() {
 
-
+					$('body').removeClass('monthly-info-upd');
         				$('#bboxdonation_gift_rdGivingLevel1').val('165');
                         $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$165');
                         $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provide three women with a nightgown, slippers and a new dress')
