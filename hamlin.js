@@ -457,7 +457,7 @@ function elementLoaded(el, cb) {
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
                  let donateParams = new URLSearchParams(window.location.search)
-                if(donateParams.has('amount') || donateParams.has('donate')){
+                if(donateParams.has('amount') || donateParams.has('donate') || $('body').hasClass('monthly-info-upd')){
 
                     if(!($pSku.includes('rdGivingLevel'))) {
                         $pSku = $pSku;
@@ -623,7 +623,7 @@ function elementLoaded(el, cb) {
 
        function monthlyUpdateInfo() {
 
-
+       					$('body').addClass('monthly-info-upd');
         				$('#bboxdonation_gift_rdGivingLevel1').val('11');
                         $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$11');
                         $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund handicraft training for one patient over a year')
@@ -668,7 +668,7 @@ function elementLoaded(el, cb) {
 
 
 						$('#bboxdonation_gift_rdGivingLevel4').val('1100');
-                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$$1,100'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One standard fistula repair surgery');
+                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$1,100'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One standard fistula repair surgery');
 
 
                           $('#bboxdonation_gift_rdGivingLevel5').val('2900');
