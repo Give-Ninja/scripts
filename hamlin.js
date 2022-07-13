@@ -664,7 +664,7 @@ function elementLoaded(el, cb) {
 
 
 						$('#bboxdonation_gift_rdGivingLevel4').val('1100');
-                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$$1,100'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One standard fistula repair surgery');
+                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$1,100'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One standard fistula repair surgery');
 
 
                           $('#bboxdonation_gift_rdGivingLevel5').val('2900');
