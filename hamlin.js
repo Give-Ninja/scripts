@@ -617,6 +617,8 @@ function elementLoaded(el, cb) {
 
         function monthlyUpdateInfo() {
 
+        console.log("hello");
+
         				$('#bboxdonation_gift_rdGivingLevel1').val('11');
                         $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$11');
                         $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund handicraft training for one patient over a year')
