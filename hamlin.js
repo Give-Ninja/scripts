@@ -316,7 +316,7 @@ function elementLoaded(el, cb) {
            
            if(($('.single-donation-btn').hasClass('monthly-not-active'))){
 
-           monthlyUpdateInfo();
+          // monthlyUpdateInfo();
             $('.single-donation-btn').removeClass('monthly-not-active');
 
              $('#bboxdonation_designation_divSection').hide();
