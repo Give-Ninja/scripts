@@ -33,7 +33,7 @@ function elementLoaded(el, cb) {
 
   });
 
-   
+   console.log("hi");
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
@@ -617,7 +617,7 @@ function elementLoaded(el, cb) {
             
         });
 
-        function monthlyUpdateInfo() {
+       /* function monthlyUpdateInfo() {
 
 
         				$('#bboxdonation_gift_rdGivingLevel1').val('11');
@@ -643,7 +643,7 @@ function elementLoaded(el, cb) {
                          $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$240');
                          $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund one complex fistula operation every year that will restore a woman’s life');
 
-        }
+        }*/
 
             function singleUpdateInfo() {
 
@@ -664,7 +664,7 @@ function elementLoaded(el, cb) {
 
 
 						$('#bboxdonation_gift_rdGivingLevel4').val('1100');
-                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$1,100'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One standard fistula repair surgery');
+                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$$1,100'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One standard fistula repair surgery');
 
 
                           $('#bboxdonation_gift_rdGivingLevel5').val('2900');
