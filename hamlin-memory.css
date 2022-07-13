@@ -42,6 +42,11 @@
     order:2;
     }
 
+.form-first-step .BBFormSectionRecurrenceInfo .BBFormFieldRecurrenceInfo{
+    display:none !important;
+    height:0 !important
+    }
+
 
     .form-container h6 {
         font-size: 30px !important;
