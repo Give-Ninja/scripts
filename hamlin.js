@@ -2,7 +2,7 @@ jQuery(document).ready(function( $ ) {
         var flag =true,
             $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata;
             
-    
+    console.log("hi");
 
 function elementLoaded(el, cb) {
     
@@ -317,6 +317,7 @@ function elementLoaded(el, cb) {
            
            if(($('.single-donation-btn').hasClass('monthly-not-active'))){
             $('.single-donation-btn').removeClass('monthly-not-active');
+
              $('#bboxdonation_designation_divSection').hide();
                $('#lblRecurrenceNextGiftDate').hide();
                setTimeout(
@@ -346,6 +347,8 @@ function elementLoaded(el, cb) {
         });
 
           $('body').on('click','.single-donation-btn',function(){
+
+           $( ".BBFormSection.BBDFormSectionGiftInfo" ).load(window.location.href + " .BBFormSection.BBDFormSectionGiftInfo" );
 
        if(!($('.single-donation-btn').hasClass('monthly-not-active'))){
             $("#bboxdonation_recurrence_lblRecurringGift").trigger("click");
@@ -387,6 +390,8 @@ function elementLoaded(el, cb) {
                     
 
                     if(!($('.single-donation-btn').hasClass('monthly-not-active')) && $monthly_exists ){
+
+                    	monthlyUpdateInfo();
 
                         $pCategory = "Monthly Donation";
 
@@ -609,6 +614,33 @@ function elementLoaded(el, cb) {
             }
             
         });
+
+        function monthlyUpdateInfo() {
+
+        				$('#bboxdonation_gift_rdGivingLevel1').val('11');
+                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$11');
+                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund handicraft training for one patient over a year')
+
+                        $('#bboxdonation_gift_rdGivingLevel2').val('22');
+                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioAmount').find('.BBFormRadioAmount').html('$22');
+                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provide a patient with pre-operative physiotherapy')
+
+                        
+
+                          $('#bboxdonation_gift_rdGivingLevel3').val('30');
+                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioAmount').find('.BBFormRadioAmount').html('$30');
+                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provide a dress, nightgown and bedding for a fistula patient every month');
+
+
+						$('#bboxdonation_gift_rdGivingLevel4').val('90');
+                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$90'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund one standard fistula operation in a Hamlin regional hospital every year, restoring a woman’s life');
+
+
+                          $('#bboxdonation_gift_rdGivingLevel5').val('240');
+                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioAmount').find('.BBFormRadioAmount').html('$240');
+                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund one complex fistula operation every year that will restore a woman’s life');
+
+        }
         
         
         function validationForm(id){
