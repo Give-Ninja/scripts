@@ -33,7 +33,7 @@ function elementLoaded(el, cb) {
 
   });
 
-   console.log("hi");
+ 
 
 
         $('#bbox-root').on("DOMNodeInserted", function (ev) {
@@ -318,7 +318,7 @@ function elementLoaded(el, cb) {
            
            if(($('.single-donation-btn').hasClass('monthly-not-active'))){
 
-          // monthlyUpdateInfo();
+           monthlyUpdateInfo();
             $('.single-donation-btn').removeClass('monthly-not-active');
 
              $('#bboxdonation_designation_divSection').hide();
@@ -621,7 +621,7 @@ function elementLoaded(el, cb) {
             
         });
 
-       /* function monthlyUpdateInfo() {
+       function monthlyUpdateInfo() {
 
 
         				$('#bboxdonation_gift_rdGivingLevel1').val('11');
@@ -647,7 +647,7 @@ function elementLoaded(el, cb) {
                          $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$240');
                          $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund one complex fistula operation every year that will restore a woman’s life');
 
-        }*/
+        }
 
             function singleUpdateInfo() {
 
