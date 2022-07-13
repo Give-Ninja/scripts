@@ -2,7 +2,7 @@ jQuery(document).ready(function( $ ) {
         var flag =true,
             $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata;
             
-    console.log("h");
+    console.log("hi");
 
 function elementLoaded(el, cb) {
     
@@ -337,6 +337,7 @@ function elementLoaded(el, cb) {
 
             else{
 
+             singleUpdateInfo();
             
              $('.single-donation-btn').addClass('monthly-not-active');
               if($flag_designation_show){
@@ -352,7 +353,7 @@ function elementLoaded(el, cb) {
 
            $( ".BBFormSection.BBDFormSectionGiftInfo" ).load(window.location.href + " .BBFormSection.BBDFormSectionGiftInfo" );
 
-           $(".BBFormSection.BBDFormSectionGiftInfo").load(location.href+" .BBFormSection.BBDFormSectionGiftInfo>*","");
+           
 
        if(!($('.single-donation-btn').hasClass('monthly-not-active'))){
             $("#bboxdonation_recurrence_lblRecurringGift").trigger("click");
@@ -621,20 +622,19 @@ function elementLoaded(el, cb) {
 
         function monthlyUpdateInfo() {
 
-        console.log("hello");
 
         				$('#bboxdonation_gift_rdGivingLevel1').val('11');
                         $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$11');
                         $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund handicraft training for one patient over a year')
 
                         $('#bboxdonation_gift_rdGivingLevel2').val('22');
-                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioAmount').find('.BBFormRadioAmount').html('$22');
+                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$22');
                         $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provide a patient with pre-operative physiotherapy')
 
                         
 
                           $('#bboxdonation_gift_rdGivingLevel3').val('30');
-                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioAmount').find('.BBFormRadioAmount').html('$30');
+                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$30');
                          $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provide a dress, nightgown and bedding for a fistula patient every month');
 
 
@@ -643,8 +643,36 @@ function elementLoaded(el, cb) {
 
 
                           $('#bboxdonation_gift_rdGivingLevel5').val('240');
-                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioAmount').find('.BBFormRadioAmount').html('$240');
+                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$240');
                          $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund one complex fistula operation every year that will restore a woman’s life');
+
+        }
+
+            function singleUpdateInfo() {
+
+
+        				$('#bboxdonation_gift_rdGivingLevel1').val('165');
+                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$165');
+                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provide three women with a nightgown, slippers and a new dress')
+
+                        $('#bboxdonation_gift_rdGivingLevel2').val('264');
+                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$264');
+                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Pre-surgery physiotherapy for one patient, complex surgery')
+
+                        
+
+                          $('#bboxdonation_gift_rdGivingLevel3').val('450');
+                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$450');
+                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Pre-surgery care plus nutritious meals for one woman');
+
+
+						$('#bboxdonation_gift_rdGivingLevel4').val('1100');
+                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$$1,100'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One standard fistula repair surgery');
+
+
+                          $('#bboxdonation_gift_rdGivingLevel5').val('2900');
+                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$2,900');
+                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One complex fistula repair surgery');
 
         }
         
