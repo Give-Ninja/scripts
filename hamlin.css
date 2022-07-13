@@ -27,6 +27,24 @@
         margin: auto;
     }
 
+    .form-first-step #bboxdonation_divForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-first-step .BBFormSection.BBFormSectionRecurrenceInfo{
+        order:1;
+    }
+
+    .form-first-step .BBFormSection.BBDFormSectionGiftInfo{
+    order:2;
+    }
+
+    .form-first-step .BBFormSection.BBDFormSectionGiftInfo .BBFormFieldRecurrenceInfo{
+    display:none !important;
+    height:0 !important
+    }
+
 
     .form-container h6 {
         font-size: 30px !important;
