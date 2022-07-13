@@ -2,8 +2,7 @@ jQuery(document).ready(function( $ ) {
         var flag =true,
             $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata;
             
-    console.log("hi");
-
+ 
 function elementLoaded(el, cb) {
     
     if ($(el).length) {
@@ -351,9 +350,7 @@ function elementLoaded(el, cb) {
 
           $('body').on('click','.single-donation-btn',function(){
 
-           $( ".BBFormSection.BBDFormSectionGiftInfo" ).load(window.location.href + " .BBFormSection.BBDFormSectionGiftInfo" );
-
-           
+        
 
        if(!($('.single-donation-btn').hasClass('monthly-not-active'))){
             $("#bboxdonation_recurrence_lblRecurringGift").trigger("click");
