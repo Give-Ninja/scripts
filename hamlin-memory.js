@@ -1,6 +1,6 @@
 (function($){
         var flag =true,
-            $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata;
+            $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false,$pSkudata,$pAmtdata,$pCategorydata,top_element = document.getElementById("bbox-container");
             
     
 
@@ -445,6 +445,8 @@ function elementLoaded(el, cb) {
                 $('.form-container .go-back').show();
                 $('body').removeClass('form-first-step');
                 
+
+                top_element.scrollIntoView();
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
                 $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes,.BBFormSectionHeading').hide();
                 $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
