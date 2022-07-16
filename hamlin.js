@@ -501,6 +501,8 @@ function elementLoaded(el, cb) {
                 n.push(validationForm($postcode));
                 
                 step = n.every(Boolean);
+
+                $('.main-error').show();
                 
                 //console.log(n,step);
                 if( step == true ) {
@@ -548,6 +550,7 @@ function elementLoaded(el, cb) {
                     var element = document.getElementById("bbox-container");
                     element.scrollIntoView();
 
+                    $('.main-error').hide();
                     $('body').addClass('show-payment-step');
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
                     $('.BBFormButtonRow,.BBDFormSectionPaymentInfo').show();
