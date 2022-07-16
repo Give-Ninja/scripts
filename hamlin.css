@@ -72,10 +72,14 @@
 
     #reCAPTCHASection.BBFormSection{
         
-        display:block;
+        display:none;
     }
 
 
+    body.show-payment-step #reCAPTCHASection.BBFormSection{
+        
+        display:block;
+    }
    
     #mongo-form  #reCAPTCHADisclosure{
         margin-left:0 !important;
