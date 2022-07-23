@@ -140,16 +140,16 @@
 
 
  #mongo-form  .BBFormContainer .BBFormSectionRecurrenceInfo .BBFormFieldContainer:after {
-        content: "Most Impact" url(https://hamlin.org.au/wp-content/uploads/2022/06/up-link.png);
+        content: "Most Impact" url(https://hamlin.org.au/wp-content/uploads/2022/06/up-link-green.png);
         margin-left:200px;
-        color: #00697f;
+        color: #47a363;
         font-weight: bold
     }
 
 
     #mongo-form .donation-highlight-text{
      margin-bottom:25px; 
-     text-align: center	;
+     text-align: center ;
      color:#00697f;
      font-weight:bold;
     }
@@ -396,7 +396,7 @@
 
     #mongo-form .error-text.error-shown {
 
-    	display: inline-block !important;
+        display: inline-block !important;
     }
 
     #mongo-form .error-text.inline-error {
@@ -413,8 +413,8 @@
     #bboxdonation_billing_fldAnonymous input[type="checkbox"],.BBDFormSectionTributeInfo input[type="checkbox"],
     #bboxdonation_billing_fldOrgGift input[type="checkbox"]{
 
-    	display: inline !important;
-    	margin-right: 5px;
+        display: inline !important;
+        margin-right: 5px;
         -webkit-appearance: checkbox;
     -moz-appearance: checkbox;
     appearance: checkbox;
@@ -422,7 +422,7 @@
 
 
     .BBDFormSectionTributeInfo .BBFormTextbox,.BBDFormSectionComments .BBFormTextArea,.BBDFormSectionComments .BBFormFieldLabel{
-    	margin-left: 0 !important;
+        margin-left: 0 !important;
     }
 
     /*.BBFormCheckboxLabel:before,
@@ -493,8 +493,8 @@
 
     #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox input:checked + .BBFormCheckboxLabel,
     #mongo-form #bboxdonation_recurrence_divRecurrenceCheckbox .BBFormCheckboxLabel.active,#mongo-form .single-donation-btn.monthly-not-active {
-        box-shadow: inset 0 0 0 2px #00697f;
-        background-color: #00697f;
+        box-shadow: inset 0 0 0 2px #47a363;
+        background-color: #47a363;
         color: #fff;
     }
 
