@@ -67,7 +67,13 @@
         display: none;
     }
 
-    #reCAPTCHASection.BBFormSection{
+     #reCAPTCHASection.BBFormSection{
+        
+        display:none;
+    }
+
+
+    body.show-payment-step #reCAPTCHASection.BBFormSection{
         
         display:block;
     }
