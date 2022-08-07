@@ -73,6 +73,10 @@
         display:block;
     }
 
+div.BBFormErrorBlock.BBFormInlineError {
+    display: block !important;
+    }
+
     /*
 
     .BBFormSection.BBFormSectionRecurrenceInfo{
