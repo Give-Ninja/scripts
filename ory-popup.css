@@ -105,6 +105,10 @@
 
     }
 
+div.BBFormErrorBlock.BBFormInlineError {
+    display: block !important;
+    }
+
     /**card-left**/
     #formModal .cards {
       display: flex;
