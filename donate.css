@@ -90,6 +90,10 @@ body.show-payment-step #mongo-form  .BBFormSection.BBFormButtonRow,body.show-pay
     display:block;
 }
 
+div.BBFormErrorBlock.BBFormInlineError {
+    display: block !important;
+    }
+
 /*
 
 .BBFormSection.BBFormSectionRecurrenceInfo{
