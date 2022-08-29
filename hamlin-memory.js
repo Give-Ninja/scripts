@@ -23,10 +23,10 @@ function elementLoaded(el, cb) {
         window.dataLayer.push({            
           "event": "purchase",
           "ecommerce": {
-             "Product Category": $pCategorydata,
-             "Product Name": window.location.pathname.toLowerCase(),
-             "Product SKU": $pSku.toLowerCase(),
-             "Revenue": $revenue
+             "ProductCategory": $pCategorydata,
+             "ProductName": window.location.pathname.toLowerCase(),
+             "ProductSKU": $pSku.toLowerCase(),
+             "Revenue": $revenue.replace("$","")
 
           }
         });
@@ -51,7 +51,6 @@ function elementLoaded(el, cb) {
 
                    $('body').addClass('form-first-step');
                         
-                        $('#bboxdonation_btnSecurePayment').val('Click here to complete your secure donation');
 
                     $("#bboxdonation_recurrence_lblRecurringGift").html("Monthly Donation");
                  
