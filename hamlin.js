@@ -49,9 +49,6 @@ function elementLoaded(el, cb) {
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
 
                     $('body').addClass('form-first-step');
-
-                        
-                     $('#bboxdonation_btnSecurePayment').val('Click here to complete your secure donation');
                         
                         
 
