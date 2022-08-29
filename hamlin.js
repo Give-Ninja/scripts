@@ -23,10 +23,10 @@ function elementLoaded(el, cb) {
         window.dataLayer.push({            
           "event": "purchase",
           "ecommerce": {
-             "Product Category": $pCategorydata,
-             "Product Name": window.location.pathname.toLowerCase(),
-             "Product SKU": $pSku.toLowerCase(),
-             "Revenue": $revenue
+             "ProductCategory": $pCategorydata,
+             "ProductName": window.location.pathname.toLowerCase(),
+             "ProductSKU": $pSku.toLowerCase(),
+             "Revenue": $revenue.replace("$","")
 
           }
         });
@@ -565,6 +565,7 @@ function elementLoaded(el, cb) {
                   
                     
                     console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue);
+                    console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue.replace("$","");
                 }
             }
             
