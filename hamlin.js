@@ -565,7 +565,7 @@ function elementLoaded(el, cb) {
                   
                     
                     console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue);
-                    console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue.replace("$","");
+                    console.log($pCategorydata,window.location.pathname.toLowerCase(),$pSku.toLowerCase(),$revenue.replace("$",""));
                 }
             }
             
