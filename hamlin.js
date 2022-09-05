@@ -48,6 +48,8 @@ function elementLoaded(el, cb) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionTributeInfo').show();
 
+                    setSinglPaymentonLoad();
+
                     $('body').addClass('form-first-step');
                         
                         
@@ -652,6 +654,29 @@ function elementLoaded(el, cb) {
 
         }
 
+
+function setSinglPaymentonLoad(){
+
+single_payment[0] = $('#bboxdonation_gift_rdGivingLevel1').val();
+single_payment[1] = $('#bboxdonation_gift_rdGivingLevel2').val();
+single_payment[2] = $('#bboxdonation_gift_rdGivingLevel3').val();
+single_payment[3] = $('#bboxdonation_gift_rdGivingLevel4').val();
+single_payment[4] = $('#bboxdonation_gift_rdGivingLevel5').val();
+
+
+single_payment_html[0] = $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html();
+single_payment_html[1] = $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html();
+single_payment_html[2] = $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html();
+single_payment_html[3] = $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html();
+single_payment_html[4] = $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html();
+
+
+console.log(single_payment[0],single_payment[1],single_payment[2],single_payment[3],single_payment[4],single_payment_html[0],single_payment_html[1],single_payment_html[2],single_payment_html[3],single_payment_html[4]);
+
+
+}
+
+
             function singleUpdateInfo() {
 
 					$('body').removeClass('monthly-info-upd');
@@ -720,3 +745,4 @@ function elementLoaded(el, cb) {
       
     });
     
+
