@@ -682,28 +682,28 @@ console.log(single_payment_var[0],single_payment_var[1],single_payment_var[2],si
             function singleUpdateInfo() {
 
 					$('body').removeClass('monthly-info-upd');
-        				$('#bboxdonation_gift_rdGivingLevel1').val('165');
-                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$165');
-                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provide three women with a nightgown, slippers and a new dress')
+        				$('#bboxdonation_gift_rdGivingLevel1').val(single_payment_var[0]);
+                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$'+single_payment_var[0]);
+                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html(single_payment_html_var[0])
 
-                        $('#bboxdonation_gift_rdGivingLevel2').val('264');
-                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$264');
-                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Pre-surgery physiotherapy for one patient, complex surgery')
+                        $('#bboxdonation_gift_rdGivingLevel2').val(single_payment_var[1]);
+                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$'+single_payment_var[1]);
+                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html(single_payment_html_var[1])
 
                         
 
-                          $('#bboxdonation_gift_rdGivingLevel3').val('450');
-                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$450');
-                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Pre-surgery care plus nutritious meals for one woman');
+                          $('#bboxdonation_gift_rdGivingLevel3').val(single_payment_var[2]);
+                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$'+single_payment_var[2]);
+                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html(single_payment_html_var[2]);
 
 
-						$('#bboxdonation_gift_rdGivingLevel4').val('1100');
-                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$1,100'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One standard fistula repair surgery');
+						$('#bboxdonation_gift_rdGivingLevel4').val(single_payment_var[3]);
+                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$'+single_payment_var[3]); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html(single_payment_html_var[3]);
 
 
-                          $('#bboxdonation_gift_rdGivingLevel5').val('2900');
-                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$2,900');
-                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('One complex fistula repair surgery');
+                          $('#bboxdonation_gift_rdGivingLevel5').val(single_payment_var[4]);
+                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$'+single_payment_var[4]);
+                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html(single_payment_html_var[4]);
 
         }
         
