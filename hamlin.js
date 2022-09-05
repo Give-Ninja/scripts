@@ -673,7 +673,7 @@ single_payment_html_var[3] = $('#bboxdonation_gift_rdGivingLevel4').siblings('.B
 single_payment_html_var[4] = $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html();
 
 
-console.log(single_payment_var[0],single_payment_var[1],single_payment_var[2],single_payment_var[3],single_payment_var[4],single_payment_html_var[0],single_payment_html_var[1],single_payment_html_var[2],single_payment_html_var[3],single_payment_html_var[4]);
+//console.log(single_payment_var[0],single_payment_var[1],single_payment_var[2],single_payment_var[3],single_payment_var[4],single_payment_html_var[0],single_payment_html_var[1],single_payment_html_var[2],single_payment_html_var[3],single_payment_html_var[4]);
 
 
 }
