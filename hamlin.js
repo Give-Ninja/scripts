@@ -631,27 +631,27 @@ function elementLoaded(el, cb) {
        function monthlyUpdateInfo() {
 
        					$('body').addClass('monthly-info-upd');
-        				$('#bboxdonation_gift_rdGivingLevel1').val('11');
-                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$11');
-                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund handicraft training for one patient over a year')
+        				$('#bboxdonation_gift_rdGivingLevel1').val('22');
+                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$22');
+                        $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provides a woman with handicraft skills training')
 
-                        $('#bboxdonation_gift_rdGivingLevel2').val('22');
-                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$22');
-                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provide a patient with pre-operative physiotherapy')
+                        $('#bboxdonation_gift_rdGivingLevel2').val('30');
+                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$30');
+                        $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Will provide two women a month with nutritious food')
 
                         
 
-                          $('#bboxdonation_gift_rdGivingLevel3').val('30');
-                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$30');
-                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provide a dress, nightgown and bedding for a fistula patient every month');
+                          $('#bboxdonation_gift_rdGivingLevel3').val('56');
+                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$56');
+                         $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Provides a nightgown, slippers, blanket and dress every month');
 
 
-						$('#bboxdonation_gift_rdGivingLevel4').val('90');
-                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$90'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund one standard fistula operation in a Hamlin regional hospital every year, restoring a woman’s life');
+						$('#bboxdonation_gift_rdGivingLevel4').val('100');
+                         $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$100'); $('#bboxdonation_gift_rdGivingLevel4').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund one standard fistula repair surgery every year');
 
 
-                          $('#bboxdonation_gift_rdGivingLevel5').val('240');
-                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$240');
+                          $('#bboxdonation_gift_rdGivingLevel5').val('290');
+                         $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$290');
                          $('#bboxdonation_gift_rdGivingLevel5').siblings('.BBFormRadioLabel').find('.BBFormRadioDescription').html('Fund one complex fistula operation every year that will restore a woman’s life');
 
         }
