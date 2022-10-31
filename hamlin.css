@@ -233,6 +233,10 @@
         flex-grow: 0;
     }
 
+.BBFormContainer .BBFormRadioAmount{
+    font-weight:normal !important;
+}
+
     .BBFormSectionHeading,
     .BBFormRadioLabelGivingLevelOther .BBFormRadioDescription {
         display: none !important;
