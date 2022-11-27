@@ -247,8 +247,8 @@ function elementLoaded(el, cb) {
                     
                     }
 
-                    var tribute =  $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').clone();
-                     $('.BBDFormSectionTributeInfo,.BBDFormSectionComments').remove();
+                    var tribute =  $('.BBDFormSectionTributeInfo').clone();
+                     $('.BBDFormSectionTributeInfo').remove();
                      $('.BBFormSection.BBDFormSectionGiftInfo').before(tribute);
                      
                        /* Utm parameter intialize */
@@ -455,9 +455,9 @@ function elementLoaded(el, cb) {
                 $('body').removeClass('form-first-step');
                 
                 top_element.scrollIntoView();
-                $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
+                $('.BBDFormSectionBillingInfo,.BBDFormSectionComments,.BBFormSubSectionGiftAttributes, .form-container .button-wrapper .button--orange').show();
                 $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
-                $('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
+                //$('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
                  let donateParams = new URLSearchParams(window.location.search)
                 if(donateParams.has('amount') || donateParams.has('donate') || $('body').hasClass('monthly-info-upd')){
@@ -553,7 +553,7 @@ function elementLoaded(el, cb) {
 
                     $('.main-error').hide();
                     $('body').addClass('show-payment-step');
-                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
+                    $('.BBDFormSectionGiftInfo,.BBFormSubSectionGiftAttributes,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
                     $('.BBFormButtonRow,.BBDFormSectionPaymentInfo').show();
                     $('.form-container .button-wrapper .button--orange').hide();
                     
@@ -602,7 +602,7 @@ function elementLoaded(el, cb) {
                 $('.form-container .go-back').hide();
                 $('body').addClass('form-first-step');
                     $('.form-container .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer,.BBDFormSectionTributeInfo').show();
-                    $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
+                    $('.BBDFormSectionBillingInfo,.BBDFormSectionComments,.BBFormSubSectionGiftAttributes,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
                        
                          if($('#bboxdonation_tribute_chkTributeGift').length){
                        if($('#bboxdonation_tribute_chkTributeGift')[0].checked){
@@ -622,7 +622,7 @@ function elementLoaded(el, cb) {
                 else if( prev.index() == 1 ) {
 
                     $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
-                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo').show();
+                    $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo,.BBDFormSectionComments,.BBFormSubSectionGiftAttributes').show();
                 }
             }
             
