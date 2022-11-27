@@ -456,7 +456,7 @@ function elementLoaded(el, cb) {
                 
                 top_element.scrollIntoView();
                 $('.BBDFormSectionBillingInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes, .form-container .button-wrapper .button--orange').show();
-                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
+                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer,.BBDFormSectionTributeInfo').hide();
                 //$('.BBDFormSectionBillingInfo,.form-container .button-wrapper .button--orange').show();
 
                  let donateParams = new URLSearchParams(window.location.search)
@@ -621,7 +621,7 @@ function elementLoaded(el, cb) {
                 }
                 else if( prev.index() == 1 ) {
 
-                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFormProgressContainer,.BBDFormSectionTributeInfo,.BBDFormSectionComments').hide();
+                    $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFormProgressContainer,.BBDFormSectionTributeInfo').hide();
                     $('.form-container .button-wrapper .button--orange,.BBDFormSectionBillingInfo,.BBDFormSectionComments,.BBFormSectionGiftAttributes').show();
                 }
             }
