@@ -771,7 +771,7 @@ function elementLoadedMain(el, cb) {
 
             function setOtherValueAmount(){
 
-             if(!($pSku.includes('rdGivingLevel'))) {
+             
 
               if(donateParams.has('amount') || donateParams.has('donate') || $pCategory == "Single Donation" ){
                         $pSku = $pSku;
@@ -791,7 +791,7 @@ function elementLoadedMain(el, cb) {
                  $('#formModal .BBFormRadioGivingLevelOther').removeClass('BBFormRadioGivingLevelNotSelected');
                  $('#formModal .BBFormRadioGivingLevelOther').addClass('BBFormRadioGivingLevelSelected');
                  }
-                }
+              
 
             }
 
