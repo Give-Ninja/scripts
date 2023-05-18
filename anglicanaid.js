@@ -384,7 +384,7 @@
                  let donateParams = new URLSearchParams(window.location.search)
                 if(donateParams.has('amount') || donateParams.has('donate')){
 
-                    if($pSku.includes('rdGivingLevel')) {
+                    
                         $pSku = $pSku;
 
                         $('.BBFormRadioGivingLevelOther').prop("checked", true);
@@ -402,7 +402,7 @@
                  $('.BBFormRadioGivingLevelOther').removeClass('BBFormRadioGivingLevelNotSelected');
                  $('.BBFormRadioGivingLevelOther').addClass('BBFormRadioGivingLevelSelected');
                        
-                    }
+                    
                    
                 }
                     
@@ -535,4 +535,3 @@
     });
     
     
-
