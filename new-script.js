@@ -1,0 +1,543 @@
+$(document).ready(function() {
+    var flag =true,
+        $fname,$lnam,$email,$address,$city,$state,$postcode,$pCategory,$pName,$pSku,$revenue,$monthly_exist,$flag_designation_show = false;
+        
+        
+    $('#bbox-root').on("DOMNodeInserted", function (ev) {
+        $('#mongo-form').on("DOMNodeInserted", function (ev) {
+            if(flag == true){
+                flag = false;
+
+                /* set designation visibility */
+
+                flag_url = window.location.href;
+
+                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo').show();
+                
+                var flag_designation_show = true;
+
+
+                
+                /* set preset values based on utm parameters */
+                console.log(document.getElementById('bboxdonation_designation_ddDesignations').childElementCount);
+                var donateParams = new URLSearchParams(window.location.search);
+                if(donateParams.has('disableDesignation') || document.getElementById('bboxdonation_designation_ddDesignations').childElementCount < 2){
+
+                    flag_designation_show = false;
+
+                }
+                if(donateParams.has('donate')){
+
+                var donateparamVal = donateParams.get('donate')
+                if(donateparamVal == "l"){
+                
+
+                    $('#bboxdonation_gift_rdGivingLevel1').val('50');
+                    $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$50');
+
+                    $('#bboxdonation_gift_rdGivingLevel2').val('90');
+                    $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$90');
+
+                    $('#bboxdonation_gift_rdGivingLevel3').val('150');
+                    $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$150');
+                }
+                else if(donateparamVal == "m"){
+                    $('#bboxdonation_gift_rdGivingLevel1').val('90');
+                    $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$90');
+
+                    $('#bboxdonation_gift_rdGivingLevel2').val('120');
+                    $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$120');
+
+                    $('#bboxdonation_gift_rdGivingLevel3').val('180');
+                    $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$180');
+                }
+                else if(donateparamVal == "h"){
+                    $('#bboxdonation_gift_rdGivingLevel1').val('120');
+                    $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$120');
+
+                    $('#bboxdonation_gift_rdGivingLevel2').val('160');
+                    $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$160');
+
+                    $('#bboxdonation_gift_rdGivingLevel3').val('220');
+                    $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html('$220');
+
+                }
+                }
+                if(donateParams.has('amount')){
+
+                var donateparamVal = donateParams.get('amount')
+                
+                    var amount = donateparamVal.split(",");
+
+                    $('#bboxdonation_gift_rdGivingLevel1').val(amount[0]);
+                    $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html("$"+amount[0]);
+
+                    $('#bboxdonation_gift_rdGivingLevel2').val(amount[1]);
+                    $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html("$"+amount[1]);
+
+                    $('#bboxdonation_gift_rdGivingLevel3').val(amount[2]);
+                    $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html("$"+amount[2]);
+            
+            
+                }
+
+            
+
+                if(donateParams.has('title')){
+
+                    let donateparamVal = donateParams.get('title');
+                
+
+                    var titleValue = donateparamVal;
+                
+
+
+                    $('.BBFormIndivFields .BBFormSelectList').find('option[value="'+ titleValue +'"]').prop('selected', 'selected');
+
+                
+                }
+
+                if(donateParams.has('fname')){
+
+                    let donateparamVal = donateParams.get('fname')
+
+
+                    $('#bboxdonation_billing_txtFirstName').val(donateparamVal);
+                    
+                    
+
+                }
+
+                    if(donateParams.has('lname')){
+
+                    let donateparamVal = donateParams.get('lname')
+
+                    $('#bboxdonation_billing_txtLastName').val(donateparamVal);
+
+                }
+
+                if(donateParams.has('email')){
+
+                    let donateparamVal = donateParams.get('email')
+
+                    $('#bboxdonation_billing_txtEmail').val(donateparamVal);
+
+                }
+
+
+                if(donateParams.has('phone')){
+
+                    let donateparamVal = donateParams.get('phone')
+
+                    $('#bboxdonation_billing_txtPhone').val(donateparamVal);
+
+                }
+
+                if(donateParams.has('address')){
+
+                    let donateparamVal = donateParams.get('address')
+
+                    $('#bboxdonation_billing_billingAddress_txtAddress').val(donateparamVal);
+
+                }
+
+                if(donateParams.has('suburb')){
+
+                    let donateparamVal = donateParams.get('suburb')
+
+                    $('#bboxdonation_billing_billingAddress_txtAUCity').val(donateparamVal);
+
+                }
+
+                if(donateParams.has('state')){
+
+                    let donateparamVal = donateParams.get('state');
+                
+
+                    var myValue = donateparamVal;
+                
+
+
+                    $('.BBFieldBillingStateZip .BBFormSelectList').find('option[value="'+ myValue +'"]').prop('selected', 'selected');
+
+                
+                }
+
+                if(donateParams.has('postcode')){
+
+                    let donateparamVal = donateParams.get('postcode')
+
+                    $('#bboxdonation_billing_billingAddress_txtAUPostCode').val(donateparamVal);
+
+                }
+
+                
+
+                /* end set values based on utm parameters */
+
+                /* general code with for validation */
+
+            
+
+                $('.donate-form__steps,.contents .button-wrapper').css({'opacity':1});
+                $('.BBDFormSectionBillingInfo fieldset').before('<p class="donation-highlight-text"><p>');
+            
+
+
+                //designation
+                if( !flag_designation_show ){
+                    $('#bboxdonation_designation_divSection').hide();
+                }
+
+                // tribute box
+                if(donateParams.has('disableTribute')){
+                    $('.BBDFormSectionTributeInfo').hide();
+                }
+
+                
+
+                /* Utm parameter intialize */
+
+                if(donateParams.has('type')){
+
+                    let donateparamVal = donateParams.get('type')
+
+                    if (donateparamVal == "monthly"){
+                        
+                        $("#bboxdonation_recurrence_lblRecurringGift").trigger("click");
+                    }
+            
+                }
+            }
+
+            const improveDonationFormInterval = setInterval(selectOtherAmountWhenInputIsSelected, 100);
+
+            function selectOtherAmountWhenInputIsSelected() {
+            
+                if(!document.getElementById('bboxdonation_gift_txtOtherAmountButtons')){
+                return;
+                }
+                
+                document.getElementById('bboxdonation_gift_txtOtherAmountButtons').addEventListener('click', function(e){
+                document.querySelector('.BBFormRadioLabelGivingLevelOther').click();
+                });
+                clearInterval(improveDonationFormInterval);
+            
+                }
+        });
+    });
+    
+    let monthlyCheckbox = document.getElementById('bboxdonation_recurrence_chkMonthlyGift');
+
+    monthlyCheckbox.addEventListener('change', (event) => {
+        if (event.currentTarget.checked) {
+            $('#mongo-form').addClass('monthly-donation');
+            $('#bboxdonation_designation_divSection').slideUp(225);
+        } else {
+            $('#mongo-form').removeClass('monthly-donation');
+            if(flag_designation_show){
+                $('#bboxdonation_designation_divSection').slideDown(225);
+            }
+        }
+    });
+
+    // add edit button
+    // $('.donation-highlight-text').append('. <button type="button" onclick=goBackToFirstStep>Edit</button>')
+
+    function goBackToFirstStep(){
+        const form = $('#mongo-form');
+        if(form.hasClass('step-2')){
+            form.removeClass('step-2');
+        }
+    }
+    
+    $('.contents .button-wrapper .button--orange').on('click', function(){
+
+        $('#mongo-form').addClass('step-2');
+
+        sendStepDataToAnalytics('firstDonationStepCompleted');
+        
+        var current = $('.donate-form__steps').find('.donate-form__step--current');
+
+                $pCategory = "Single Donation";
+
+                
+
+                if(!($('.single-donation-btn').hasClass('monthly-not-active'))){
+
+                    $pCategory = "Monthly Donation";
+
+                }
+
+                
+                $pName = window.location.href;
+                $pSku = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
+                $revenue = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
+                //console.log($pCategory);
+                //console.log($pName);
+                //console.log($revenue);
+                //console.log($pSku);
+
+                if($pSku.includes('rdGivingLevel')) {
+                    $pSku = $('.BBFormGiftOtherAmount').val();
+                    if(!($pSku.includes('$'))) {
+                    
+                        $pSku = "$" + $pSku;
+                    }
+                
+                }
+                else{
+
+                    $pSku = "$" + $pSku;
+                }
+
+                if($pCategory == "Single Donation"){
+
+                $('.donation-highlight-text').html('You are making a one-off donation of ' + $pSku);
+
+                }
+
+                if($pCategory == "Monthly Donation"){
+
+                $('.donation-highlight-text').html('You are making a monthly donation of ' + $pSku);
+
+                }
+
+                else{
+
+                $('.donation-highlight-text').html('You are making a one-off donation of ' + $pSku);
+
+                }
+
+        
+        //console.log(current.index());
+        
+        if( current.index() == 0 ) {
+            $('.donate-form__step').removeClass('donate-form__step--current');
+            $('.donate-form__steps').find('.donate-form__step:eq(1)').addClass('donate-form__step--current');
+            
+            $('.BBDFormSectionBillingInfo,.contents .button-wrapper .button--orange').show();
+            $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,#bboxdonation_designation_divSection,.BBFormProgressContainer').hide();
+            $('.BBDFormSectionBillingInfo,.contents .button-wrapper .button--orange').show();
+
+            let donateParams = new URLSearchParams(window.location.search)
+            if(donateParams.has('amount') || donateParams.has('donate')){
+
+                
+                    $pSku = $pSku;
+
+                    $('.BBFormRadioGivingLevelOther').prop("checked", true);
+                $('.BBFormGiftOtherAmount').val($pSku);
+                $('.BBFormRadioLabelGivingLevel').removeClass('BBFormRadioLabelGivingLevelSelected');
+            $('.BBFormRadioLabelGivingLevel').addClass('BBFormRadioLabelGivingNotLevelSelected');
+
+            $('.BBFormRadioGivingLevel').removeClass('BBFormRadioGivingLevelSelected');
+            $('.BBFormRadioGivingLevel').addClass('BBFormRadioGivingLevelNotSelected');
+
+
+            $('.BBFormRadioLabelGivingLevelOther').removeClass('BBFormRadioLabelGivingLevelNotSelected');
+            $('.BBFormRadioLabelGivingLevelOther').addClass('BBFormRadioLabelGivingLevelSelected');
+            
+            $('.BBFormRadioGivingLevelOther').removeClass('BBFormRadioGivingLevelNotSelected');
+            $('.BBFormRadioGivingLevelOther').addClass('BBFormRadioGivingLevelSelected');   
+            
+            }
+            $('.BBFormButtonRow,.BBDFormSectionPaymentInfo').show();
+            $('.contents .button-wrapper .button--orange').hide();
+                
+            
+        }
+        else if( current.index() == 1 ) {
+
+            var n = [],
+            step = true;
+            
+            n.push(validationForm($fname));
+            n.push(validationForm($lname));
+            n.push(validationForm($email));
+            n.push(validationForm($address));
+            n.push(validationForm($city));
+            n.push(validationForm($postcode));
+            
+            step = n.every(Boolean);
+            
+            //console.log(n,step);
+            if( step == true ) {
+                
+                /*$pCategory = $('#bboxdonation_recurrence_divRecurrenceCheckbox input[type="radio"]:checked').val();*/
+                $pName = window.location.href;
+                $pSku = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
+                $revenue = $('#bboxdonation_gift_rdlstGivingLevels input[type="radio"]:checked').val();
+
+                
+                if($pSku == '25') {
+                    $pSku = 'DONATE25';
+                }
+                else if($pSku == '50') {
+                    $pSku = 'DONATE50';
+                }
+                else if($pSku == '75') {
+                    $pSku = 'DONATE75';
+                }
+                else if($pSku == '100') {
+                    $pSku = 'DONATE100';
+                }
+                else if($pSku.includes('rdGivingLevel')) {
+                    $pSku = 'OTHER';
+                    $revenue = $('.BBFormGiftOtherAmount').val();
+                }
+                
+                
+                $('.donate-form__step').removeClass('donate-form__step--current');
+                $('.donate-form__steps').find('.donate-form__step:eq(2)').addClass('donate-form__step--current');
+            
+                $('body').addClass('show-payment-step');
+                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBDFormSectionBillingInfo,.BBFormProgressContainer').hide();
+                $('.BBFormButtonRow,.BBDFormSectionPaymentInfo').show();
+                $('.contents .button-wrapper .button--orange').hide();
+                
+                if( $('.BBFormErrorBlock').find('.BBFormErrorItem').length > 0 ) {
+                    $('.BBFormErrorBlock').show();
+                }
+                else {
+                    $('.BBFormErrorBlock').hide();
+                }
+                
+                //console.log($pCategory,$pName,$pSku,$revenue);
+            }
+        }
+        document.querySelector('#floating-button-container a').click();
+    });
+    
+    
+    
+    
+    $('.donate-form__step').on('click', function(){
+        
+        var current = $('.donate-form__steps').find('.donate-form__step--current'),
+            prev = $(this);
+        
+        if( current.index() > prev.index() ) {
+            $('.donate-form__step').removeClass('donate-form__step--current');
+            $(this).addClass('donate-form__step--current');
+            $('body').removeClass('show-payment-step');
+        
+            if( prev.index() == 0 ) {
+                $('.contents .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer').show();
+                $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
+                if (flag_designation_show == true && ($('.single-donation-btn').hasClass('monthly-not-active'))){
+
+                
+                    $('#bboxdonation_designation_divSection').show();
+                
+
+                }
+            }
+            else if( prev.index() == 1 ) {
+
+                $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock,.BBFormProgressContainer').hide();
+                $('.contents .button-wrapper .button--orange,.BBDFormSectionBillingInfo').show();
+            }
+        }
+        
+    });
+    
+    
+    function validationForm(id){
+        if( id.val() == '') {
+            id.addClass('has-error');
+            id.next('.error-text').show();
+            return false;
+        }
+        else {
+            id.removeClass('has-error');
+            id.next('.error-text').hide();
+            return true;
+        }
+    }
+    
+    /*console.log($pCategory,$pName,$pSku,$revenue);
+    gtag('event', 'purchase', {
+    "transaction_id": "24.031608523954162",
+    "affiliation": $pName,
+    "value": $revenue,
+    "currency": "USD",
+    "tax": 1.24,
+    "shipping": 0
+    });*/
+    const form = document.getElementById('submissionForm') ? document.getElementById('submissionForm') : document.getElementById('mongo-form');
+    form.addEventListener("submit", sendPurchaseDataToAnalytics);
+
+
+    function sendPurchaseDataToAnalytics(){
+        let isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
+        let selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
+        let itemId = 'dollar' + selectedAmount;
+            if(selectedAmount === 'rdGivingLevel4'){
+                selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.split('$')[1];
+                itemId = 'other';
+            }
+        let currentDate = new Date(); 
+        let transactionId = currentDate.getDate + currentDate.getMonth() + currentDate.getFullYear() + currentDate.getHours() + currentDate.getMinutes() + '_' + (Math.random() + 1).toString(36).substring(2);
+        dataLayer.push({ ecommerce: null });
+        window.dataLayer.push({
+            event: 'purchase',
+            transaction_id: transactionId,
+            value: parseFloat(selectedAmount),
+            currency: 'AUD',
+            ecommerce: {
+                items: [
+                    {
+                        item_id: itemId,
+                        item_name: window.location.pathname,
+                        index: 0,
+                        item_category: isMonthly,
+                        item_category2: "OLX donation form",
+                        price: parseFloat(selectedAmount),
+                        quantity: 1
+
+                    }
+                ]
+            }
+        });
+    }
+
+    function sendStepDataToAnalytics(eventName){
+        let isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
+        let selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
+        let itemId = 'dollar' + selectedAmount;
+        if(selectedAmount === 'rdGivingLevel4'){
+            selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.split('$')[1];
+            itemId = 'other';
+        }
+
+        window.dataLayer.push({
+            event: eventName,
+            value: parseFloat(selectedAmount),
+            item_id: itemId,
+            item_name: window.location.pathname,
+            item_category: isMonthly
+        });
+    }
+});
+
+window.addEventListener("load", (event) => {
+    let callback = function (entries, observer) {
+    entries.forEach(entry => {
+        const button = document.getElementById('floating-button-container');
+        if(entry.isIntersecting){
+          button.classList.add('form-visible');
+        }
+        else{
+          button.classList.remove('form-visible');
+        }
+    });
+  };
+  
+  let observer = new IntersectionObserver(callback);
+  
+  let target = document.getElementById('ac-donation-form');
+  
+  observer.observe(target);
+
+});
