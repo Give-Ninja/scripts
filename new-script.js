@@ -14,13 +14,13 @@ $(document).ready(function() {
 
                 $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo').show();
                 
-                var flag_designation_show = true;
+                let flag_designation_show = true;
 
 
                 
                 /* set preset values based on utm parameters */
                 console.log(document.getElementById('bboxdonation_designation_ddDesignations').childElementCount);
-                var donateParams = new URLSearchParams(window.location.search);
+                let donateParams = new URLSearchParams(window.location.search);
                 if(donateParams.has('disableDesignation') || document.getElementById('bboxdonation_designation_ddDesignations').childElementCount < 2){
 
                     flag_designation_show = false;
@@ -28,7 +28,7 @@ $(document).ready(function() {
                 }
                 if(donateParams.has('donate')){
 
-                var donateparamVal = donateParams.get('donate')
+                let donateparamVal = donateParams.get('donate')
                 if(donateparamVal == "l"){
                 
 
@@ -65,7 +65,7 @@ $(document).ready(function() {
                 }
                 if(donateParams.has('amount')){
 
-                var donateparamVal = donateParams.get('amount')
+                let donateparamVal = donateParams.get('amount')
                 
                     var amount = donateparamVal.split(",");
 
@@ -180,7 +180,14 @@ $(document).ready(function() {
             
 
                 $('.donate-form__steps,.contents .button-wrapper').css({'opacity':1});
-                $('.BBDFormSectionBillingInfo fieldset').before('<p class="donation-highlight-text"><p>');
+                
+              
+                if(donateParams.has('disableTribute')){
+                    $('.BBDFormSectionBillingInfo fieldset').before('<p class="donation-highlight-text"><p>');
+                }
+                else{
+                    $('.BBDFormSectionTributeInfo fieldset').before('<p class="donation-highlight-text"><p>');
+                }
             
 
 
@@ -191,7 +198,7 @@ $(document).ready(function() {
 
                 // tribute box
                 if(donateParams.has('disableTribute')){
-                    $('.BBDFormSectionTributeInfo').hide();
+                    $('.BBDFormSectionTributeInfo').addClass('hidden');
                 }
 
                 
@@ -209,36 +216,32 @@ $(document).ready(function() {
             
                 }
             }
-
-            const improveDonationFormInterval = setInterval(selectOtherAmountWhenInputIsSelected, 100);
-
-            function selectOtherAmountWhenInputIsSelected() {
-            
-                if(!document.getElementById('bboxdonation_gift_txtOtherAmountButtons')){
-                return;
-                }
-                
-                document.getElementById('bboxdonation_gift_txtOtherAmountButtons').addEventListener('click', function(e){
-                document.querySelector('.BBFormRadioLabelGivingLevelOther').click();
-                });
-                clearInterval(improveDonationFormInterval);
-            
-                }
+           else if(document.getElementById('bboxdonation_divThanks') && !window.purchaseSentToAnalytics){
+                window.purchaseSentToAnalytics = true;
+                sendPurchaseDataToAnalytics();
+            }
         });
     });
     
-    let monthlyCheckbox = document.getElementById('bboxdonation_recurrence_chkMonthlyGift');
+    
 
-    monthlyCheckbox.addEventListener('change', (event) => {
-        if (event.currentTarget.checked) {
-            $('#mongo-form').addClass('monthly-donation');
-            $('#bboxdonation_designation_divSection').slideUp(225);
-        } else {
+    $('body').on('click','#bboxdonation_recurrence_lblRecurringGift',function(){
+    
+    if(($('.single-donation-btn').hasClass('monthly-not-active'))){
+        $('.single-donation-btn').removeClass('monthly-not-active');
+        $('#mongo-form').addClass('monthly-donation');
+        $('#bboxdonation_designation_divSection').slideUp(225);
+        
+        }
+        else{
+            // single donation
+            $('.single-donation-btn').addClass('monthly-not-active');
             $('#mongo-form').removeClass('monthly-donation');
             if(flag_designation_show){
                 $('#bboxdonation_designation_divSection').slideDown(225);
             }
         }
+
     });
 
     // add edit button
@@ -256,6 +259,16 @@ $(document).ready(function() {
         $('#mongo-form').addClass('step-2');
 
         sendStepDataToAnalytics('firstDonationStepCompleted');
+        //sendPurchaseDataToAnalytics();
+      
+        window.isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
+        console.log(window.isMonthly);
+        window.selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
+        window.itemId = 'dollar' + window.selectedAmount;
+            if(window.selectedAmount === 'rdGivingLevel4'){
+                window.selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.split('$')[1];
+                window.itemId = 'other';
+         }
         
         var current = $('.donate-form__steps').find('.donate-form__step--current');
 
@@ -470,30 +483,23 @@ $(document).ready(function() {
 
 
     function sendPurchaseDataToAnalytics(){
-        let isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
-        let selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
-        let itemId = 'dollar' + selectedAmount;
-            if(selectedAmount === 'rdGivingLevel4'){
-                selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.split('$')[1];
-                itemId = 'other';
-            }
         let currentDate = new Date(); 
-        let transactionId = currentDate.getDate + currentDate.getMonth() + currentDate.getFullYear() + currentDate.getHours() + currentDate.getMinutes() + '_' + (Math.random() + 1).toString(36).substring(2);
+        let transactionId = "" + currentDate.getDate() + currentDate.getMonth() + currentDate.getFullYear() + currentDate.getHours() + currentDate.getMinutes() + '_' + (Math.random() + 1).toString(36).substring(2);
         dataLayer.push({ ecommerce: null });
         window.dataLayer.push({
             event: 'purchase',
             transaction_id: transactionId,
-            value: parseFloat(selectedAmount),
+            value: parseFloat(window.selectedAmount),
             currency: 'AUD',
             ecommerce: {
                 items: [
                     {
-                        item_id: itemId,
+                        item_id: window.itemId,
                         item_name: window.location.pathname,
                         index: 0,
-                        item_category: isMonthly,
+                        item_category: window.isMonthly,
                         item_category2: "OLX donation form",
-                        price: parseFloat(selectedAmount),
+                        price: parseFloat(window.selectedAmount),
                         quantity: 1
 
                     }
@@ -519,25 +525,4 @@ $(document).ready(function() {
             item_category: isMonthly
         });
     }
-});
-
-window.addEventListener("load", (event) => {
-    let callback = function (entries, observer) {
-    entries.forEach(entry => {
-        const button = document.getElementById('floating-button-container');
-        if(entry.isIntersecting){
-          button.classList.add('form-visible');
-        }
-        else{
-          button.classList.remove('form-visible');
-        }
-    });
-  };
-  
-  let observer = new IntersectionObserver(callback);
-  
-  let target = document.getElementById('ac-donation-form');
-  
-  observer.observe(target);
-
 });
