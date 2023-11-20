@@ -488,10 +488,10 @@ $(document).ready(function() {
         dataLayer.push({ ecommerce: null });
         window.dataLayer.push({
             event: 'purchase',
-            transaction_id: transactionId,
-            value: parseFloat(window.selectedAmount),
-            currency: 'AUD',
             ecommerce: {
+                transaction_id: transactionId,
+                value: parseFloat(window.selectedAmount),
+                currency: 'AUD',
                 items: [
                     {
                         item_id: window.itemId,
