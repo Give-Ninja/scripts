@@ -97,13 +97,7 @@ display:none;
     margin-bottom:16px;
 }
 #floating-button-container{
-    position: fixed;
-    bottom: 0px;
-    padding: 16px;
     width: 100%;
-    left: 0px;
-    background: #ffffff;
-    display: none;
     z-index:99999;
     transition:all .225s ease-out;
 }
@@ -806,6 +800,11 @@ input:checked + .BBFormCheckboxLabel:before {
 @media (max-width: 767px) {
     #floating-button-container{
         display: block;
+    	background: #ffffff;
+        position: fixed;
+	bottom: 0px;
+	left: 0px;
+	padding: 16px;
     }
     #page_block_below_fold .form-container {
     }
