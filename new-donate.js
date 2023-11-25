@@ -407,8 +407,7 @@ $(document).ready(function() {
         }
         document.querySelector('#floating-button-container a').click();
     });
-    
-    document.getElementById('bboxdonation_btnSecurePayment').addEventListener('click', function(){
+    $('body').on('click','#bboxdonation_btnSecurePayment',function(){
         let preventRunning = false;
          console.log('clicked');
         $('#mongo-form').on("DOMNodeInserted", function (ev) {
