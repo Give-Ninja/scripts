@@ -63,23 +63,9 @@ $(document).ready(function() {
 
                 }
                 }
-                if(donateParams.has('amount')){
-
-                let donateparamVal = donateParams.get('amount')
                 
-                    var amount = donateparamVal.split(",");
+                updateDonationValues(donateParams);
 
-                    $('#bboxdonation_gift_rdGivingLevel1').val(amount[0]);
-                    $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html("$"+amount[0]);
-
-                    $('#bboxdonation_gift_rdGivingLevel2').val(amount[1]);
-                    $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html("$"+amount[1]);
-
-                    $('#bboxdonation_gift_rdGivingLevel3').val(amount[2]);
-                    $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html("$"+amount[2]);
-            
-            
-                }
 
             
 
@@ -422,7 +408,15 @@ $(document).ready(function() {
         document.querySelector('#floating-button-container a').click();
     });
     
-    
+    document.getElementById('bboxdonation_btnSecurePayment').addEventListener('click', function(){
+        let preventRunning = false;
+        $('#mongo-form').on("DOMNodeInserted", function (ev) {
+            if(!preventRunning){
+                updateDonationValues();
+                preventRunning = true;
+            }
+        });
+    });
     
     
     $('.donate-form__step').on('click', function(){
@@ -524,5 +518,24 @@ $(document).ready(function() {
             item_name: window.location.pathname,
             item_category: isMonthly
         });
+    }
+
+    function updateDonationValues(donateParams = new URLSearchParams(window.location.search)){
+
+        if(donateParams.has('amount')){
+    
+            let donateparamVal = donateParams.get('amount')
+                            
+            var amount = donateparamVal.split(",");
+    
+            $('#bboxdonation_gift_rdGivingLevel1').val(amount[0]);
+            $('#bboxdonation_gift_rdGivingLevel1').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html("$"+amount[0]);
+    
+            $('#bboxdonation_gift_rdGivingLevel2').val(amount[1]);
+            $('#bboxdonation_gift_rdGivingLevel2').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html("$"+amount[1]);
+    
+            $('#bboxdonation_gift_rdGivingLevel3').val(amount[2]);
+            $('#bboxdonation_gift_rdGivingLevel3').siblings('.BBFormRadioLabel').find('.BBFormRadioAmount').html("$"+amount[2]);
+        }
     }
 });
