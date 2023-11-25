@@ -410,8 +410,10 @@ $(document).ready(function() {
     
     document.getElementById('bboxdonation_btnSecurePayment').addEventListener('click', function(){
         let preventRunning = false;
+         console.log('clicked');
         $('#mongo-form').on("DOMNodeInserted", function (ev) {
             if(!preventRunning){
+                console.log('run');
                 updateDonationValues();
                 preventRunning = true;
             }
