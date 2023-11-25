@@ -521,7 +521,7 @@ $(document).ready(function() {
     }
 
     function updateDonationValues(donateParams = new URLSearchParams(window.location.search)){
-
+        console.log('updated');
         if(donateParams.has('amount')){
     
             let donateparamVal = donateParams.get('amount')
