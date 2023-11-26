@@ -1068,3 +1068,24 @@ input:checked + .BBFormCheckboxLabel:before {
 	font-weight:bold;
 	color: var(--Anglicare-text, #2E2E2E);
 }
+
+/* HORIZONTAL DONATION AMOUNT SELECTORS */
+
+@media only screen and (min-width:1251px){
+    #mongo-form #bboxdonation_gift_rdlstGivingLevels{
+	    display: grid;
+	    grid-template-columns: 1fr 1fr;
+	    gap: 1rem;
+	    margin-bottom: 1rem;
+    }
+
+    #mongo-form .BBFormRadioButtonContainer, #mongo-form .BBFormRadioButtonContainer label{
+    	height: 100%;
+    }
+    #mongo-form .BBFormRadioItem.BBFormRadioGivingLevelItem:not(:last-child){
+	margin-bottom:0px!important;
+    }
+    #bboxdonation_gift_rdlstGivingLevels .BBFormRadioItem:nth-child(2){
+	margin-top:0px!important;
+    }
+}
