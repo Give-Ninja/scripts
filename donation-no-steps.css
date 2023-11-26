@@ -1060,3 +1060,11 @@ input:checked + .BBFormCheckboxLabel:before {
   height:3200px!important;
 }
 
+#mongo-form #bboxdonation_billing_divBillingHeader {
+    display: block!important;
+    padding-left: 0px;
+}
+#mongo-form legend .BBFormSectionHeading label{
+	font-weight:bold;
+	color: var(--Anglicare-text, #2E2E2E);
+}
