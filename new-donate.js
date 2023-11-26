@@ -425,7 +425,10 @@ $(document).ready(function() {
                         otherAmount = otherAmount.replace('$','');
                         otherAmount = otherAmount.replace(',','');
                         otherAmount = parseInt(otherAmount);
-                        document.querySelector('input.BBFormRadioGivingLevel[value="' + otherAmount + '"]').nextElementSibling.click();
+                        const radioSelector = document.querySelector('input.BBFormRadioGivingLevel[value="' + otherAmount + '"]');
+                        if(radioSelector){
+                            radioSelector.nextElementSibling.click();
+                        }
                     }
                 }
             });
