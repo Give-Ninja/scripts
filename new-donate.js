@@ -252,9 +252,11 @@ $(document).ready(function() {
         window.selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
         window.itemId = 'dollar' + window.selectedAmount;
             if(window.selectedAmount === 'rdGivingLevel4'){
-                window.selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.split('$')[1];
+                window.selectedAmount = document.getElementById('bboxdonation_gift_txtAmountOther').value.replace('$', '');
+                window.selectedAmount = parseFloat(window.selectedAmount.replace(',',''));
                 window.itemId = 'other';
-         }
+                itemId = 'other';
+             }
         
         var current = $('.donate-form__steps').find('.donate-form__step--current');
 
@@ -524,7 +526,8 @@ $(document).ready(function() {
         let selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
         let itemId = 'dollar' + selectedAmount;
         if(selectedAmount === 'rdGivingLevel4'){
-            selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.split('$')[1];
+            selectedAmount = document.getElementById('bboxdonation_gift_txtAmountOther').value.replace('$', '');
+            selectedAmount = parseFloat(selectedAmount.replace(',',''));
             itemId = 'other';
         }
 
