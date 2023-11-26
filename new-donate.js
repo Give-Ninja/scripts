@@ -415,8 +415,9 @@ $(document).ready(function() {
             $('#mongo-form').on("DOMNodeInserted", function (ev) {
                 if(!preventRunning){
                     console.log('run');
-                    updateDonationValues();
                     preventRunning = true;
+                    updateDonationValues();
+                    console.log(preventRunning);
                 }
             });
         }
