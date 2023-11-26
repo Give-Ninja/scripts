@@ -407,17 +407,20 @@ $(document).ready(function() {
         }
         document.querySelector('#floating-button-container a').click();
     });
-    $('body').on('click','#bboxdonation_btnSecurePayment',function(){
-        let preventRunning = false;
-         console.log('clicked');
-        $('#mongo-form').on("DOMNodeInserted", function (ev) {
-            if(!preventRunning){
-                console.log('run');
-                updateDonationValues();
-                preventRunning = true;
-            }
-        });
-    });
+    document.addEventListener( "click", handleSecurePaymentButtonClick );
+
+    function handleSecurePaymentButtonClick(event){
+        if(event.target.id === 'bboxdonation_btnSecurePayment'){
+            let preventRunning = false;
+            $('#mongo-form').on("DOMNodeInserted", function (ev) {
+                if(!preventRunning){
+                    console.log('run');
+                    updateDonationValues();
+                    preventRunning = true;
+                }
+            });
+        }
+    }
     
     
     $('.donate-form__step').on('click', function(){
@@ -473,8 +476,8 @@ $(document).ready(function() {
     "tax": 1.24,
     "shipping": 0
     });*/
-    const form = document.getElementById('submissionForm') ? document.getElementById('submissionForm') : document.getElementById('mongo-form');
-    form.addEventListener("submit", sendPurchaseDataToAnalytics);
+    //const form = document.getElementById('submissionForm') ? document.getElementById('submissionForm') : document.getElementById('mongo-form');
+    //form.addEventListener("submit", sendPurchaseDataToAnalytics);
 
 
     function sendPurchaseDataToAnalytics(){
