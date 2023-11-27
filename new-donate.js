@@ -212,21 +212,26 @@ $(document).ready(function() {
     
 
     $('body').on('click','#bboxdonation_recurrence_lblRecurringGift',function(){
-    
-    if(($('.single-donation-btn').hasClass('monthly-not-active'))){
-        $('.single-donation-btn').removeClass('monthly-not-active');
-        $('#mongo-form').addClass('monthly-donation');
-        $('#bboxdonation_designation_divSection').slideUp(225);
         
+        if($('#bboxdonation_recurrence_chkMonthlyGift').is( ":checked" )){
+            $('#mongo-form').addClass('monthly-donation');
+            $('#bboxdonation_designation_divSection').slideUp(225);
         }
         else{
             // single donation
-            $('.single-donation-btn').addClass('monthly-not-active');
             $('#mongo-form').removeClass('monthly-donation');
             if(flag_designation_show){
                 $('#bboxdonation_designation_divSection').slideDown(225);
             }
         }
+        /*
+        if(($('.single-donation-btn').hasClass('monthly-not-active'))){
+            $('.single-donation-btn').removeClass('monthly-not-active');
+            $('#mongo-form').addClass('monthly-donation');
+            $('#bboxdonation_designation_divSection').slideUp(225);
+            
+            } */ 
+
 
     });
 
@@ -264,7 +269,7 @@ $(document).ready(function() {
 
                 
 
-                if(!($('.single-donation-btn').hasClass('monthly-not-active'))){
+                if($('#bboxdonation_recurrence_chkMonthlyGift').is(':checked')){
 
                     $pCategory = "Monthly Donation";
 
