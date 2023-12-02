@@ -14,7 +14,7 @@ $(document).ready(function() {
 
                 $('.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo').show();
                 
-                let flag_designation_show = true;
+                window.flag_designation_show = true;
 
 
                 
@@ -23,7 +23,7 @@ $(document).ready(function() {
                 let donateParams = new URLSearchParams(window.location.search);
                 if(donateParams.has('disableDesignation') || document.getElementById('bboxdonation_designation_ddDesignations').childElementCount < 2){
 
-                    flag_designation_show = false;
+                    window.flag_designation_show = false;
 
                 }
                 if(donateParams.has('donate')){
@@ -178,7 +178,7 @@ $(document).ready(function() {
 
 
                 //designation
-                if( !flag_designation_show ){
+                if( !window.flag_designation_show ){
                     $('#bboxdonation_designation_divSection').hide();
                 }
 
@@ -220,7 +220,7 @@ $(document).ready(function() {
         else{
             // single donation
             $('#mongo-form').removeClass('monthly-donation');
-            if(flag_designation_show){
+            if(window.flag_designation_show){
                 $('#bboxdonation_designation_divSection').slideDown(225);
             }
         }
@@ -456,7 +456,7 @@ $(document).ready(function() {
             if( prev.index() == 0 ) {
                 $('.contents .button-wrapper .button--orange,.BBDFormSectionGiftInfo,.BBFormSectionRecurrenceInfo,.BBFormProgressContainer').show();
                 $('.BBDFormSectionBillingInfo,.BBFormButtonRow,.BBDFormSectionPaymentInfo,.BBFormErrorBlock').hide();
-                if (flag_designation_show == true && ($('.single-donation-btn').hasClass('monthly-not-active'))){
+                if (window.flag_designation_show == true && ($('.single-donation-btn').hasClass('monthly-not-active'))){
 
                 
                     $('#bboxdonation_designation_divSection').show();
@@ -537,6 +537,13 @@ $(document).ready(function() {
         }
 
         window.dataLayer.push({
+            event: eventName,
+            value: parseFloat(selectedAmount),
+            item_id: itemId,
+            item_name: window.location.pathname,
+            item_category: isMonthly
+        });
+        console.log({
             event: eventName,
             value: parseFloat(selectedAmount),
             item_id: itemId,
