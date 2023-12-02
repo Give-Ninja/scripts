@@ -524,6 +524,13 @@ $(document).ready(function() {
                 ]
             }
         });
+        console.log({
+            event: eventName,
+            value: parseFloat(selectedAmount),
+            item_id: itemId,
+            item_name: window.location.pathname,
+            item_category: isMonthly
+        });
     }
 
     function sendStepDataToAnalytics(eventName){
@@ -537,13 +544,6 @@ $(document).ready(function() {
         }
 
         window.dataLayer.push({
-            event: eventName,
-            value: parseFloat(selectedAmount),
-            item_id: itemId,
-            item_name: window.location.pathname,
-            item_category: isMonthly
-        });
-        console.log({
             event: eventName,
             value: parseFloat(selectedAmount),
             item_id: itemId,
