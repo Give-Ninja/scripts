@@ -252,7 +252,7 @@ $(document).ready(function() {
         sendStepDataToAnalytics('firstDonationStepCompleted');
         //sendPurchaseDataToAnalytics();
       
-        window.isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly donation' : 'one-off donation';
+        window.isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
         console.log(window.isMonthly);
         window.selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
         window.itemId = 'dollar' + window.selectedAmount;
@@ -534,7 +534,7 @@ $(document).ready(function() {
     }
 
     function sendStepDataToAnalytics(eventName){
-        let isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly donation' : 'one-off donation';
+        let isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
         let selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
         let itemId = 'dollar' + selectedAmount;
         if(selectedAmount === 'rdGivingLevel4'){
@@ -548,7 +548,7 @@ $(document).ready(function() {
             value: parseFloat(selectedAmount),
             item_id: itemId,
             item_name: window.location.pathname,
-            item_category: isMonthly
+            item_category: isMonthly + ' donation'
         });
     }
 
