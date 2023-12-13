@@ -252,7 +252,7 @@ $(document).ready(function() {
         sendStepDataToAnalytics('firstDonationStepCompleted');
         //sendPurchaseDataToAnalytics();
       
-        window.isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
+        window.isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly donation' : 'one-off donation';
         console.log(window.isMonthly);
         window.selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
         window.itemId = 'dollar' + window.selectedAmount;
@@ -515,7 +515,7 @@ $(document).ready(function() {
                         item_id: window.itemId,
                         item_name: window.location.pathname,
                         index: 0,
-                        item_category: window.isMonthly,
+                        item_category: window.isMonthly + ' donation',
                         item_category2: "OLX donation form",
                         price: parseFloat(window.selectedAmount),
                         quantity: 1
@@ -534,7 +534,7 @@ $(document).ready(function() {
     }
 
     function sendStepDataToAnalytics(eventName){
-        let isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
+        let isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly donation' : 'one-off donation';
         let selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
         let itemId = 'dollar' + selectedAmount;
         if(selectedAmount === 'rdGivingLevel4'){
