@@ -538,7 +538,7 @@ $(document).ready(function() {
         let selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
         let itemId = 'dollar' + selectedAmount;
         if(selectedAmount === 'rdGivingLevel4'){
-            selectedAmount = document.getElementById('bboxdonation_gift_txtAmountOther').value.replace('$', '');
+            selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.replace('$', '');
             selectedAmount = parseFloat(selectedAmount.replace(',',''));
             itemId = 'other';
         }
