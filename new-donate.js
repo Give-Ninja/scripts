@@ -254,14 +254,17 @@ $(document).ready(function() {
       
         window.isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
         console.log(window.isMonthly);
-        window.selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
-        window.itemId = 'dollar' + window.selectedAmount;
-            if(window.selectedAmount === 'rdGivingLevel4'){
+
+        if(document.querySelector('.BBFormRadioGivingLevel:checked').classList.contains('BBFormRadioGivingLevelOther'){
                 window.selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.replace('$', '');
                 window.selectedAmount = parseFloat(window.selectedAmount.replace(',',''));
                 window.itemId = 'other';
-                itemId = 'other';
-             }
+        }
+        else {
+            window.selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
+            window.itemId = 'dollar' + window.selectedAmount;
+        }
+
         
         var current = $('.donate-form__steps').find('.donate-form__step--current');
 
@@ -526,29 +529,20 @@ $(document).ready(function() {
         });
         console.log({
             event: eventName,
-            value: parseFloat(selectedAmount),
-            item_id: itemId,
+            value: parseFloat(window.selectedAmount),
+            item_id: window.itemId,
             item_name: window.location.pathname,
-            item_category: isMonthly
+            item_category: window.isMonthly
         });
     }
 
     function sendStepDataToAnalytics(eventName){
-        let isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
-        let selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
-        let itemId = 'dollar' + selectedAmount;
-        if(selectedAmount === 'rdGivingLevel4'){
-            selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.replace('$', '');
-            selectedAmount = parseFloat(selectedAmount.replace(',',''));
-            itemId = 'other';
-        }
-
         window.dataLayer.push({
             event: eventName,
-            value: parseFloat(selectedAmount),
-            item_id: itemId,
+            value: parseFloat(window.selectedAmount),
+            item_id: window.itemId,
             item_name: window.location.pathname,
-            item_category: isMonthly + ' donation'
+            item_category: window.isMonthly + ' donation'
         });
     }
 
