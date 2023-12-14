@@ -248,10 +248,7 @@ $(document).ready(function() {
     $('.contents .button-wrapper .button--orange').on('click', function(){
 
         $('#mongo-form').addClass('step-2');
-
-        sendStepDataToAnalytics('firstDonationStepCompleted');
-        //sendPurchaseDataToAnalytics();
-      
+        
         window.isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
         console.log(window.isMonthly);
 
@@ -264,6 +261,9 @@ $(document).ready(function() {
             window.selectedAmount = document.querySelector('.BBFormRadioGivingLevel:checked').value;
             window.itemId = 'dollar' + window.selectedAmount;
         }
+
+        sendStepDataToAnalytics('firstDonationStepCompleted');
+        //sendPurchaseDataToAnalytics();
 
         
         var current = $('.donate-form__steps').find('.donate-form__step--current');
