@@ -255,7 +255,7 @@ $(document).ready(function() {
         window.isMonthly = document.getElementById('bboxdonation_recurrence_chkMonthlyGift').checked ? 'monthly' : 'one-off';
         console.log(window.isMonthly);
 
-        if(document.querySelector('.BBFormRadioGivingLevel:checked').classList.contains('BBFormRadioGivingLevelOther'){
+        if(document.querySelector('.BBFormRadioGivingLevel:checked').classList.contains('BBFormRadioGivingLevelOther')){
                 window.selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.replace('$', '');
                 window.selectedAmount = parseFloat(window.selectedAmount.replace(',',''));
                 window.itemId = 'other';
