@@ -253,7 +253,7 @@ $(document).ready(function() {
         console.log(window.isMonthly);
 
         if(document.querySelector('.BBFormRadioGivingLevel:checked').classList.contains('BBFormRadioGivingLevelOther')){
-                window.selectedAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value.replace('$', '');
+                window.selectedAmount = document.querySelector('.BBFormTextbox.BBFormGiftOtherAmount').value.replace('$', '');
                 window.selectedAmount = parseFloat(window.selectedAmount.replace(',',''));
                 window.itemId = 'other';
         }
@@ -431,7 +431,7 @@ $(document).ready(function() {
                     // by default, when the form reloads it has the "other amount" selected with the previously selected amount
                     // so we select the previously selected radio button so it looks the same for the user as when they sent the form
                     if(document.querySelector('input.BBFormRadioGivingLevelOther').checked){
-                        let otherAmount = document.getElementById('bboxdonation_gift_txtOtherAmountButtons').value;
+                        let otherAmount = document.querySelector('.BBFormTextbox.BBFormGiftOtherAmount').value;
                         otherAmount = otherAmount.replace('$','');
                         otherAmount = otherAmount.replace(',','');
                         otherAmount = parseInt(otherAmount);
