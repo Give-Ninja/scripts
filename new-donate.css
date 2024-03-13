@@ -26,9 +26,7 @@ ul.donate-form__steps, ul.donate-form__steps *{
     margin:0px!important;
     padding:0px!important;
   }
-#mongo-form #bboxdonation_billing_divPhone{
-display:none;
-}
+
 /* hide payment method selection as it's not needed with the new form */
 /* #mongo-form #bboxdonation_payment_PaymentChoices{
     display:none!important;
