@@ -1061,3 +1061,33 @@ input:checked + .BBFormCheckboxLabel:before {
 #bboxdonation_divForm #bboxdonation_designation_divSection{
 	order:-1;
 }
+
+/* grid layout for selectors */
+#mongo-form #bboxdonation_divForm #bboxdonation_gift_rdlstGivingLevels.BBFormRadioList.grid{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+}
+#mongo-form #bboxdonation_divForm #bboxdonation_gift_rdlstGivingLevels.BBFormRadioList.grid .BBFormRadioItem.BBFormRadioGivingLevelItem:not(:last-child){
+    margin-bottom:0px;
+}
+#mongo-form #bboxdonation_divForm #bboxdonation_gift_rdlstGivingLevels.BBFormRadioList.grid .BBFormRadioItem:nth-child(2){
+    margin-top:0px;
+}
+#mongo-form #bboxdonation_divForm #bboxdonation_gift_rdlstGivingLevels.BBFormRadioList.grid .BBFormRadioItem label{
+    justify-content:center;
+}
+#mongo-form #bboxdonation_divForm #bboxdonation_gift_rdlstGivingLevels.BBFormRadioList.grid .BBFormRadioItem.BBFormRadioGivingLevelItem:last-child{
+    grid-column: 1 / span 2;
+}
+#mongo-form #bboxdonation_divForm #bboxdonation_gift_rdlstGivingLevels.BBFormRadioList.grid .BBFormRadioItem:nth-child(2) label.BBFormRadioLabel.BBFormRadioLabelGivingLevel:after{
+	left:initial;
+	top: -8px;
+    	right: -4px;
+}
+#mongo-form #bboxdonation_divForm #bboxdonation_gift_rdlstGivingLevels.BBFormRadioList.grid  .BBFormRadioItem:nth-child(2) label.BBFormRadioLabel.BBFormRadioLabelGivingLevel:before{
+	left:initial;
+	right: -12px;
+	padding: 4px 24px 4px 10px;
+	top:-16px;
+}
