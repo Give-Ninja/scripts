@@ -67,7 +67,9 @@ $(document).ready(function() {
                     
                     updateDonationValues(donateParams);
 
-
+                    if(!document.querySelector('#bboxdonation_gift_rdlstGivingLevels .BBFormRadioDescription')){
+                        document.getElementById('bboxdonation_gift_rdlstGivingLevels').classList.add('grid');
+                    }
                 
 
                     if(donateParams.has('title')){
