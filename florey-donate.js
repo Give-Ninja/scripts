@@ -50,7 +50,7 @@ function getIframeCode() {
       }
     }
   });
-
   // Load the original script
   document.head.appendChild(originalScript);
 })();
+
