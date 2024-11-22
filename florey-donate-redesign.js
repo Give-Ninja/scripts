@@ -36,9 +36,7 @@
                     case "height-change":
                         d = e.data.message.height, s.style.minHeight = d;
                         const script = document.createElement("script");
-                        script.textContent = `window.addEventListener("load", (event) => {
-                          
-        // select elements
+                        script.textContent = `// select elements
         const form = document.querySelector('.donor-form form.ng-untouched');
         const elements = Array.from(form.querySelectorAll('div.fs-unmask'));
         
@@ -528,9 +526,9 @@
         }
         
         \`;
-        document.body.appendChild(styles);
-                        });`;
+        document.body.appendChild(styles);`;
                         script.type = "text/javascript";
+                        script.id = "dn-redesign-new";
                         document.getElementsByTagName("head")[0].appendChild(script);
                         break;
                     case "checkout-url":
